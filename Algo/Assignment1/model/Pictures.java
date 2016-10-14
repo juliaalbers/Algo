@@ -6,5 +6,6 @@ public class Pictures{
 	
 }
 class Pic extends Component{
-	//hallo ich hab dich ge‰ndert
+	//hallo ich hab dich ge√§ndert
+//jetzt aus dem iNternet
 }
