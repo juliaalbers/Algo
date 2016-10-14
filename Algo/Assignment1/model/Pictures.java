@@ -1,11 +1,10 @@
-package model;
+0package model;
 
 import java.awt.*;
 
 public class Pictures{
-	Pic[] m_pics;
-}
-
-class Pic extends Component{
 	
+}
+class Pic extends Component{
+	//hallo ich hab dich geändert
 }
