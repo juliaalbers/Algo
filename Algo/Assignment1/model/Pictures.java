@@ -1,4 +1,4 @@
-0package model;
+package model;
 
 import java.awt.*;
 
@@ -6,6 +6,5 @@ public class Pictures{
 	
 }
 class Pic extends Component{
-	//hallo ich hab dich geändert
-//jetzt aus dem iNternet
+	
 }
