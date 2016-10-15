@@ -1,5 +1,6 @@
 package view;
 
+import model.Pictures;
 
 import javax.swing.*;
 import java.awt.*;
@@ -7,9 +8,14 @@ import java.awt.event.*;
 
 
 public class MyFrame extends JFrame implements ActionListener{
+	private Pictures m_Pictures;
 	
-	public MyFrame(){
+	public MyFrame(Pictures pic){
 		super("");
+		//Inizialisierung MVC
+		m_Pictures = pic;
+		
+		//Inizialisierung Oberfläche
 		setLayout(new BorderLayout());
 		
 		JPanel pa = new JPanel();

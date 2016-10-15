@@ -80,7 +80,7 @@ public class Pics extends Component{
 
 class MyFrame extends JFrame implements ActionListener{
 	Pics MainImage;
-	
+	Pics pic1, pic2, pic3;
 	
 	public MyFrame(){
 		super("");
