@@ -2,7 +2,7 @@ package nreins;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.image.*;
+//import java.awt.image.*;
 import java.io.File;
 
 import javax.swing.*;
@@ -23,7 +23,7 @@ public class Pics extends Component{
 			int result = diag.showOpenDialog(father);
 			if(result == JFileChooser.APPROVE_OPTION){
 				m_File = diag.getSelectedFile();
-				m_Img = getToolkit().getImage(m_File.getAbsolutePath()).getScaledInstance(800,600, Image.SCALE_SMOOTH);;
+				m_Img = getToolkit().getImage(m_File.getAbsolutePath()).getScaledInstance(800,600, Image.SCALE_SMOOTH);
 			}
 				
 			MediaTracker mt = new MediaTracker(this);

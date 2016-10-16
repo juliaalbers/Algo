@@ -1,25 +1,19 @@
 package model;
 
 import java.awt.*;
+import java.io.File;
 import java.util.Vector;
 
 public class Pictures{
-	Vector<Pic> m_Pics;
+	public Vector<Pic> m_Pics;
 	
 	public Pictures(){
-		
+		m_Pics = new Vector<Pic>();
 	}
 	
 	//addPics soll aufgerufen werden wenn das Menü "Hinzufügen" aufgerufen wird
-	void addPics(){
-		
+	public void addPics(File file){
+		m_Pics.add(new Pic(file));
 	}
 }
-class Pic extends Component{
-	Image m_Img;
-	int[] m_Pixel;
-	
-	Pic(){
-		
-	}
-}
+
