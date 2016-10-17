@@ -8,6 +8,7 @@ import java.awt.event.*;
 import java.io.File;
 
 
+@SuppressWarnings("serial")
 public class MyFrame extends JFrame implements ActionListener{
 	private Pictures m_Pictures;
 	JPanel pa;
@@ -18,10 +19,10 @@ public class MyFrame extends JFrame implements ActionListener{
 		
 		//Inizialisierung Oberfläche
 		setLayout(new BorderLayout());
-		
 		pa = new JPanel();
 		pa.setLayout(new FlowLayout());
-		pa.add(new Button("TEST"));
+		pa.setBackground(Color.blue);
+		add(pa, BorderLayout.SOUTH);
 		
 		JMenuBar mb = new JMenuBar();
 		JMenu m = new JMenu("Datei");
@@ -42,6 +43,9 @@ public class MyFrame extends JFrame implements ActionListener{
 		
 		hin.addActionListener(e->{
 			this.newPicture();
+			getContentPane().validate();
+			getContentPane().repaint();
+			pack();
 		});
 		
 //		pack();
@@ -66,16 +70,16 @@ public class MyFrame extends JFrame implements ActionListener{
 		try{
 			MediaTracker mt = new MediaTracker(this);
 			for(int i = 0; i < m_Pictures.m_Pics.size(); ++i){
-				mt.addImage(m_Pictures.m_Pics.get(i).m_Img, 0);
+				mt.addImage(m_Pictures.m_Pics.get(i).m_Img, i);
 			}
 			mt.waitForAll();
 		}catch(InterruptedException e){}
 		
 		//Neue Pics ins Layout packen
 		for(int i = 0; i < m_Pictures.m_Pics.size(); ++i){
-//			m_Pictures.m_Pics.get(i).Mypaint(getGraphics());
-			pa.add(m_Pictures.m_Pics.get(i));
+			this.pa.add(m_Pictures.m_Pics.get(i));
+		
 		}
-		add(pa, BorderLayout.SOUTH);
+
 	}
 }

@@ -3,17 +3,19 @@ package model;
 import java.awt.*;
 import java.io.File;
 
+import javax.swing.JComponent;
+
 @SuppressWarnings("serial")
-public class Pic extends Component{
+public class Pic extends JComponent{
 	public Image m_Img;
 	int[] m_Pixel;
 	
 	Pic(File file){
-		m_Img = getToolkit().getImage(file.getAbsolutePath()).getScaledInstance(800,600, Image.SCALE_SMOOTH);
+		m_Img = getToolkit().getImage(file.getAbsolutePath()).getScaledInstance(125,75, Image.SCALE_SMOOTH);
 	}
 	
 	public void paint(Graphics g){
-		g.drawImage(m_Img, 0, 0, 125, 75, this);
+		g.drawImage(m_Img, 0, 0, getWidth(), getHeight(), this);
 	}
 	
 	public Dimension getPreferredSize(){
