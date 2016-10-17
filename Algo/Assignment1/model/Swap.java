@@ -1,11 +1,13 @@
 package model;
 
+import java.awt.*;
+
 public class Swap {
 	final int W, H;
 	int[] m_ImgPix;
 	
 	
-	Swap(int w, int h) {
+	public Swap(int w, int h) {
 		W = w;
 		H = h;
 		m_ImgPix = new int[W*H];
@@ -26,6 +28,14 @@ public class Swap {
 		for(int i = 0; i < W; ++i) {
 			m_ImgPix[i] = compPix(img1[i], img2[i], p);
 		}
+	}
+	
+	public Dimension getPreferredSize() {
+		return getMinimumSize();
+	}
+	
+	public Dimension getMinimumSize() {
+		return new Dimension(W, H);
 	}
 	
 	public int[] getNewPic() {

@@ -1,5 +1,6 @@
 package view;
 
+import model.Pic;
 import model.Pictures;
 
 import javax.swing.*;
@@ -12,6 +13,8 @@ import java.io.File;
 public class MyFrame extends JFrame implements ActionListener{
 	private Pictures m_Pictures;
 	JPanel pa;
+	Pic m_CenterImage;
+	
 	public MyFrame(Pictures pic){
 		super("");
 		//Initialisierung MVC
@@ -107,13 +110,19 @@ public class MyFrame extends JFrame implements ActionListener{
 		
 		hin.addActionListener(e->{
 			this.newPicture();
+
+			m_CenterImage = addCenterImage();
+			if(m_CenterImage != null) {
+				add(m_CenterImage, BorderLayout.CENTER);
+			}
+
 			getContentPane().validate();
 			getContentPane().repaint();
 			pack();
 		});
 		
 		start.addActionListener(e->{
-			
+			m_Pictures.startSwap();
 		});
 		
 		stop.addActionListener(e->{
@@ -139,5 +148,22 @@ public class MyFrame extends JFrame implements ActionListener{
 		lupe.addActionListener(e->{
 			
 		});
+	}
+	
+	public void update(Graphics g) {
+		paint(g);
+	}
+	
+	private Pic addCenterImage() {
+		if(m_CenterImage != m_Pictures.getCenterImage()) {
+			m_CenterImage = m_Pictures.getCenterImage();
+			m_CenterImage.setBigImage();
+		}
+
+		if(m_CenterImage == null) {
+			return null;
+		}
+
+		return m_CenterImage;
 	}
 }
