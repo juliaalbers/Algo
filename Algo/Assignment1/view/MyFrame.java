@@ -14,10 +14,10 @@ public class MyFrame extends JFrame implements ActionListener{
 	JPanel pa;
 	public MyFrame(Pictures pic){
 		super("");
-		//Inizialisierung MVC
+		//Initialisierung MVC
 		m_Pictures = pic;
 		
-		//Inizialisierung Oberfläche
+		//Initialisierung Oberfläche
 		setLayout(new BorderLayout());
 		pa = new JPanel();
 		pa.setLayout(new FlowLayout());
