@@ -11,7 +11,7 @@ import javax.swing.JComponent;
 public class Pic extends JComponent{
 	public Image m_Img;
 	public Image m_ImgBig;
-	int[] m_Pixel;
+	public final int[] m_Pixel;
 	boolean selected;
 	final int H,W;
 	
