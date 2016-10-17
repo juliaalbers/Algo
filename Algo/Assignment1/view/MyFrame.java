@@ -24,15 +24,7 @@ public class MyFrame extends JFrame implements ActionListener{
 		pa.setBackground(Color.blue);
 		add(pa, BorderLayout.SOUTH);
 		
-		JMenuBar mb = new JMenuBar();
-		JMenu m = new JMenu("Datei");
-		JMenu subm = new JMenu("Bild");
-		JMenuItem hin = new JMenuItem("Hinzufügen");
-		setJMenuBar(mb);
-		
-		mb.add(m);
-		m.add(subm);
-		subm.add(hin);
+		createMenu();
 		
 		//Event-Listener 
 		addWindowListener(new WindowAdapter(){
@@ -41,15 +33,8 @@ public class MyFrame extends JFrame implements ActionListener{
             }
         });
 		
-		hin.addActionListener(e->{
-			this.newPicture();
-			getContentPane().validate();
-			getContentPane().repaint();
-			pack();
-		});
-		
-//		pack();
-		setSize(500,500);
+		pack();
+//		setSize(500,500);
 		setVisible(true);
 	}
 		
@@ -81,5 +66,78 @@ public class MyFrame extends JFrame implements ActionListener{
 		
 		}
 
+	}
+	
+	private void createMenu() {
+		JMenuBar mb = new JMenuBar();
+		JMenu m1 = new JMenu("Bild");
+		JMenu m2 = new JMenu("Zeichnen");
+		JMenu m3 = new JMenu("Histogramm");
+		JMenu m4 = new JMenu("Lupe");
+		
+		JMenuItem hin = new JMenuItem("Hinzufügen");
+		JMenuItem start = new JMenuItem("Diashow starten");
+		JMenuItem stop = new JMenuItem("Diashow stoppen");
+		JMenuItem linien = new JMenuItem("Linien");
+		JMenuItem kreis = new JMenuItem("Kreise");
+		JRadioButtonMenuItem ausf = new JRadioButtonMenuItem("Kreise ausfüllen");
+		JMenuItem histo = new JMenuItem("Anzeigen");
+		JCheckBoxMenuItem lupe = new JCheckBoxMenuItem("Lupe an/aus");
+		
+		setJMenuBar(mb);
+		
+		mb.add(m1);
+		mb.add(m2);
+		mb.add(m3);
+		mb.add(m4);
+		
+		m1.add(hin);
+		m1.add(start);
+		m1.add(stop);
+		
+		m2.add(linien);
+		m2.add(kreis);
+		m2.addSeparator();
+		m2.add(ausf);
+		
+		m3.add(histo);
+		
+		m4.add(lupe);
+
+		
+		hin.addActionListener(e->{
+			this.newPicture();
+			getContentPane().validate();
+			getContentPane().repaint();
+			pack();
+		});
+		
+		start.addActionListener(e->{
+			
+		});
+		
+		stop.addActionListener(e->{
+			
+		});
+		
+		linien.addActionListener(e->{
+			
+		});
+		
+		kreis.addActionListener(e->{
+			
+		});
+		
+		ausf.addActionListener(e->{
+			
+		});
+		
+		histo.addActionListener(e->{
+			
+		});
+		
+		lupe.addActionListener(e->{
+			
+		});
 	}
 }
