@@ -25,8 +25,10 @@ public class MyFrame extends JFrame implements ActionListener{
 		pa = new JPanel();
 		pa.setLayout(new FlowLayout());
 		pa.setBackground(Color.blue);
-		add(pa, BorderLayout.SOUTH);
+//		add(pa, BorderLayout.SOUTH);
 		
+		JScrollPane sp = new JScrollPane(pa, JScrollPane.VERTICAL_SCROLLBAR_NEVER,JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		add(sp, BorderLayout.SOUTH);
 		createMenu();
 		
 		//Event-Listener 
@@ -37,7 +39,7 @@ public class MyFrame extends JFrame implements ActionListener{
         });
 		
 //		pack();
-		setSize(500,500);
+		setBounds(500, 200, 500, 500);
 		setVisible(true);
 	}
 		
@@ -119,7 +121,6 @@ public class MyFrame extends JFrame implements ActionListener{
 
 			getContentPane().validate();
 			getContentPane().repaint();
-			pack();
 		});
 		
 		start.addActionListener(e->{

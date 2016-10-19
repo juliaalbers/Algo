@@ -17,7 +17,6 @@ public class Pictures{
 		if(m_Pics.size() != 0) {
 			return m_Pics.get(0);
 		}
-		
 		return null;
 	}
 	
