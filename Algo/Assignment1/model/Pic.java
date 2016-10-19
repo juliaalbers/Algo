@@ -10,8 +10,8 @@ import javax.swing.JComponent;
 
 @SuppressWarnings("serial")
 public class Pic extends JComponent{
-	public Image m_Img;
-	public Image m_ImgBig;
+	Image m_Img;
+	Image m_ImgBig;
 
 	int[] m_Pixel;
 	boolean m_Selected;
@@ -78,5 +78,13 @@ public class Pic extends JComponent{
 	
 	public Dimension getPreferredSize(){
 		return new Dimension(m_Img.getWidth(this), m_Img.getHeight(this));
+	}
+	
+	public Image getImg(){
+		return m_Img;
+	}
+	
+	public Image getImgBig(){
+		return m_ImgBig;
 	}
 }

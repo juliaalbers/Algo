@@ -15,7 +15,7 @@ public class Pictures{
 		m_CenterImg = new Pic();
 	}
 	
-	public Vector<Pic>getPicVector(){
+	public Vector<Pic> getPicVector(){
 		return m_Pics;
 	}
 	
@@ -41,6 +41,7 @@ public class Pictures{
 			m_Pics.add(new Pic(file[i]));	
 		}
 		m_CenterImg.m_ImgBig = getPicVector().get(0).m_ImgBig;
+		getPicVector().get(0).m_Selected = true;
 	}
 }
 

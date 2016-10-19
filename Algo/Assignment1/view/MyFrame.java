@@ -62,7 +62,7 @@ public class MyFrame extends JFrame implements ActionListener{
 		try{
 			MediaTracker mt = new MediaTracker(this);
 			for(int i = 0; i < m_Pictures.getPicVector().size(); ++i){
-				mt.addImage(m_Pictures.getPicVector().get(i).m_Img, i);
+				mt.addImage(m_Pictures.getPicVector().get(i).getImg(), i);
 			}
 			mt.waitForAll();
 		}catch(InterruptedException e){}
