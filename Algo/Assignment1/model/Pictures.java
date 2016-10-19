@@ -5,12 +5,18 @@ import java.util.Vector;
 import model.Swap;
 
 public class Pictures{
-	public Vector<Pic> m_Pics;
+	Vector<Pic> m_Pics;
 	Swap m_Swap;
+	public Pic m_CenterImg;
 	
 	public Pictures(){
 		m_Pics = new Vector<Pic>();	
 		m_Swap = new Swap(800, 600);
+		m_CenterImg = new Pic();
+	}
+	
+	public Vector<Pic>getPicVector(){
+		return m_Pics;
 	}
 	
 	public Pic getCenterImage() {
@@ -32,9 +38,9 @@ public class Pictures{
 	//addPics soll aufgerufen werden wenn das Menü "Hinzufügen" aufgerufen wird
 	public void addPics(File[] file){
 		for(int i = 0; i < file.length; ++i){
-			m_Pics.add(new Pic(file[i]));
-			
+			m_Pics.add(new Pic(file[i]));	
 		}
+		m_CenterImg.m_ImgBig = getPicVector().get(0).m_ImgBig;
 	}
 }
 

@@ -29,6 +29,7 @@ public class MyFrame extends JFrame implements ActionListener{
 		
 		JScrollPane sp = new JScrollPane(pa, JScrollPane.VERTICAL_SCROLLBAR_NEVER,JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		add(sp, BorderLayout.SOUTH);
+		
 		createMenu();
 		
 		//Event-Listener 
@@ -60,15 +61,15 @@ public class MyFrame extends JFrame implements ActionListener{
 		//MediaTracker
 		try{
 			MediaTracker mt = new MediaTracker(this);
-			for(int i = 0; i < m_Pictures.m_Pics.size(); ++i){
-				mt.addImage(m_Pictures.m_Pics.get(i).m_Img, i);
+			for(int i = 0; i < m_Pictures.getPicVector().size(); ++i){
+				mt.addImage(m_Pictures.getPicVector().get(i).m_Img, i);
 			}
 			mt.waitForAll();
 		}catch(InterruptedException e){}
 		
 		//Neue Pics ins Layout packen
-		for(int i = 0; i < m_Pictures.m_Pics.size(); ++i){
-			this.pa.add(m_Pictures.m_Pics.get(i));
+		for(int i = 0; i < m_Pictures.getPicVector().size(); ++i){
+			this.pa.add(m_Pictures.getPicVector().get(i));
 		
 		}
 
@@ -113,11 +114,12 @@ public class MyFrame extends JFrame implements ActionListener{
 		
 		hin.addActionListener(e->{
 			this.newPicture();
-
-			m_CenterImage = addCenterImage();
-			if(m_CenterImage != null) {
-				add(m_CenterImage, BorderLayout.CENTER);
-			}
+			this.add(m_Pictures.m_CenterImg, BorderLayout.CENTER);
+			m_Pictures.m_CenterImg.setBigImage();
+//			m_CenterImage = addCenterImage();
+//			if(m_CenterImage != null) {
+//				add(m_CenterImage, BorderLayout.CENTER);
+//			}
 
 			getContentPane().validate();
 			getContentPane().repaint();
@@ -156,16 +158,16 @@ public class MyFrame extends JFrame implements ActionListener{
 		paint(g);
 	}
 	
-	private Pic addCenterImage() {
-		if(m_CenterImage != m_Pictures.getCenterImage()) {
-			m_CenterImage = m_Pictures.getCenterImage();
-			m_CenterImage.setBigImage();
-		}
-
-		if(m_CenterImage == null) {
-			return null;
-		}
-
-		return m_CenterImage;
-	}
+//	private Pic addCenterImage() {
+//		if(m_CenterImage != m_Pictures.getCenterImage()) {
+//			m_CenterImage = m_Pictures.getCenterImage();
+//			m_CenterImage.setBigImage();
+//		}
+//
+//		if(m_CenterImage == null) {
+//			return null;
+//		}
+//
+//		return m_CenterImage;
+//	}
 }
