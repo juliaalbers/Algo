@@ -31,8 +31,11 @@ public class Pictures{
 	}
 	
 	//addPics soll aufgerufen werden wenn das Menü "Hinzufügen" aufgerufen wird
-	public void addPics(File file){
-		m_Pics.add(new Pic(file));
+	public void addPics(File[] file){
+		for(int i = 0; i < file.length; ++i){
+			m_Pics.add(new Pic(file[i]));
+			
+		}
 	}
 }
 

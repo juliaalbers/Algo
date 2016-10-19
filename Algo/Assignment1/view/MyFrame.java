@@ -36,8 +36,8 @@ public class MyFrame extends JFrame implements ActionListener{
             }
         });
 		
-		pack();
-//		setSize(500,500);
+//		pack();
+		setSize(500,500);
 		setVisible(true);
 	}
 		
@@ -49,10 +49,11 @@ public class MyFrame extends JFrame implements ActionListener{
 		//JFileChooser 
 		JFileChooser fc = new JFileChooser();
 		fc.setCurrentDirectory(new File("C:\\Users\\Julia\\Documents\\Pictures"));
+		fc.setMultiSelectionEnabled(true);
 		int result = fc.showOpenDialog(this);
 		
 		if(result == JFileChooser.APPROVE_OPTION){
-			m_Pictures.addPics(fc.getSelectedFile());	//neues Pic mit ausgesuchtem File
+			m_Pictures.addPics(fc.getSelectedFiles());	//neues Pic mit ausgesuchtem File
 		}
 		//MediaTracker
 		try{

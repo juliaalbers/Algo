@@ -12,13 +12,10 @@ import javax.swing.JComponent;
 public class Pic extends JComponent{
 	public Image m_Img;
 	public Image m_ImgBig;
-<<<<<<< HEAD
+
 	int[] m_Pixel;
 	boolean m_Selected;
-=======
-	public final int[] m_Pixel;
-	boolean selected;
->>>>>>> branch 'master' of https://github.com/juliaalbers/Algo
+
 	final int H,W;
 	MemoryImageSource m_MSrc;
 	boolean m_Big;
@@ -63,13 +60,14 @@ public class Pic extends JComponent{
 			g.drawImage(m_ImgBig, 0, 0, getWidth(), getHeight(), this);
 		} else {
 			g.drawImage(m_Img, 0, 0, 125, 75, this);
-		}
-		g.setColor(Color.red);
-		if(m_Selected){
-			for(int i = 0; i < 5; ++i){
-				g.drawRect(i, i, 124-2*i, 74-2*i);
+			g.setColor(Color.red);
+			if(m_Selected){
+				for(int i = 0; i < 5; ++i){
+					g.drawRect(i, i, 124-2*i, 74-2*i);
+				}
 			}
 		}
+		
 	
 	}
 	
