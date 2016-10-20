@@ -7,23 +7,40 @@ import model.Swap;
 public class Pictures{
 	Vector<Pic> m_Pics;
 	Swap m_Swap;
-	public Pic m_CenterImg;
+	Pic m_CenterImg;
+	int m_CurrentCenterImg;
 	
 	public Pictures(){
 		m_Pics = new Vector<Pic>();	
 		m_Swap = new Swap(800, 600);
 		m_CenterImg = new Pic();
+		m_CurrentCenterImg = 0;
 	}
 	
 	public Vector<Pic> getPicVector(){
 		return m_Pics;
 	}
 	
-	public Pic getCenterImage() {
-		if(m_Pics.size() != 0) {
-			return m_Pics.get(0);
+	public int getCurrentCenterImg(){
+		return m_CurrentCenterImg;
+	}
+	
+	public void nextCenterImg(){
+//		while(m_Pics.get(m_CurrentCenterImg+1).m_Selected == false){
+//			m_CurrentCenterImg++;
+//		}
+		if(m_CurrentCenterImg < m_Pics.size()-1){
+			m_CurrentCenterImg++;
+		}else{
+			m_CurrentCenterImg = 0;
 		}
-		return null;
+	}
+	
+	public Pic getCenterImage() {
+//		if(m_Pics.size() != 0) {
+			return m_CenterImg;
+//		}
+//		return null;
 	}
 	
 	public void startSwap() {
@@ -35,12 +52,17 @@ public class Pictures{
 		}
 	}
 	
+	public void changeCenterImg(Pic pic){
+		m_CenterImg.m_ImgBig = pic.m_ImgBig;
+		
+	}
+	
 	//addPics soll aufgerufen werden wenn das Menü "Hinzufügen" aufgerufen wird
 	public void addPics(File[] file){
 		for(int i = 0; i < file.length; ++i){
 			m_Pics.add(new Pic(file[i]));	
 		}
-		m_CenterImg.m_ImgBig = getPicVector().get(0).m_ImgBig;
+//		m_CenterImg.m_ImgBig = getPicVector().get(0).m_ImgBig;
 		getPicVector().get(0).m_Selected = true;
 	}
 }

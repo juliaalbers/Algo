@@ -25,7 +25,9 @@ public class MyFrame extends JFrame implements ActionListener{
 		pa = new JPanel();
 		pa.setLayout(new FlowLayout());
 		pa.setBackground(Color.blue);
-//		add(pa, BorderLayout.SOUTH);
+		
+		this.add(m_Pictures.getCenterImage(), BorderLayout.CENTER);
+		m_Pictures.getCenterImage().setBigImage();
 		
 		JScrollPane sp = new JScrollPane(pa, JScrollPane.VERTICAL_SCROLLBAR_NEVER,JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		add(sp, BorderLayout.SOUTH);
@@ -39,7 +41,6 @@ public class MyFrame extends JFrame implements ActionListener{
             }
         });
 		
-//		pack();
 		setBounds(500, 200, 500, 500);
 		setVisible(true);
 	}
@@ -91,6 +92,8 @@ public class MyFrame extends JFrame implements ActionListener{
 		JMenuItem histo = new JMenuItem("Anzeigen");
 		JCheckBoxMenuItem lupe = new JCheckBoxMenuItem("Lupe an/aus");
 		
+		JMenuItem weiter = new JMenuItem("Weiter");
+		
 		setJMenuBar(mb);
 		
 		mb.add(m1);
@@ -101,6 +104,8 @@ public class MyFrame extends JFrame implements ActionListener{
 		m1.add(hin);
 		m1.add(start);
 		m1.add(stop);
+		
+		m1.add(weiter);
 		
 		m2.add(linien);
 		m2.add(kreis);
@@ -114,8 +119,9 @@ public class MyFrame extends JFrame implements ActionListener{
 		
 		hin.addActionListener(e->{
 			this.newPicture();
-			this.add(m_Pictures.m_CenterImg, BorderLayout.CENTER);
-			m_Pictures.m_CenterImg.setBigImage();
+
+		
+			m_Pictures.changeCenterImg(m_Pictures.getPicVector().get(m_Pictures.getCurrentCenterImg()));
 //			m_CenterImage = addCenterImage();
 //			if(m_CenterImage != null) {
 //				add(m_CenterImage, BorderLayout.CENTER);
@@ -151,6 +157,12 @@ public class MyFrame extends JFrame implements ActionListener{
 		
 		lupe.addActionListener(e->{
 			
+		});
+		
+		weiter.addActionListener(e->{
+			m_Pictures.nextCenterImg();
+			m_Pictures.changeCenterImg(m_Pictures.getPicVector().get(m_Pictures.getCurrentCenterImg()));
+			repaint();
 		});
 	}
 	
