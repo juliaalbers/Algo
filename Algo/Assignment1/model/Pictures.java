@@ -4,17 +4,43 @@ import java.io.File;
 import java.util.Vector;
 import model.Swap;
 
+import java.util.Arrays;
+
 public class Pictures{
 	Vector<Pic> m_Pics;
 	Swap m_Swap;
 	Pic m_CenterImg;
 	int m_CurrentCenterImg;
+	Vector<int[]> m_Colors;
 	
 	public Pictures(){
 		m_Pics = new Vector<Pic>();	
 		m_Swap = new Swap(800, 600);
-		m_CenterImg = new Pic();
+		m_CenterImg = new Pic(null);
 		m_CurrentCenterImg = 0;
+		m_Colors = new Vector<int[]>();
+	}
+	
+	public void calcColor(Pic pic){
+		int[] pixel = new int[50*20];
+		pixel = pic.getPixel();
+		Arrays.sort(pixel);
+		//Vector m_Color füllen
+		int[] tmp = {pixel[0],1};
+		m_Colors.add(tmp);
+		for(int i = 1;i < pixel.length; ++i){
+			if(tmp[0] == pixel[i]){
+				m_Colors.lastElement()[1] += 1;
+			}else{
+				tmp[0] = pixel[i];
+				tmp[1] = 1;
+				m_Colors.add(tmp);
+			}
+		}
+	}
+	
+	public Vector<int[]> getColors(){
+		return m_Colors;
 	}
 	
 	public Vector<Pic> getPicVector(){
@@ -54,6 +80,7 @@ public class Pictures{
 	
 	public void changeCenterImg(Pic pic){
 		m_CenterImg.m_ImgBig = pic.m_ImgBig;
+		m_CenterImg.m_Pixel = pic.m_Pixel;
 		
 	}
 	

@@ -21,8 +21,8 @@ public class Pic extends JComponent{
 	boolean m_Big;
 	
 	Pic(File file){
-		W = 800;
-		H = 600;
+		W = 50;
+		H = 20;
 		m_Selected = false;
 		m_Big = false;
 		if(null != file){
@@ -52,9 +52,6 @@ public class Pic extends JComponent{
 		});
 	}
 	
-	Pic(){
-		this(null);
-	}
 	
 	public void setBigImage() {
 		m_Big = !m_Big;
@@ -86,5 +83,9 @@ public class Pic extends JComponent{
 	
 	public Image getImgBig(){
 		return m_ImgBig;
+	}
+	
+	public int[] getPixel(){
+		return m_Pixel;
 	}
 }

@@ -152,6 +152,34 @@ public class MyFrame extends JFrame implements ActionListener{
 		});
 		
 		histo.addActionListener(e->{
+//			if(m_CenterImage != null) {
+				m_Pictures.calcColor(m_Pictures.getCenterImage());
+				
+				JFrame dia = new JFrame();
+				dia.setBounds(400, 400, 400, 400);
+				JScrollPane sp = new JScrollPane();
+				JPanel p = new JPanel();
+				p.setLayout(new FlowLayout());
+				
+				System.out.println(String.valueOf(m_Pictures.getColors().get(0)[1]));	
+				for(int i = 0; i < m_Pictures.getColors().size(); ++i) {
+					JTextField t = new JTextField(20);
+					JTextField t2 = new JTextField(20);
+					JTextField t3= new JTextField(20);
+					t.setText(String.valueOf(m_Pictures.getColors().get(i)[0]));
+					t2.setText(String.valueOf(m_Pictures.getColors().get(i)[1]));
+					t3.setText("Fick deine Mutter");
+					p.add(t);
+					p.add(t2);
+					p.add(t3);
+				}
+				
+				
+				p.setBackground(new Color(m_Pictures.getColors().get(0)[0]));
+				sp.add(p);
+				dia.add(p);
+				dia.setVisible(true);
+//			}
 			
 		});
 		
