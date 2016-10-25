@@ -13,7 +13,6 @@ import java.io.File;
 public class MyFrame extends JFrame implements ActionListener{
 	private Pictures m_Pictures;
 	JPanel pa;
-	Pic m_CenterImage;
 	
 	public MyFrame(Pictures pic){
 		super("");
@@ -152,17 +151,21 @@ public class MyFrame extends JFrame implements ActionListener{
 		});
 		
 		histo.addActionListener(e->{
-//			if(m_CenterImage != null) {
+			if(m_Pictures.getCenterImage() != null) {
 				m_Pictures.calcColor(m_Pictures.getCenterImage());
 				
 				JFrame dia = new JFrame();
 				dia.setBounds(400, 400, 400, 400);
-				JScrollPane sp = new JScrollPane();
-				JPanel p = new JPanel();
-				p.setLayout(new FlowLayout());
 				
-				System.out.println(String.valueOf(m_Pictures.getColors().get(0)[1]));	
+				JPanel p = new JPanel();
+				JScrollPane sp = new JScrollPane(p);
+				p.setLayout(new GridLayout(0,3));
+				
+					
 				for(int i = 0; i < m_Pictures.getColors().size(); ++i) {
+					
+//					System.out.println(String.valueOf(m_Pictures.getColors().get(i)[0]));
+					
 					JTextField t = new JTextField(20);
 					JTextField t2 = new JTextField(20);
 					JTextField t3= new JTextField(20);
@@ -176,10 +179,9 @@ public class MyFrame extends JFrame implements ActionListener{
 				
 				
 				p.setBackground(new Color(m_Pictures.getColors().get(0)[0]));
-				sp.add(p);
-				dia.add(p);
+				dia.add(sp);
 				dia.setVisible(true);
-//			}
+			}
 			
 		});
 		
