@@ -21,8 +21,8 @@ public class Pic extends JComponent{
 	boolean m_Big;
 	
 	Pic(File file){
-		W = 10;
-		H = 5;
+		W = 800;
+		H = 600;
 		m_Selected = false;
 		m_Big = false;
 		if(null != file){

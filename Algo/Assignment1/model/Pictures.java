@@ -22,9 +22,10 @@ public class Pictures{
 	}
 	
 	public void calcColor(Pic pic){
-		int[] pixel = new int[10*5];
+		int[] pixel = new int[m_Pics.get(0).W * m_Pics.get(0).H];
 		pixel = pic.getPixel();
 		Arrays.sort(pixel);
+		
 		//Vector m_Color füllen
 		int[] tmp = {pixel[0],1};
 		m_Colors.add(tmp);
@@ -32,10 +33,10 @@ public class Pictures{
 			if(tmp[0] == pixel[i]){
 				m_Colors.lastElement()[1] += 1;
 			}else{
-				int []tmp1 = new int[2];
-				tmp1[0] = pixel[i];
-				tmp1[1] = 1;
-				m_Colors.add(tmp1);
+				tmp = new int[2];
+				tmp[0] = pixel[i];
+				tmp[1] = 1;
+				m_Colors.add(tmp);
 			}
 		}
 		
