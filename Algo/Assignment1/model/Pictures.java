@@ -18,7 +18,7 @@ public class Pictures{
 		m_Swap = new Swap(800, 600);
 		m_CenterImg = new Pic(null);
 		m_CurrentCenterImg = 0;
-		m_Colors = new Vector<int[]>();
+		m_Colors = new Vector<int[]>(100,10000);
 	}
 	
 	public void calcColor(Pic pic){
@@ -63,6 +63,11 @@ public class Pictures{
 		}else{
 			m_CurrentCenterImg = 0;
 		}
+		
+		if(m_Pics.get(getCurrentCenterImg()).m_Selected == false){
+			nextCenterImg();
+		}
+		
 	}
 	
 	public Pic getCenterImage() {
