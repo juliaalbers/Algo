@@ -26,6 +26,9 @@ public class Pictures{
 		pixel = pic.getPixel();
 		Arrays.sort(pixel);
 		
+		//Vector löschen
+		m_Colors.clear();
+		
 		//Vector m_Color füllen
 		int[] tmp = {pixel[0],1};
 		m_Colors.add(tmp);

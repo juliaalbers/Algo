@@ -159,46 +159,17 @@ public class MyFrame extends JFrame implements ActionListener{
 				JTextArea ta = new JTextArea(1,m_Pictures.getColors().size());
 				JScrollPane sp = new JScrollPane(ta, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 				ta.setEditable(false);
+				ta.setText(""); //löschen 
 				
 				for(int i = 0; i < m_Pictures.getColors().size(); ++i){
 					String text = "Die Farbe " + m_Pictures.getColors().get(i)[0] + " ist " + m_Pictures.getColors().get(i)[1] + "-mal im Bild enthalten." ;
 					ta.append(text + "\n");
 				}
 				
-				
-				
-				
-
-				
 				JDialog dia = new JDialog();
 				dia.setBounds(400, 400, 400, 400);
 				dia.add(sp);
 				dia.setVisible(true);
-//				
-//				JPanel p = new JPanel();
-//				JScrollPane sp = new JScrollPane(p);
-//				p.setLayout(new GridLayout(0,3));
-//				
-//					
-//				for(int i = 0; i < m_Pictures.getColors().size(); ++i) {
-//					
-//					System.out.println(i);
-//					
-//					JTextField t = new JTextField(20);
-//					JTextField t2 = new JTextField(20);
-//					JTextField t3= new JTextField(20);
-//					t.setText(String.valueOf(m_Pictures.getColors().get(i)[0]));
-//					t2.setText(String.valueOf(m_Pictures.getColors().get(i)[1]));
-//					t3.setText("Fick deine Mutter");
-//					p.add(t);
-//					p.add(t2);
-//					p.add(t3);
-//				}
-//				
-//				
-//				p.setBackground(new Color(m_Pictures.getColors().get(0)[0]));
-//				dia.add(sp);
-//				dia.setVisible(true);
 			}
 			
 		});
@@ -217,17 +188,4 @@ public class MyFrame extends JFrame implements ActionListener{
 	public void update(Graphics g) {
 		paint(g);
 	}
-	
-//	private Pic addCenterImage() {
-//		if(m_CenterImage != m_Pictures.getCenterImage()) {
-//			m_CenterImage = m_Pictures.getCenterImage();
-//			m_CenterImage.setBigImage();
-//		}
-//
-//		if(m_CenterImage == null) {
-//			return null;
-//		}
-//
-//		return m_CenterImage;
-//	}
 }
