@@ -76,6 +76,7 @@ public class Pic extends JComponent{
 				}
 			}
 		}
+		System.out.println("Neu gezeichnet!");
 		
 	
 	}

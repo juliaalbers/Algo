@@ -15,6 +15,7 @@ public class Pictures{
 	Pic m_CenterImg;
 	int m_CurrentCenterImg;
 	Vector<int[]> m_Colors;
+	boolean m_LensOn;
 	
 	
 	public Pictures(){
@@ -27,14 +28,14 @@ public class Pictures{
 		
 		m_CenterImg.addMouseMotionListener(new MouseMotionAdapter(){
 			public void mouseMoved(MouseEvent e){
-//				if(lupe.getState()) {
+				if(m_LensOn) {
 					
 					getCenterImage().setPixel(getLens().lens(e.getPoint(), getCenterImage().getPixel(), getPicVector().get(getnextImg(getCurrentCenterImg())).getPixel(),
 							getCenterImage().getPixel()));
 					getCenterImage().getMemoryImgSrc().newPixels();
 					m_CenterImg.validate();
 					m_CenterImg.repaint();
-//				}
+				}
 			}	
 		});
 		
@@ -63,6 +64,10 @@ public class Pictures{
 		}
 		
 
+	}
+	
+	public void setLensOn() {
+		 m_LensOn = !m_LensOn;
 	}
 	
 	public Lens getLens() {

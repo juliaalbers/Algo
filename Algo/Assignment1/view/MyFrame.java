@@ -176,7 +176,7 @@ public class MyFrame extends JFrame implements ActionListener{
 		});
 		
 		lupe.addActionListener(e->{
-			m_Pictures.startLens();
+			m_Pictures.setLensOn();
 		});
 		
 //		addMouseMotionListener(new MouseMotionAdapter(){
