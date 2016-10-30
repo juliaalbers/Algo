@@ -2,16 +2,21 @@ package view;
 
 import model.Pic;
 import model.Pictures;
+import model.RunShuffle;
+import model.Swap;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
+import java.util.Vector;
 
 
 @SuppressWarnings("serial")
 public class MyFrame extends JFrame implements ActionListener{
 	private Pictures m_Pictures;
+	Swap m_Swap;
+	RunShuffle m_Rs;
 	JPanel pa;
 	
 	public MyFrame(Pictures pic){
@@ -19,7 +24,7 @@ public class MyFrame extends JFrame implements ActionListener{
 		//Initialisierung MVC
 		m_Pictures = pic;
 		
-		//Initialisierung Oberfläche
+		//Initialisierung Oberflï¿½che
 		setLayout(new BorderLayout());
 		pa = new JPanel();
 		pa.setLayout(new FlowLayout());
@@ -49,6 +54,7 @@ public class MyFrame extends JFrame implements ActionListener{
 	}
 	
 	private void newPicture(){
+		
 		//JFileChooser 
 		JFileChooser fc = new JFileChooser();
 		fc.setCurrentDirectory(new File("C:\\Users\\Julia\\Documents\\Pictures"));
@@ -75,6 +81,28 @@ public class MyFrame extends JFrame implements ActionListener{
 
 	}
 	
+	public void startSwap() {
+		Vector<Pic> pv = m_Pictures.getPicVector();
+		for(int i = 1; i < pv.size(); ++i) {
+			if(pv.get(i).m_Selected == true) {
+				m_Swap = new Swap(800, 600, pv.get(i).getPixel(), m_Pictures.getCenterImage().getPixel());
+				Thread t = new Thread(new Runnable() {
+		            @Override
+		            public void run(){
+		            	try {
+		            		m_Swap.setPics(m_Pictures);
+			            	for(int j = 0; j <= 100; j += 2) {
+								m_Swap.shuffle(j);
+								Thread.sleep(20);
+							}
+		            	} catch(InterruptedException e) {}
+		            }
+		        });
+				t.start();
+			}
+		}
+	}
+	
 	private void createMenu() {
 		JMenuBar mb = new JMenuBar();
 		JMenu m1 = new JMenu("Bild");
@@ -82,12 +110,12 @@ public class MyFrame extends JFrame implements ActionListener{
 		JMenu m3 = new JMenu("Histogramm");
 		JMenu m4 = new JMenu("Lupe");
 		
-		JMenuItem hin = new JMenuItem("Hinzufügen");
+		JMenuItem hin = new JMenuItem("Hinzufï¿½gen");
 		JMenuItem start = new JMenuItem("Diashow starten");
 		JMenuItem stop = new JMenuItem("Diashow stoppen");
 		JMenuItem linien = new JMenuItem("Linien");
 		JMenuItem kreis = new JMenuItem("Kreise");
-		JRadioButtonMenuItem ausf = new JRadioButtonMenuItem("Kreise ausfüllen");
+		JRadioButtonMenuItem ausf = new JRadioButtonMenuItem("Kreise ausfï¿½llen");
 		JMenuItem histo = new JMenuItem("Anzeigen");
 		JCheckBoxMenuItem lupe = new JCheckBoxMenuItem("Lupe an/aus");
 		
@@ -131,7 +159,7 @@ public class MyFrame extends JFrame implements ActionListener{
 		});
 		
 		start.addActionListener(e->{
-			m_Pictures.startSwap();
+			startSwap();
 		});
 		
 		stop.addActionListener(e->{
@@ -159,7 +187,7 @@ public class MyFrame extends JFrame implements ActionListener{
 				JTextArea ta = new JTextArea(1,m_Pictures.getColors().size());
 				JScrollPane sp = new JScrollPane(ta, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 				ta.setEditable(false);
-				ta.setText(""); //löschen 
+				ta.setText(""); //lï¿½schen 
 				
 				for(int i = 0; i < m_Pictures.getColors().size(); ++i){
 					String text = "Die Farbe " + m_Pictures.getColors().get(i)[0] + " ist " + m_Pictures.getColors().get(i)[1] + "-mal im Bild enthalten." ;
@@ -183,6 +211,7 @@ public class MyFrame extends JFrame implements ActionListener{
 			m_Pictures.changeCenterImg(m_Pictures.getPicVector().get(m_Pictures.getCurrentCenterImg()));
 			repaint();
 		});
+		
 	}
 	
 	public void update(Graphics g) {

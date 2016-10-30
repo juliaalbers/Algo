@@ -12,10 +12,10 @@ public class Pictures{
 	Pic m_CenterImg;
 	int m_CurrentCenterImg;
 	Vector<int[]> m_Colors;
+	RunShuffle m_Rs;
 	
 	public Pictures(){
 		m_Pics = new Vector<Pic>();	
-		m_Swap = new Swap(800, 600);
 		m_CenterImg = new Pic(null);
 		m_CurrentCenterImg = 0;
 		m_Colors = new Vector<int[]>(100,10000);
@@ -26,10 +26,10 @@ public class Pictures{
 		pixel = pic.getPixel();
 		Arrays.sort(pixel);
 		
-		//Vector löschen
+		//Vector lï¿½schen
 		m_Colors.clear();
 		
-		//Vector m_Color füllen
+		//Vector m_Color fï¿½llen
 		int[] tmp = {pixel[0],1};
 		m_Colors.add(tmp);
 		for(int i = 1;i < pixel.length; ++i){
@@ -81,13 +81,9 @@ public class Pictures{
 //		return null;
 	}
 	
-	public void startSwap() {
-		for(int i = 0; i < m_Pics.size(); ++i) {
-			if(m_Pics.get(i).m_Selected == true) {
-				m_Swap.shuffle(50, m_Pics.get(i).m_Pixel, getCenterImage().m_Pixel);
-				m_Pics.get(0).m_Pixel = m_Swap.getNewPic();
-			}
-		}
+	public void setCenterImagePixel(int[] p) {
+		m_CenterImg.m_Pixel = p;
+		m_CenterImg.newPixel();
 	}
 	
 	public void changeCenterImg(Pic pic){
@@ -96,7 +92,7 @@ public class Pictures{
 		
 	}
 	
-	//addPics soll aufgerufen werden wenn das Menü "Hinzufügen" aufgerufen wird
+	//addPics soll aufgerufen werden wenn das Menï¿½ "Hinzufï¿½gen" aufgerufen wird
 	public void addPics(File[] file){
 		for(int i = 0; i < file.length; ++i){
 			m_Pics.add(new Pic(file[i]));	
