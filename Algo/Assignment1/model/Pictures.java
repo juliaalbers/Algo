@@ -15,7 +15,6 @@ public class Pictures{
 	Pic m_CenterImg;
 	int m_CurrentCenterImg;
 	Vector<int[]> m_Colors;
-	RunShuffle m_Rs;
 	boolean m_LensOn;
 	
 	

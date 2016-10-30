@@ -2,7 +2,6 @@ package view;
 
 import model.Pic;
 import model.Pictures;
-import model.RunShuffle;
 import model.Swap;
 
 import javax.swing.*;
@@ -16,7 +15,6 @@ import java.util.Vector;
 public class MyFrame extends JFrame implements ActionListener{
 	private Pictures m_Pictures;
 	Swap m_Swap;
-	RunShuffle m_Rs;
 	JPanel pa;
 	
 	public MyFrame(Pictures pic){
