@@ -40,6 +40,8 @@ public class MyFrame extends JFrame implements ActionListener{
             }
         });
 		
+		
+		
 		setBounds(500, 200, 500, 500);
 		setVisible(true);
 	}
@@ -72,7 +74,6 @@ public class MyFrame extends JFrame implements ActionListener{
 			this.pa.add(m_Pictures.getPicVector().get(i));
 		
 		}
-
 	}
 	
 	private void createMenu() {
@@ -175,8 +176,20 @@ public class MyFrame extends JFrame implements ActionListener{
 		});
 		
 		lupe.addActionListener(e->{
-			
+			m_Pictures.startLens();
 		});
+		
+//		addMouseMotionListener(new MouseMotionAdapter(){
+//			public void mouseMoved(MouseEvent e){
+//				if(lupe.getState()) {
+//					
+//					m_Pictures.getCenterImage().setPixel(m_Pictures.getLens().lens(e.getPoint(), m_Pictures.getCenterImage().getPixel(), m_Pictures.getPicVector().get(m_Pictures.getnextImg(m_Pictures.getCurrentCenterImg())).getPixel(),
+//							m_Pictures.getCenterImage().getPixel()));
+//					m_Pictures.getCenterImage().getMemoryImgSrc().newPixels();
+//					repaint();
+//				}
+//			}	
+//		});
 		
 		weiter.addActionListener(e->{
 			m_Pictures.nextCenterImg();

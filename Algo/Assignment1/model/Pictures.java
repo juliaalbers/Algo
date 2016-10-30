@@ -1,5 +1,7 @@
 package model;
 
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
 import java.io.File;
 import java.util.Vector;
 import model.Swap;
@@ -9,18 +11,35 @@ import java.util.Arrays;
 public class Pictures{
 	Vector<Pic> m_Pics;
 	Swap m_Swap;
+	Lens m_Lens;
 	Pic m_CenterImg;
 	int m_CurrentCenterImg;
 	Vector<int[]> m_Colors;
 	
+	
 	public Pictures(){
 		m_Pics = new Vector<Pic>();	
 		m_Swap = new Swap(800, 600);
+		m_Lens = new Lens(800,600);
 		m_CenterImg = new Pic(null);
 		m_CurrentCenterImg = 0;
 		m_Colors = new Vector<int[]>(100,10000);
+		
+		m_CenterImg.addMouseMotionListener(new MouseMotionAdapter(){
+			public void mouseMoved(MouseEvent e){
+//				if(lupe.getState()) {
+					
+					getCenterImage().setPixel(getLens().lens(e.getPoint(), getCenterImage().getPixel(), getPicVector().get(getnextImg(getCurrentCenterImg())).getPixel(),
+							getCenterImage().getPixel()));
+					getCenterImage().getMemoryImgSrc().newPixels();
+					m_CenterImg.validate();
+					m_CenterImg.repaint();
+//				}
+			}	
+		});
+		
 	}
-	
+	// Für das Histogramm
 	public void calcColor(Pic pic){
 		int[] pixel = new int[m_Pics.get(0).W * m_Pics.get(0).H];
 		pixel = pic.getPixel();
@@ -43,7 +62,11 @@ public class Pictures{
 			}
 		}
 		
-		System.out.println(pic.getPixel()[0]);
+
+	}
+	
+	public Lens getLens() {
+		return m_Lens;
 	}
 	
 	public Vector<int[]> getColors(){
@@ -70,8 +93,24 @@ public class Pictures{
 		
 		if(m_Pics.get(getCurrentCenterImg()).m_Selected == false){
 			nextCenterImg();
+		}	
+	}
+	
+	public int getnextImg(int current) {
+		int next = current;
+
+		
+		if(current < m_Pics.size()-1){
+			next++;
+		}else{
+			next = 0;
 		}
 		
+		if(m_Pics.get(next).m_Selected == false){
+			return getnextImg(next);
+		}else {
+			return next;
+		}
 	}
 	
 	public Pic getCenterImage() {
@@ -88,6 +127,11 @@ public class Pictures{
 				m_Pics.get(0).m_Pixel = m_Swap.getNewPic();
 			}
 		}
+	}
+	
+	public void startLens() {
+		//Bedingung: Keine Diashow
+		
 	}
 	
 	public void changeCenterImg(Pic pic){

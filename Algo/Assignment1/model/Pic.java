@@ -25,20 +25,21 @@ public class Pic extends JComponent{
 		H = 600;
 		m_Selected = false;
 		m_Big = false;
+		m_Pixel = new int[W * H];
 		if(null != file){
 			m_ImgBig = getToolkit().getImage(file.getAbsolutePath()).getScaledInstance(W,H, Image.SCALE_SMOOTH);
 			m_Img = m_ImgBig.getScaledInstance(125, 75, Image.SCALE_SMOOTH);
 		
-			m_Pixel = new int[W * H];
+			
 			PixelGrabber grab = new PixelGrabber(m_ImgBig,0,0, W,H, m_Pixel, 0,W);
 			try {
 				grab.grabPixels();
 			} catch (InterruptedException e) {}
-			
-			m_MSrc = new MemoryImageSource(W, H, m_Pixel, 0, W);
-			m_MSrc.setAnimated(true);
-			m_ImgBig = createImage(m_MSrc);
-		}
+		}	
+		m_MSrc = new MemoryImageSource(W, H, m_Pixel, 0, W);
+		m_MSrc.setAnimated(true);
+		m_ImgBig = createImage(m_MSrc);
+		
 		
 		addMouseListener(new MouseAdapter(){
 			public void mouseReleased(MouseEvent e){
@@ -50,11 +51,17 @@ public class Pic extends JComponent{
 				repaint();
 			}
 		});
+		
+		
 	}
 	
 	
 	public void setBigImage() {
 		m_Big = !m_Big;
+	}
+	
+	public MemoryImageSource getMemoryImgSrc() {
+		return m_MSrc;
 	}
 	
 	public void paint(Graphics g){
@@ -88,4 +95,10 @@ public class Pic extends JComponent{
 	public int[] getPixel(){
 		return m_Pixel;
 	}
+	
+	public void setPixel(int[] newPix) {
+		m_Pixel = newPix;
+		
+	}
+	
 }

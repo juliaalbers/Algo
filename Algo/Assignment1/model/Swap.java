@@ -2,7 +2,7 @@ package model;
 
 import java.awt.*;
 
-public class Swap {
+public class Swap extends Component{
 	final int W, H;
 	int[] m_ImgPix;
 	
@@ -17,7 +17,7 @@ public class Swap {
 		return x1+(x2-x1)*p/100;
 	}
 	
-	private int compPix(int pix1, int pix2, int p) {
+	protected int compPix(int pix1, int pix2, int p) {
 		final int RED = compColor((pix1 >> 16) & 0xff, (pix2 >> 16) & 0xff, p);
 		final int GREEN = compColor((pix1 >> 8) & 0xff, (pix2 >> 8) & 0xff, p);
 		final int BLUE = compColor(pix1 & 0xff, pix2 & 0xff, p);
