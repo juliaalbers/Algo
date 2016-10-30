@@ -83,7 +83,7 @@ public class MyFrame extends JFrame implements ActionListener{
 	public void startSwap() {
 		Vector<Pic> pv = m_Pictures.getPicVector();
 		for(int i = 1; i < pv.size(); ++i) {
-			if(pv.get(i).m_Selected == true) {
+			if(pv.get(i).getSelected() == true) {
 				m_Swap = new Swap(800, 600, pv.get(i).getPixel(), m_Pictures.getCenterImage().getPixel());
 				Thread t = new Thread(new Runnable() {
 		            @Override
@@ -109,7 +109,7 @@ public class MyFrame extends JFrame implements ActionListener{
 		JMenu m3 = new JMenu("Histogramm");
 		JMenu m4 = new JMenu("Lupe");
 		
-		JMenuItem hin = new JMenuItem("Hinzufï¿½gen");
+		JMenuItem hin = new JMenuItem("Hinzufügen");
 		JMenuItem start = new JMenuItem("Diashow starten");
 		JMenuItem stop = new JMenuItem("Diashow stoppen");
 		JMenuItem linien = new JMenuItem("Linien");

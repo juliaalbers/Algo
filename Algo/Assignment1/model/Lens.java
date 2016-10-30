@@ -8,7 +8,7 @@ import java.awt.event.MouseMotionAdapter;
 public class Lens extends Swap {
 
 	public Lens(int w, int h){
-		super(w,h);
+		super(w,h, null, null);
 		
 		//evtl in MyFrame auslagern???--------------------------------------
 //		addMouseMotionListener(new MouseMotionAdapter(){

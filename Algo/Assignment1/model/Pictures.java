@@ -126,7 +126,7 @@ public class Pictures{
 	
 	public void setCenterImagePixel(int[] p) {
 		m_CenterImg.m_Pixel = p;
-		m_CenterImg.newPixel();
+		m_CenterImg.getMemoryImgSrc().newPixels();
 	}
 	
 	public void startLens() {

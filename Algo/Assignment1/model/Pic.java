@@ -14,7 +14,7 @@ public class Pic extends JComponent{
 	Image m_ImgBig;
 
 	int[] m_Pixel;
-	public boolean m_Selected;
+	boolean m_Selected;
 
 	final int H,W;
 	MemoryImageSource m_MSrc;
@@ -35,8 +35,7 @@ public class Pic extends JComponent{
 			try {
 				grab.grabPixels();
 			} catch (InterruptedException e) {}
-		}
-
+		}	
 		m_MSrc = new MemoryImageSource(W, H, m_Pixel, 0, W);
 		m_MSrc.setAnimated(true);
 		m_ImgBig = createImage(m_MSrc);
@@ -52,11 +51,8 @@ public class Pic extends JComponent{
 				repaint();
 			}
 		});
-	}
-	
-	public void newPixel() {
-		m_MSrc.newPixels();
-		repaint();
+		
+		
 	}
 	
 	
@@ -80,6 +76,9 @@ public class Pic extends JComponent{
 				}
 			}
 		}
+		System.out.println("Neu gezeichnet!");
+		
+	
 	}
 	
 	public Dimension getPreferredSize(){
@@ -99,8 +98,11 @@ public class Pic extends JComponent{
 	}
 	
 	public void setPixel(int[] newPix) {
-		m_Pixel = newPix;
-		
+			m_Pixel = newPix;	
+	}
+	
+	public boolean getSelected() {
+		return m_Selected;
 	}
 	
 }
