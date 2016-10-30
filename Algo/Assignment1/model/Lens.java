@@ -9,17 +9,16 @@ public class Lens extends Swap {
 
 	public Lens(int w, int h){
 		super(w,h, null, null);
-		
-		//evtl in MyFrame auslagern???--------------------------------------
-//		addMouseMotionListener(new MouseMotionAdapter(){
-//			public void mouseMoved(MouseEvent e){
-//				lens(e.getPoint());
-//			}
-//			
-//		});
-		
-		//-----------------------------------------------------------------
 	}
+	
+	
+	/*	Irgendwie ist Img1Pix das gleiche wie Img2Pix!! 
+	 * 
+	 * Keine Ahung warum! :(
+	 * 
+	 * 
+	 * */
+	
 	
 	public int[] lens(Point p, int [] Img1Pix, int[] Img2Pix, int[] pix){
 
@@ -31,16 +30,18 @@ public class Lens extends Swap {
 				final int VAL = (X_DIFF * X_DIFF + Y_DIFF * Y_DIFF) /100;
 				final int MAX_VAL = VAL > 100 ? 100 : VAL;
 				pix[IDX] = compPix(Img1Pix[IDX], Img2Pix[IDX], MAX_VAL);
+
 				
 			}
 		}
-		System.out.println("Nächstes Img berechnen");
+		pix = Img2Pix;
+		if(Img1Pix != Img2Pix) {
+			System.out.println("Nicht Gleich :D");
+		}else {
+			System.out.println("GLEICH!!!!!");
+		}
+//		System.out.println("Nächstes Img berechnen");
 		return pix;
-	
-		
-		//in MyFrame packen
-//		m_ImgSrc.newPixels();
-//		repaint();
 	}
 	
 

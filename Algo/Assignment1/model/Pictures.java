@@ -29,8 +29,12 @@ public class Pictures{
 			public void mouseMoved(MouseEvent e){
 				if(m_LensOn) {
 					
-					getCenterImage().setPixel(getLens().lens(e.getPoint(), getCenterImage().getPixel(), getPicVector().get(getnextImg(getCurrentCenterImg())).getPixel(),
-							getCenterImage().getPixel()));
+					getCenterImage().setPixel(
+							getLens().lens(
+									e.getPoint(),
+									getCenterImage().getPixel(), 
+									getPicVector().get(getnextImg(getCurrentCenterImg())).getPixel(),
+									getCenterImage().getPixel()));
 					getCenterImage().getMemoryImgSrc().newPixels();
 					m_CenterImg.validate();
 					m_CenterImg.repaint();
@@ -39,13 +43,13 @@ public class Pictures{
 		});
 		
 	}
-	// Fï¿½r das Histogramm
+	// Für das Histogramm
 	public void calcColor(Pic pic){
 		int[] pixel = new int[m_Pics.get(0).W * m_Pics.get(0).H];
 		pixel = pic.getPixel();
 		Arrays.sort(pixel);
 		
-		//Vector lï¿½schen
+		//Vector löschen
 		m_Colors.clear();
 		
 		//Vector m_Color fï¿½llen
@@ -103,7 +107,6 @@ public class Pictures{
 	public int getnextImg(int current) {
 		int next = current;
 
-		
 		if(current < m_Pics.size()-1){
 			next++;
 		}else{
