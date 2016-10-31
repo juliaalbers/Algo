@@ -32,8 +32,9 @@ public class Pictures{
 					getCenterImage().setPixel(
 							getLens().lens(
 									e.getPoint(),
-									getCenterImage().getPixel(), 
-									getPicVector().get(getnextImg(getCurrentCenterImg())).getPixel(),
+//									getCenterImage().getPixel(), 
+									getPicVector().get(0).getPixel(),
+									getPicVector().get(1).getPixel(),
 									getCenterImage().getPixel()));
 					getCenterImage().getMemoryImgSrc().newPixels();
 					m_CenterImg.validate();
@@ -128,7 +129,9 @@ public class Pictures{
 	}
 	
 	public void setCenterImagePixel(int[] p) {
-		m_CenterImg.m_Pixel = p;
+		for(int i = 0; i < p.length; ++i) {
+			m_CenterImg.m_Pixel[i] = p[i];
+		}
 		m_CenterImg.getMemoryImgSrc().newPixels();
 	}
 	
@@ -140,6 +143,10 @@ public class Pictures{
 	public void changeCenterImg(Pic pic){
 		m_CenterImg.m_ImgBig = pic.m_ImgBig;
 		m_CenterImg.m_Pixel = pic.m_Pixel;
+		for(int i = 0; i < pic.m_Pixel.length; ++i) {
+			m_CenterImg.m_Pixel[i] = pic.m_Pixel[i];
+		}
+		m_CenterImg.getMemoryImgSrc().newPixels();
 		
 	}
 	

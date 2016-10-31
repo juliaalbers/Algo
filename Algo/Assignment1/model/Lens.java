@@ -34,7 +34,7 @@ public class Lens extends Swap {
 				
 			}
 		}
-		pix = Img2Pix;
+
 		if(Img1Pix != Img2Pix) {
 			System.out.println("Nicht Gleich :D");
 		}else {

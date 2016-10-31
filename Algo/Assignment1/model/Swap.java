@@ -4,15 +4,16 @@ import java.awt.*;
 
 public class Swap extends Component{
 	final int W, H;
-	int[] m_ImgPix, m_Img1, m_Img2;
+	int[] m_ImgPix;
+	Pic m_Img1, m_Img2;
 	Pictures m_Pics;
 	
 	
-	public Swap(int w, int h, int[] img1, int[] img2) {
+	public Swap(int w, int h, Pic img1, Pic img2) {
 		W = w;
 		H = h;
-		m_Img1 = img1;
-		m_Img2 = img2;
+		m_Img1 = img1.getPixel();
+		m_Img2 = img2.getPixel();
 		m_ImgPix = new int[W*H];
 	}
 	
@@ -29,9 +30,10 @@ public class Swap extends Component{
 	
 	public void shuffle(int p) {
 		for(int i = 0; i < W; ++i) {
-			m_ImgPix[i] = compPix(m_Img1[i], m_Img2[i], p);
+			m_Img1[i] = compPix(m_Img1[i], m_Img2[i], p);
 		}
 		System.out.println(p);
+		
 		m_Pics.setCenterImagePixel(m_ImgPix);
 	}
 	
