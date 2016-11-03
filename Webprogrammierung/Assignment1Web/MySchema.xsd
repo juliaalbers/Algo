@@ -24,7 +24,17 @@
                         <xs:attribute name="Anschaffungsdatum" type="xs:date"/>
                     </xs:complexType>
                 </xs:element>
-                <xs:element name="Geraete"></xs:element>
+                <xs:element name="Geraete">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Beschreibung"></xs:element>
+                            <xs:element name="Besonderheiten"></xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="Geraete_ID" type="xs:ID"/>
+                        <xs:attribute name="Anschaffungsdatum" type="xs:date"/>
+                    </xs:complexType>
+                </xs:element>
+                
             </xs:sequence>
             <xs:attribute name="Raum_Nr" type="xs:string"/>
         </xs:complexType>
