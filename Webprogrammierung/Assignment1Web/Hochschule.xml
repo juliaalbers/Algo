@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="MySchema.xsd" -->
 <Hochschule>
     
     <Labor Name="Informatik Labor" Raumnummer="E1313">
-        <Rechner ID="E0013" Anschaffung="13.1.2013">
+        <Rechner ID="1013" Anschaffung="13.1.2013">
             <Beschreibung>
                 <Hersteller>Dell</Hersteller>-PC
             </Beschreibung>
@@ -18,15 +20,17 @@
             <Besonderheiten></Besonderheiten>
         </Rechner>
         
-        <Rechner ID="E0131" Anschaffung="1.3.2016">
+        <Rechner ID="E2013" Anschaffung="1.3.2016">
             <Beschreibung>
-                <Hersteller>Dell</Hersteller>-PC
+                <Hersteller>Dell</Hersteller>
+                -PC
             </Beschreibung>
             
             <Erweiterung>
                 <Beschreibung>
                     <Hersteller>Intel</Hersteller> 
-                    <Model>Core i5-6300U Processor</Model> 
+                    <Model>Core i5-6300U</Model>
+                    -Prozessor
                 </Beschreibung>
                 <Besonderheiten></Besonderheiten>
             </Erweiterung>
@@ -34,15 +38,17 @@
             <Besonderheiten></Besonderheiten>
         </Rechner>
         
-        <Rechner ID="E1313">
+        <Rechner ID="3013">
             <Beschreibung>
-                <Hersteller>Microsoft</Hersteller>-PC
+                <Hersteller>Microsoft</Hersteller>
+                -PC
             </Beschreibung>
             
             <Erweiterung>
                 <Beschreibung>
                     <Hersteller>Intel</Hersteller>
-                    <Model>Core i5-6300U Processor</Model>
+                    <Model>Core i5-6300U</Model>
+                    -Prozessor
                 </Beschreibung>
                 <Besonderheiten></Besonderheiten>
             </Erweiterung>
@@ -50,86 +56,114 @@
             <Besonderheiten></Besonderheiten>
         </Rechner>
         
-        <Gerät ID="1310" Anschaffung="1.3.2013">
+        <Gerät ID="4013" Anschaffung="1.3.2013">
             <Beschreibung>
-               Model= HP Color LaserJet Pro MFP M274n
+                <Hersteller>HP</Hersteller>
+                <Model>Color LaserJet Pro MFP M274n</Model>
+                -Drucker
+            </Beschreibung>
+        </Gerät>
+        
+    </Labor>
+    
+    <Labor Name="Biologie Labor" Raumnummer="J3737">
+        
+        <Rechner ID="1037" Anschaffung="3.7.2013">
+            <Beschreibung>
+                <Hersteller>Acer</Hersteller>
+                -PC
             </Beschreibung>
             
-        </Gerät>
+            <Erweiterung>
+                <Beschreibung>
+                    2x-
+                    <Hersteller>Kingston</Hersteller>
+                    <Model>99U5471-012.A00LF 4GB PC3-10600</Model>
+                    -Arbeitsspeicher
+                </Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Erweiterung>
+            
+            <Besonderheiten></Besonderheiten>           
+        </Rechner>
+        
+        <Rechner >
+            
+        </Rechner>
     </Labor>
     
     <Software>
-        <Windows10>
+        <Windows10 ID="00001">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
         </Windows10>
         
-        <Windows8>
+        <Windows8 ID="00002">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
         </Windows8>
         
-        <Windows7>
+        <Windows7 ID="00003">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
         </Windows7>
         
-        <WindowsVista>
+        <WindowsVista ID="00004">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
         </WindowsVista>
         
-        <Linux>
+        <Linux ID="00005">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
         </Linux>
         
-        <Eclipse>
+        <Eclipse ID="00006">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
         </Eclipse>
         
-        <Photoshop>
+        <Photoshop ID="00007">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
         </Photoshop>
         
-        <Illustrator>
+        <Illustrator ID="00008">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
         </Illustrator>
         
-        <JCreator>
+        <JCreator ID="00009">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
         </JCreator>
         
-        <H2>
+        <H2 ID="00010">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
         </H2>
         
-        <VisualParadigm>
+        <VisualParadigm ID="00011">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
         </VisualParadigm>
         
-        <MicrosoftOffice>
+        <MicrosoftOffice ID="00012">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
         </MicrosoftOffice>
         
-        <BoneLab>
+        <BoneLab ID="00013">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
         </BoneLab>
         
-        <VirtualMicroscope>
+        <VirtualMicroscope ID="00014">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
         </VirtualMicroscope>
         
-        <UnrealEngine>
+        <UnrealEngine ID="00015">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
         </UnrealEngine>
