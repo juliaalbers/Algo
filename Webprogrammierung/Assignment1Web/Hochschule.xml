@@ -1,22 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Hochschule>
     
-    <Labor>
-        <Rechner>
-            <Beschreibung></Beschreibung>
+    <Labor Name="Informatik Labor" Raumnummer="E1313">
+        <Rechner ID="E0013" Anschaffung="13.1.2013">
+            <Beschreibung>
+                <Hersteller>Dell</Hersteller>-PC
+            </Beschreibung>
+            
             <Erweiterung>
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    <Hersteller>Intel</Hersteller> 
+                    <Modell>Core m5-6Y57 Processor</Modell>
+                </Beschreibung>
+                 <Besonderheiten></Besonderheiten>
             </Erweiterung>
+            
             <Besonderheiten></Besonderheiten>
         </Rechner>
-        <Gerät></Gerät>
+        
+        <Rechner ID="E0131" Anschaffung="1.3.2016">
+            <Beschreibung>
+                <Hersteller>Dell</Hersteller>-PC
+            </Beschreibung>
+            
+            <Erweiterung>
+                <Beschreibung>
+                    <Hersteller>Intel</Hersteller> 
+                    <Model>Core i5-6300U Processor</Model> 
+                </Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Erweiterung>
+            
+            <Besonderheiten></Besonderheiten>
+        </Rechner>
+        
+        <Rechner ID="E1313">
+            <Beschreibung>
+                <Hersteller>Microsoft</Hersteller>-PC
+            </Beschreibung>
+            
+            <Erweiterung>
+                <Beschreibung>
+                    <Hersteller>Intel</Hersteller>
+                    <Model>Core i5-6300U Processor</Model>
+                </Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Erweiterung>
+            
+            <Besonderheiten></Besonderheiten>
+        </Rechner>
+        
+        <Gerät ID="1310" Anschaffung="1.3.2013">
+            <Beschreibung>
+               Model= HP Color LaserJet Pro MFP M274n
+            </Beschreibung>
+            
+        </Gerät>
     </Labor>
+    
     <Software>
+        <Windows10>
+            <Beschreibung></Beschreibung>
+            <Besonderheiten></Besonderheiten>
+        </Windows10>
+        
+        <Windows8>
+            <Beschreibung></Beschreibung>
+            <Besonderheiten></Besonderheiten>
+        </Windows8>
+        
+        <Windows7>
+            <Beschreibung></Beschreibung>
+            <Besonderheiten></Besonderheiten>
+        </Windows7>
+        
+        <WindowsVista>
+            <Beschreibung></Beschreibung>
+            <Besonderheiten></Besonderheiten>
+        </WindowsVista>
+        
+        <Linux>
+            <Beschreibung></Beschreibung>
+            <Besonderheiten></Besonderheiten>
+        </Linux>
+        
         <Eclipse>
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
         </Eclipse>
+        
+        <Photoshop>
+            <Beschreibung></Beschreibung>
+            <Besonderheiten></Besonderheiten>
+        </Photoshop>
+        
+        <Illustrator>
+            <Beschreibung></Beschreibung>
+            <Besonderheiten></Besonderheiten>
+        </Illustrator>
+        
+        <JCreator>
+            <Beschreibung></Beschreibung>
+            <Besonderheiten></Besonderheiten>
+        </JCreator>
+        
+        <H2>
+            <Beschreibung></Beschreibung>
+            <Besonderheiten></Besonderheiten>
+        </H2>
+        
+        <VisualParadigm>
+            <Beschreibung></Beschreibung>
+            <Besonderheiten></Besonderheiten>
+        </VisualParadigm>
+        
+        <MicrosoftOffice>
+            <Beschreibung></Beschreibung>
+            <Besonderheiten></Besonderheiten>
+        </MicrosoftOffice>
+        
+        <BoneLab>
+            <Beschreibung></Beschreibung>
+            <Besonderheiten></Besonderheiten>
+        </BoneLab>
+        
+        <VirtualMicroscope>
+            <Beschreibung></Beschreibung>
+            <Besonderheiten></Besonderheiten>
+        </VirtualMicroscope>
+        
+        <UnrealEngine>
+            <Beschreibung></Beschreibung>
+            <Besonderheiten></Besonderheiten>
+        </UnrealEngine>
+        
     </Software>
 </Hochschule>
 
