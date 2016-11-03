@@ -27,8 +27,8 @@
                 <xs:element name="Geraete">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="Beschreibung"></xs:element>
-                            <xs:element name="Besonderheiten"></xs:element>
+                            <xs:element name="Beschreibung" type="xs:string" minOccurs="1"/>
+                            <xs:element name="Besonderheiten" type="xs:string"/>
                         </xs:sequence>
                         <xs:attribute name="Geraete_ID" type="xs:ID"/>
                         <xs:attribute name="Anschaffungsdatum" type="xs:date"/>
