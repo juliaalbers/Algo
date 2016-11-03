@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
 <Hochschule>
     <Labor>
         <Rechner>
@@ -19,6 +18,4 @@
         </Eclipse>
     </Software>
 </Hochschule>
-=======
-<!-- haaalo-->
->>>>>>> branch 'master' of https://github.com/juliaalbers/Algo
+
