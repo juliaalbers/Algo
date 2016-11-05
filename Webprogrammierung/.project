@@ -13,4 +13,5 @@
 	</buildSpec>
 	<natures>
 		<nature>com.oxygenxml.editor.xmlnature</nature>
+	</natures>
 </projectDescription>
