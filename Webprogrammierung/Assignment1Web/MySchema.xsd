@@ -1,42 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-    <xs:element name="Labor"> 
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">    
+    <xs:element name="Hochschule">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="Rechner" minOccurs="1">
+                <xs:element name="Labor" minOccurs="1" maxOccurs="unbounded"> 
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="Beschreibung" minOccurs="1" maxOccurs="1"/>
-                            <xs:choice>
-                                <xs:element name="Erweiterung">
-                                    <xs:complexType>
-                                        <xs:all>
-                                            <xs:element name="Beschreibung" minOccurs="1" type="xs:string"/>
+                <!-- Elemente fuer Labor: Rechner -->
+                            <xs:element name="Rechner" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                            <!-- Elemente fuer Rechner: Beschreibung -->
+                                        <xs:element name="Beschreibung" minOccurs="1" maxOccurs="1"/>
+                                        
+                            <!-- Element fuer Rechner: Erweiterung -->
+                                            <xs:element name="Erweiterung">
+                                                <xs:complexType>
+                                                    <xs:all>
+                                            <!-- Element fuer Erweiterungen: Beschreibung -->
+                                                        <xs:element name="Beschreibung" minOccurs="1" />
+                                            <!-- Element fuer Erweiterungen: Besonderheiten -->            
+                                                        <xs:element name="Besonderheiten" type="xs:string"/>
+                                                    </xs:all>    
+                                                </xs:complexType>
+                                            </xs:element>
+                            <!-- Element fuer Rechner: Besonderheiten -->                
                                             <xs:element name="Besonderheiten" type="xs:string"/>
-                                        </xs:all>    
-                                    </xs:complexType>
-                                </xs:element>
-                                <xs:element name="Besonderheiten"/>
-                            </xs:choice>  
+                                          
+                                    </xs:sequence>
+                            <!-- Attribute fuer Rechner -->        
+                                    <xs:attribute name="Rechner_ID" type="xs:ID"/>
+                                    <xs:attribute name="Betriebssystem" type="xs:string"/>
+                                    <xs:attribute name="Anschaffungsdatum" type="xs:date"/>
+                                </xs:complexType>
+                            </xs:element>
+                <!-- Element fuer Labor: Geraet -->
+                            <xs:element name="Geraet" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                            <!-- Elemente fuer Geraet: Beschreibung, Besonderheiten -->
+                                        <xs:element name="Beschreibung" minOccurs="1"/>
+                                        <xs:element name="Besonderheiten" type="xs:string" minOccurs="0"/>
+                                    </xs:sequence>
+                            <!-- Attribute fuer Geraet -->
+                                    <xs:attribute name="Geraete_ID" type="xs:ID"/>
+                                    <xs:attribute name="Anschaffungsdatum" type="xs:date"/>
+                                </xs:complexType>
+                            </xs:element>
                         </xs:sequence>
-                        <xs:attribute name="Rechner_ID" type="xs:ID"/>
-                        <xs:attribute name="Betriebssystem" type="xs:string"/>
-                        <xs:attribute name="Anschaffungsdatum" type="xs:date"/>
+                <!-- Attribute fuer Labor -->
+                        <xs:attribute name="Raum_Nr" type="xs:ID"/>
                     </xs:complexType>
                 </xs:element>
-                <xs:element name="Geraete">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="Beschreibung" type="xs:string" minOccurs="1"/>
-                            <xs:element name="Besonderheiten" type="xs:string"/>
-                        </xs:sequence>
-                        <xs:attribute name="Geraete_ID" type="xs:ID"/>
-                        <xs:attribute name="Anschaffungsdatum" type="xs:date"/>
-                    </xs:complexType>
-                </xs:element>
-                
             </xs:sequence>
-            <xs:attribute name="Raum_Nr" type="xs:string"/>
         </xs:complexType>
     </xs:element>
 </xs:schema>
