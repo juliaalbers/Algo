@@ -3,8 +3,8 @@
     xsi:noNamespaceSchemaLocation="MySchema.xsd" -->
 <Hochschule>
     
-    <Labor Name="Informatik Labor" Raumnummer="E1313">
-        <Rechner ID="1013" Anschaffung="13.1.2013">
+    <Labor Name="E1313">
+        <Rechner ID="1013" Betriebssystem="Windows" Anschaffung="13.1.2013">
             <Beschreibung>
                 <Hersteller>Dell</Hersteller>-PC
             </Beschreibung>
@@ -20,7 +20,7 @@
             <Besonderheiten></Besonderheiten>
         </Rechner>
         
-        <Rechner ID="E2013" Anschaffung="1.3.2016">
+        <Rechner ID="E2013" Betriebssystem="Windows" Anschaffung="1.3.2016">
             <Beschreibung>
                 <Hersteller>Dell</Hersteller>
                 -PC
@@ -38,7 +38,7 @@
             <Besonderheiten></Besonderheiten>
         </Rechner>
         
-        <Rechner ID="3013">
+        <Rechner ID="3013" Betriebssystem="Windows" Anschaffung="1.3.2016">
             <Beschreibung>
                 <Hersteller>Microsoft</Hersteller>
                 -PC
@@ -66,9 +66,8 @@
         
     </Labor>
     
-    <Labor Name="Biologie Labor" Raumnummer="J3737">
-        
-        <Rechner ID="1037" Anschaffung="3.7.2013">
+    <Labor Name="J3737">
+        <Rechner ID="1037" Betriebssystem="Windows" Anschaffung="3.7.2013">
             <Beschreibung>
                 <Hersteller>Acer</Hersteller>
                 -PC
