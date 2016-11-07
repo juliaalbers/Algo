@@ -14,7 +14,7 @@
                                     <xs:sequence>
                             <!-- Elemente fuer Rechner: Beschreibung -->
                                         <xs:element name="Beschreibung" minOccurs="1" maxOccurs="1">
-                                            <xs:complexType>
+                                            <xs:complexType mixed="true">
                                                 <xs:all>
                                                     <xs:element name="Hersteller" minOccurs="1"/>
                                                 </xs:all>
@@ -34,18 +34,23 @@
                                         </xs:element>
                             <!-- Element fuer Rechner: Besonderheiten -->                
                                         <xs:element name="Besonderheiten" type="xs:string"/>
+                                        
+                                        <xs:element name="Installierte_Software">
+                                            <xs:simpleType>
+                                                <xs:list itemType="xs:IDREF">
+                                                    
+                                                </xs:list>
+                                            </xs:simpleType>
+                                        </xs:element>
                                     </xs:sequence>
-                                    <xs:simpleType>
-                                        <xs:list itemType="xs:IDREF">
-                                            <xs:element name="Installierte Software"></xs:element>
-                                        </xs:list>
-                                    </xs:simpleType>
+                                    
                             <!-- Attribute fuer Rechner -->        
                                     <xs:attribute name="Rechner_ID" type="xs:ID"/>
                                     <xs:attribute name="Betriebssystem" type="xs:IDREF">
                                     </xs:attribute>
                                     <xs:attribute name="Anschaffungsdatum" type="xs:date"/>
                                 </xs:complexType>
+                                
                             </xs:element>
                 <!-- Element fuer Labor: Geraet -->
                             <xs:element name="Geraet" minOccurs="0" maxOccurs="unbounded">
@@ -118,5 +123,6 @@
             <xs:selector xpath="Betriebssysteme/*"/>
             <xs:field xpath="@ID"/>
         </xs:key>
+        
     </xs:element>
 </xs:schema>
