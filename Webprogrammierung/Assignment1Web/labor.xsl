@@ -68,7 +68,9 @@
                 <!-- Zeilenumbruch -->
                 <xsl:element name="br"/>
                 <xsl:element name="h3">Installierte Software</xsl:element>
-                <xsl:element name="p"><xsl:value-of select="//Labor[position()=1]/*/Installierte_Software"/></xsl:element>
+                <xsl:for-each select="//Labor[position()=1]/*/Installierte_Software/Software">
+                    <xsl:element name="li"><xsl:value-of select="@ID"/></xsl:element>
+                </xsl:for-each>
             </body>
         </html>
     </xsl:template>
