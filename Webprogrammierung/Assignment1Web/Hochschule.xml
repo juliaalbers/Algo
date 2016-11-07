@@ -150,10 +150,7 @@
     
     <Software>
         <Betriebssysteme>
-            <Betriebssystem>
-                <Beschreibung></Beschreibung>
-            </Betriebssystem>
-        
+
             <Betriebssystem Name="Windows10" ID="B00001">
                 <Beschreibung></Beschreibung>
                 <Besonderheiten></Besonderheiten>

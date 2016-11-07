@@ -13,7 +13,13 @@
                                 <xs:complexType>
                                     <xs:sequence>
                             <!-- Elemente fuer Rechner: Beschreibung -->
-                                        <xs:element name="Beschreibung" minOccurs="1" maxOccurs="1"/>
+                                        <xs:element name="Beschreibung" minOccurs="1" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element name="Hersteller" minOccurs="1"/>
+                                                </xs:all>
+                                            </xs:complexType>
+                                        </xs:element>
                                         
                             <!-- Element fuer Rechner: Erweiterung -->
                                         <xs:element name="Erweiterung" minOccurs="0">
@@ -29,9 +35,15 @@
                             <!-- Element fuer Rechner: Besonderheiten -->                
                                         <xs:element name="Besonderheiten" type="xs:string"/>
                                     </xs:sequence>
+                                    <xs:simpleType>
+                                        <xs:list itemType="xs:IDREF">
+                                            <xs:element name="Installierte Software"></xs:element>
+                                        </xs:list>
+                                    </xs:simpleType>
                             <!-- Attribute fuer Rechner -->        
                                     <xs:attribute name="Rechner_ID" type="xs:ID"/>
-                                    <xs:attribute name="Betriebssystem" type="xs:IDREF"/>
+                                    <xs:attribute name="Betriebssystem" type="xs:IDREF">
+                                    </xs:attribute>
                                     <xs:attribute name="Anschaffungsdatum" type="xs:date"/>
                                 </xs:complexType>
                             </xs:element>
@@ -96,5 +108,15 @@
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
+        
+        
+        <xs:keyref name="theKeyRef" refer="theKey">
+            <xs:selector xpath="Rechner/*"/>
+            <xs:field xpath="@Betriebssystem"/>
+        </xs:keyref>
+        <xs:key name="theKey">
+            <xs:selector xpath="Betriebssysteme/*"/>
+            <xs:field xpath="@ID"/>
+        </xs:key>
     </xs:element>
 </xs:schema>
