@@ -31,8 +31,12 @@
                 Gehäuse am 2015-06-03 ausgetauscht,
                 Drei USB 2.0 Schnittstellen defekt
             </Besonderheiten>
-           
-                <Software ID="A00006"/>
+            
+            <Installierte_Software>
+                <Software ID="A00006" LizenzVorhanden="True"/>
+                <Software ID="A00009" LizenzVorhanden="True"/>
+                <Software ID="A00010" LizenzVorhanden="False"/>
+            </Installierte_Software>
 
         </Rechner>
         
@@ -59,8 +63,6 @@
                     Mainboard am 2016-02-01 ausgewechselt
                 </Besonderheiten>
             </Erweiterung>
-            
-            <Besonderheiten></Besonderheiten>
         </Rechner>
         
         <Rechner Rechner_ID="C3013" Anschaffungsdatum="2016-03-01" Betriebssystem="B00001">
