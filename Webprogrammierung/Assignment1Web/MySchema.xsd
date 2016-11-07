@@ -26,7 +26,13 @@
                                             <xs:complexType>
                                                 <xs:all>
                                         <!-- Element fuer Erweiterungen: Beschreibung -->
-                                                    <xs:element name="Beschreibung" minOccurs="1" />
+                                                    <xs:element name="Beschreibung" minOccurs="1">
+                                                        <xs:complexType mixed="true">
+                                                            <xs:sequence>
+                                                                <xs:element name="Hersteller" minOccurs="1" maxOccurs="unbounded"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
                                         <!-- Element fuer Erweiterungen: Besonderheiten -->            
                                                     <xs:element name="Besonderheiten" type="xs:string" minOccurs="0"/>
                                                 </xs:all>    
@@ -38,9 +44,10 @@
                                         <xs:element name="Installierte_Software">
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element name="Software">
+                                                    <xs:element name="Software" maxOccurs="unbounded">
                                                         <xs:complexType>
                                                             <xs:attribute name="ID" type="xs:IDREF"/>
+                                                            <xs:attribute name="Lizenzvorhanden" type="xs:boolean"/>
                                                         </xs:complexType>
                                                     </xs:element>
                                                 </xs:sequence>

@@ -6,9 +6,9 @@
     
     <Labor Raum_Nr="E1313" Name="Informatik Labor">
         <Rechner Rechner_ID="C1013" Anschaffungsdatum="2013-01-13" Betriebssystem="B00001">
-
             <Beschreibung>
                 <Hersteller>Dell</Hersteller>
+                Precision Tower 3000 Serie
                 PC mit
                 <Hersteller>Intel </Hersteller>
                 Core i5 Prozessor und Integrierte
@@ -33,14 +33,14 @@
             </Besonderheiten>
             
             <Installierte_Software>
-                <Software ID="A00006" LizenzVorhanden="True"/>
-                <Software ID="A00009" LizenzVorhanden="True"/>
-                <Software ID="A00010" LizenzVorhanden="False"/>
+                <Software ID="A00006" Lizenzvorhanden="true"/>
+                <Software ID="A00009" Lizenzvorhanden="true"/>
+                <Software ID="A00010" Lizenzvorhanden="false"/>
             </Installierte_Software>
 
         </Rechner>
         
-        <Rechner Rechner_ID="C2013" Anschaffungsdatum="2016-03-01" Betriebssystem="B00001">
+        <Rechner Rechner_ID="C2013" Anschaffungsdatum="2016-03-01" Betriebssystem="B00002">
             <Beschreibung>
                 <Hersteller>Dell </Hersteller>
                 PC mit
@@ -51,7 +51,7 @@
                 <Hersteller>Samsung </Hersteller>
                 und eine 1TB Festplatte von 
                 <Hersteller>Seagate </Hersteller>
-            
+            </Beschreibung>
             <Erweiterung>
                 <Beschreibung>
                     Leistungsfähigere CPU durch
@@ -59,15 +59,20 @@
                     Core i5 Prozessor und schnellere Verarbeitungszeit durch 8GB RAM von
                     <Hersteller>Samsung</Hersteller>
                 </Beschreibung>
-                <Besonderheiten>
-                    Mainboard am 2016-02-01 ausgewechselt
-                </Besonderheiten>
             </Erweiterung>
+            
+            <Besonderheiten>
+                Mainboard am 2016-02-01 ausgewechselt
+            </Besonderheiten>
+            
+            <Installierte_Software>
+                <Software ID="A00009" Lizenzvorhanden="false"/>
+            </Installierte_Software>
         </Rechner>
         
         <Rechner Rechner_ID="C3013" Anschaffungsdatum="2016-03-01" Betriebssystem="B00001">
             <Beschreibung>
-                <Hersteller>Microsoft</Hersteller>
+                <Hersteller>Microsoft </Hersteller>
                 PC mit
                 <Hersteller>Intel </Hersteller>
                 Core i3 Prozessor und Integrierte
@@ -86,7 +91,11 @@
                 </Beschreibung>
             </Erweiterung>
             
-            <Besonderheiten></Besonderheiten>
+            <Installierte_Software>
+                <Software ID="A00009" Lizenzvorhanden="false"/>
+                <Software ID="A00010" Lizenzvorhanden="true"/>
+            </Installierte_Software>
+            
         </Rechner>
         
         <Geraet Geraete_ID="G4013" Anschaffungsdatum="2013-03-01">
@@ -205,7 +214,7 @@
             </Betriebssystem>
             
         </Betriebssysteme>
-        <Anwendugen>
+        <Anwendungen>
             <Anwendung>
                 <Beschreibung></Beschreibung>
             </Anwendung>
@@ -259,7 +268,7 @@
                 <Beschreibung></Beschreibung>
                 <Besonderheiten></Besonderheiten>
             </Anwendung>
-        </Anwendugen>
+        </Anwendungen>
         
     </Software>
 </Hochschule>
