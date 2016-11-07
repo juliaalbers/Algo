@@ -5,7 +5,7 @@
     xsi:noNamespaceSchemaLocation="MySchema.xsd">
     
     <Labor Raum_Nr="E1313" Name="Informatik Labor">
-        <Rechner Rechner_ID="C1013" Betriebssystem="Windows" Anschaffungsdatum="2013-01-13">
+        <Rechner Rechner_ID="C1013" Anschaffungsdatum="2013-01-13" Betriebssystem="Windows">
             <Beschreibung>
                 <Hersteller>Dell</Hersteller>
                 -PC
@@ -23,7 +23,7 @@
             <Besonderheiten></Besonderheiten>
         </Rechner>
         
-        <Rechner Rechner_ID="C2013" Betriebssystem="Windows" Anschaffungsdatum="2016-03-01">
+        <Rechner Rechner_ID="C2013" Anschaffungsdatum="2016-03-01" Betriebssystem="Windows">
             <Beschreibung>
                 <Hersteller>Dell</Hersteller>
                 -PC
@@ -41,7 +41,7 @@
             <Besonderheiten></Besonderheiten>
         </Rechner>
         
-        <Rechner Rechner_ID="C3013" Betriebssystem="Windows" Anschaffungsdatum="2016-03-01">
+        <Rechner Rechner_ID="C3013" Anschaffungsdatum="2016-03-01" Betriebssystem="Windows">
             <Beschreibung>
                 <Hersteller>Microsoft</Hersteller>
                 -PC
@@ -70,7 +70,7 @@
     </Labor>
     
     <Labor Name="Biologie Labor" Raum_Nr="J3737">
-        <Rechner Rechner_ID="C1037" Betriebssystem="Windows" Anschaffungsdatum="2013-07-03">
+        <Rechner Rechner_ID="C1037" Anschaffungsdatum="2013-07-03" Betriebssystem="Windows">
             <Beschreibung>
                 <Hersteller>Acer</Hersteller>
                 -PC
@@ -89,7 +89,7 @@
             <Besonderheiten></Besonderheiten>   
         </Rechner>
         
-        <Rechner Rechner_ID="C2037" Betriebssystem="Windows" Anschaffungsdatum="2014-03-07">
+        <Rechner Rechner_ID="C2037" Anschaffungsdatum="2014-03-07" Betriebssystem="Windows">
             <Beschreibung>
                 <Hersteller>Asus</Hersteller>
                 -PC
@@ -115,6 +115,35 @@
                 -Binokulares Mikroskop
             </Beschreibung>
         </Geraet>
+    </Labor>
+    
+    <Labor Name="Digitale Medien Produktion Labor" Raum_Nr="N3099">
+        
+        <Rechner Rechner_ID="C1003" Anschaffungsdatum="2016-03-09" Betriebssystem="Windows">
+            <Beschreibung>
+                <Hersteller>Acer</Hersteller>
+                -PC
+            </Beschreibung>
+            <Erweiterung>
+                <Beschreibung>
+                    <Hersteller>Zotac</Hersteller>
+                    <Model>GeForce GTX 1080 AMP 8 GB GDDR5X</Model>
+                    -Grafikkarte
+                </Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Erweiterung>
+            
+            <Besonderheiten></Besonderheiten>
+        </Rechner>
+        
+        <Rechner Rechner_ID="C2003" Anschaffungsdatum="2016-03-03" Betriebssystem="Windows">
+            <Beschreibung></Beschreibung>
+            <Erweiterung>
+                <Beschreibung></Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Erweiterung>
+            <Besonderheiten></Besonderheiten>
+        </Rechner>
     </Labor>
     
     <Software>
