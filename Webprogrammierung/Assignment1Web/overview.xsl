@@ -22,9 +22,8 @@
                             <xsl:element name="td">
                                 <xsl:element name="a">
                                     <xsl:attribute name="href">
-                                        <xsl:value-of select="rechner.xsl"/>
+                                        rechner.xsl
                                     </xsl:attribute>
-                                    <xsl:attribute name="target">rechner.xsl</xsl:attribute>
                                     <xsl:value-of select="@Name"/>
                                 </xsl:element>
                             </xsl:element>
@@ -32,6 +31,7 @@
                         </xsl:element>
                     </xsl:for-each>
                 </xsl:element>
+                <!-- Neue Tabelle vorher br -->
                 <xsl:element name="br"/>
                 <xsl:element name="h2">Zahlen und Fakten</xsl:element>
                 <xsl:element name="table">
@@ -54,13 +54,65 @@
                         <xsl:element name="td"><xsl:value-of select="count(//Rechner)"/></xsl:element>
                     </xsl:element>
                     <xsl:element name="tr">
+                        <xsl:element name="td">Betriebssystem</xsl:element>
+                        <xsl:element name="td"><xsl:value-of select="count(//Betriebssystem)"/></xsl:element>
+                    </xsl:element>
+                    <xsl:element name="tr">
                         <xsl:element name="td">Software</xsl:element>
-                        <xsl:element name="td"><xsl:value-of select="count(//Betriebssystem)+count(//Anwendung)"/></xsl:element>
+                        <xsl:element name="td"><xsl:value-of select="count(//Anwendung)"/></xsl:element>
                     </xsl:element>
                     <xsl:element name="tr">
                         <xsl:element name="td">Durchschnitt Rechner</xsl:element>
                         <xsl:element name="td"><xsl:value-of select="format-number(count(//Labor) div count(//Rechner), '0.00')"/></xsl:element>
                     </xsl:element>
+                </xsl:element>
+                <!-- Neue Tabelle vorher br -->
+                <xsl:element name="br"/>
+                <xsl:element name="h2">Alle Betriebssysteme</xsl:element>
+                <xsl:element name="table">
+                    <xsl:attribute name="border">
+                        1
+                    </xsl:attribute>
+                    <xsl:element name="tr">
+                        <xsl:attribute name="bgcolor">
+                            4d79ff
+                        </xsl:attribute>
+                        <xsl:element name="th">Betriebssysteme</xsl:element>
+                        <xsl:element name="th">ID</xsl:element>
+                    </xsl:element>
+                    <xsl:for-each select="//Betriebssystem">
+                        <xsl:sort select="@Name"/>
+                        <xsl:element name="tr">
+                            <xsl:element name="td">
+                                <xsl:value-of select="@Name"/>
+                            </xsl:element>
+                            <xsl:element name="td"><xsl:value-of select="@ID"/></xsl:element>
+                        </xsl:element>
+                    </xsl:for-each>
+                </xsl:element>
+                <!-- Neue Tabelle vorher br -->
+                <xsl:element name="br"/>
+                <xsl:element name="h2">Alle Anwendungen</xsl:element>
+                <xsl:element name="table">
+                    <xsl:attribute name="border">
+                        1
+                    </xsl:attribute>
+                    <xsl:element name="tr">
+                        <xsl:attribute name="bgcolor">
+                            4d4dff
+                        </xsl:attribute>
+                        <xsl:element name="th">Anwendungen</xsl:element>
+                        <xsl:element name="th">ID</xsl:element>
+                    </xsl:element>
+                    <xsl:for-each select="//Anwendung">
+                        <xsl:sort select="@Name"/>
+                        <xsl:element name="tr">
+                            <xsl:element name="td">
+                                <xsl:value-of select="@Name"/>
+                            </xsl:element>
+                            <xsl:element name="td"><xsl:value-of select="@ID"/></xsl:element>
+                        </xsl:element>
+                    </xsl:for-each>
                 </xsl:element>
             </body>
         </html>
