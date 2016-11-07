@@ -101,7 +101,6 @@
         <Geraet Geraete_ID="G4013" Anschaffungsdatum="2013-03-01">
             <Beschreibung>
                 <Hersteller>HP</Hersteller>
-                <Model>Color LaserJet Pro MFP M274n</Model>
                 -Drucker
             </Beschreibung>
         </Geraet>
@@ -111,46 +110,55 @@
     <Labor Name="Biologie Labor" Raum_Nr="J3737">
         <Rechner Rechner_ID="C1037" Anschaffungsdatum="2013-07-03" Betriebssystem="B00001">
             <Beschreibung>
-                <Hersteller>Acer</Hersteller>
-                -PC
+                <Hersteller>Acer </Hersteller>
+                PC mit
+                <Hersteller>Intel </Hersteller>
+                Core i3 Prozessor und Integrierte
+                <Hersteller>Intel </Hersteller>
+                HD Grafik, dazu 16 GB RAM von
+                <Hersteller>Kingston </Hersteller>
+                und eine 1TB Festplatte von 
+                <Hersteller>Seagate </Hersteller>
             </Beschreibung>
             
             <Erweiterung>
                 <Beschreibung>
-                    2x-
+                    Hohe belastbarkeit für anspruchsvolle Programme durch 16GB Arbeitsspeicher von
                     <Hersteller>Kingston</Hersteller>
-                    <Model>99U5471-012.A00LF 4GB PC3-10600</Model>
-                    -Arbeitsspeicher
                 </Beschreibung>
-                <Besonderheiten></Besonderheiten>
             </Erweiterung>
             
-            <Besonderheiten></Besonderheiten>   
+            <Installierte_Software>
+                <Software ID="A00007" Lizenzvorhanden="true"/>
+                <Software ID="A00012" Lizenzvorhanden="false"/>
+                <Software ID="A00013" Lizenzvorhanden="true"/>
+                <Software ID="A00014" Lizenzvorhanden="true"/>
+            </Installierte_Software>
         </Rechner>
         
         <Rechner Rechner_ID="C2037" Anschaffungsdatum="2014-03-07" Betriebssystem="B00001">
             <Beschreibung>
-                <Hersteller>Asus</Hersteller>
-                -PC
+                <Hersteller>Asus </Hersteller>
+                PC mit 
+                <Hersteller>Intel </Hersteller>
+                Core i3 Prozessor und Integrierte
+                <Hersteller>Intel </Hersteller>
+                HD Grafik, dazu 4 GB RAM von
+                <Hersteller>Samsung </Hersteller>
+                und eine 1TB Festplatte von 
+                <Hersteller>Seagate </Hersteller>
             </Beschreibung>
             
-            <Erweiterung>
-                <Beschreibung>
-                    2x-
-                    <Hersteller>Samsung</Hersteller>
-                    <Model>8Gb 2133 Mhz DDR4 PC3-2133P</Model>
-                    -Arbeitsspeicher
-                </Beschreibung>
-                <Besonderheiten></Besonderheiten>
-            </Erweiterung>
-            
-            <Besonderheiten></Besonderheiten>   
+            <Installierte_Software>
+                <Software ID="A00007" Lizenzvorhanden="true"/>
+                <Software ID="A00008" Lizenzvorhanden="true"/>
+                <Software ID="A00012" Lizenzvorhanden="true"/>
+            </Installierte_Software>
         </Rechner>
         
         <Geraet Geraete_ID="M3037" Anschaffungsdatum="2015-07-03">
             <Beschreibung>
                 <Hersteller>Compra</Hersteller>
-                <Model>Bin-TOP 02</Model>
                 -Binokulares Mikroskop
             </Beschreibung>
         </Geraet>
@@ -161,27 +169,34 @@
         <Rechner Rechner_ID="C1003" Anschaffungsdatum="2016-03-09" Betriebssystem="B00001">
             <Beschreibung>
                 <Hersteller>Acer</Hersteller>
-                -PC
+                -PC mit
+                <Hersteller>Intel </Hersteller>
+                Core i5 Prozessor und eine GTX 1080 Grafikkarte von
+                <Hersteller>Zotac </Hersteller>
+                dazu eine 1TB Festplatte von 
+                <Hersteller>Samsung </Hersteller>
             </Beschreibung>
             <Erweiterung>
                 <Beschreibung>
+                    Seht Hohe auflösung durch die
                     <Hersteller>Zotac</Hersteller>
-                    <Model>GeForce GTX 1080 AMP 8 GB GDDR5X</Model>
-                    -Grafikkarte
+                    Grafikkarte und Leistungsfähigere CPU durch den
+                    <Hersteller>Intel </Hersteller>
+                    Core i5 Prozessor
                 </Beschreibung>
-                <Besonderheiten></Besonderheiten>
             </Erweiterung>
             
-            <Besonderheiten></Besonderheiten>
-        </Rechner>
-        
-        <Rechner Rechner_ID="C2003" Anschaffungsdatum="2016-03-03" Betriebssystem="B00001">
-            <Beschreibung></Beschreibung>
-            <Erweiterung>
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
-            </Erweiterung>
-            <Besonderheiten></Besonderheiten>
+            <Besonderheiten>
+                Geäuse erheblich zerkratzt,
+                CPU Lüfter am 2016-04-03 ausgewechselt
+            </Besonderheiten>
+            
+            <Installierte_Software>
+                <Software ID="A00007" Lizenzvorhanden="true"/>
+                <Software ID="A00008" Lizenzvorhanden="true"/>
+                <Software ID="A00011" Lizenzvorhanden="false"/>
+                <Software ID="A00012" Lizenzvorhanden="true"/>
+            </Installierte_Software>
         </Rechner>
     </Labor>
     
