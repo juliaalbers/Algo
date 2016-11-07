@@ -12,14 +12,14 @@
                         <th>Link</th>
                     </tr>
                     <xsl:for-each select="//Labor">
-                        <xsl:sort select="@Raum_Nr"/>
+                        <xsl:sort select="@Name"/>
                         <tr>
                             <td>
                                 <xsl:element name="a">
                                     <xsl:attribute name="href">
-                                        <xsl:value-of select="@Raum_Nr"/>
+                                        <xsl:value-of select="rechner.xsl"/>
                                     </xsl:attribute>
-                                    <xsl:attribute name="target">_blank</xsl:attribute>
+                                    <xsl:attribute name="target">rechner.xsl</xsl:attribute>
                                     <xsl:value-of select="@Name"/>
                                 </xsl:element>
                             </td>
