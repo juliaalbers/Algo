@@ -39,7 +39,7 @@
                                             </xs:complexType>
                                         </xs:element>
                             <!-- Element fuer Rechner: Besonderheiten -->                
-                                        <xs:element name="Besonderheiten" type="xs:string"/>
+                                        <xs:element name="Besonderheiten" type="xs:string" minOccurs="0"/>
                             <!-- Element fuer Rechner: Installierte_Software -->            
                                         <xs:element name="Installierte_Software">
                                             <xs:complexType>
@@ -57,8 +57,7 @@
                                     
                             <!-- Attribute fuer Rechner -->        
                                     <xs:attribute name="Rechner_ID" type="xs:ID"/>
-                                    <xs:attribute name="Betriebssystem" type="xs:IDREF">
-                                    </xs:attribute>
+                                    <xs:attribute name="Betriebssystem" type="xs:IDREF"/>
                                     <xs:attribute name="Anschaffungsdatum" type="xs:date"/>
                                 </xs:complexType>
                                 
