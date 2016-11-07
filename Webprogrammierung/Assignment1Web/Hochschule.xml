@@ -31,12 +31,8 @@
                 Gehäuse am 2015-06-03 ausgetauscht,
                 Drei USB 2.0 Schnittstellen defekt
             </Besonderheiten>
-            
-            <Installierte_Software>
-                A00006
-                A00009
-                A00010
-            </Installierte_Software>
+           
+                <Software ID="A00006"/>
 
         </Rechner>
         
