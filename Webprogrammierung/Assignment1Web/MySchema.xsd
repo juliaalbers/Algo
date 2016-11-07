@@ -38,9 +38,10 @@
                                         <xs:element name="Installierte_Software">
                                             <xs:complexType>
                                                 <xs:sequence>
-                                                    <xs:element name="Software">
+                                                    <xs:element name="Software" maxOccurs="unbounded">
                                                         <xs:complexType>
                                                             <xs:attribute name="ID" type="xs:IDREF"/>
+                                                            <xs:attribute name="Lizenzvorhanden" type="xs:boolean"/>
                                                         </xs:complexType>
                                                     </xs:element>
                                                 </xs:sequence>
