@@ -94,80 +94,92 @@
     </Labor>
     
     <Software>
-        <Betriebssystem Name="Windows10" ID="B00001">
-            <Beschreibung></Beschreibung>
-            <Besonderheiten></Besonderheiten>
-        </Betriebssystem>
+        <Betriebssysteme>
+            <Betriebssystem>
+                <Beschreibung></Beschreibung>
+            </Betriebssystem>
         
-        <Betriebssystem Name="Windows8" ID="B00002">
-            <Beschreibung></Beschreibung>
-            <Besonderheiten></Besonderheiten>
-        </Betriebssystem>
+            <Betriebssystem Name="Windows10" ID="B00001">
+                <Beschreibung></Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Betriebssystem>
+            
+            <Betriebssystem Name="Windows8" ID="B00002">
+                <Beschreibung></Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Betriebssystem>
+            
+            <Betriebssystem Name="Windows7" ID="B00003">
+                <Beschreibung></Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Betriebssystem>
+            
+            <Betriebssystem Name="WindowsVista" ID="B00004">
+                <Beschreibung></Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Betriebssystem>
+            
+            <Betriebssystem Name="Linux" ID="B00005">
+                <Beschreibung></Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Betriebssystem>
+            
+        </Betriebssysteme>
+        <Anwendugen>
+            <Anwendung>
+                <Beschreibung></Beschreibung>
+            </Anwendung>
         
-        <Betriebssystem Name="Windows7" ID="B00003">
-            <Beschreibung></Beschreibung>
-            <Besonderheiten></Besonderheiten>
-        </Betriebssystem>
-        
-        <Betriebssystem Name="WindowsVista" ID="B00004">
-            <Beschreibung></Beschreibung>
-            <Besonderheiten></Besonderheiten>
-        </Betriebssystem>
-        
-        <Betriebssystem Name="Linux" ID="B00005">
-            <Beschreibung></Beschreibung>
-            <Besonderheiten></Besonderheiten>
-        </Betriebssystem>
-        
-        <Anwendung Name="Eclipse" ID="A00006">
-            <Beschreibung></Beschreibung>
-            <Besonderheiten></Besonderheiten>
-        </Anwendung>
-        
-        <Anwendung Name="Photoshop" ID="A00007">
-            <Beschreibung></Beschreibung>
-            <Besonderheiten></Besonderheiten>
-        </Anwendung>
-        
-        <Anwendung Name="Illustrator" ID="A00008">
-            <Beschreibung></Beschreibung>
-            <Besonderheiten></Besonderheiten>
-        </Anwendung>
-        
-        <Anwendung Name="JCreator" ID="A00009">
-            <Beschreibung></Beschreibung>
-            <Besonderheiten></Besonderheiten>
-        </Anwendung>
-        
-        <Anwendung Name="H2" ID="A00010">
-            <Beschreibung></Beschreibung>
-            <Besonderheiten></Besonderheiten>
-        </Anwendung>
-        
-        <Anwendung Name="VisualParadigm" ID="A00011">
-            <Beschreibung></Beschreibung>
-            <Besonderheiten></Besonderheiten>
-        </Anwendung>
-        
-        <Anwendung Name="MicrosoftOffice" ID="A00012">
-            <Beschreibung></Beschreibung>
-            <Besonderheiten></Besonderheiten>
-        </Anwendung>
-        
-        <Anwendung Name="BoneLab" ID="A00013">
-            <Beschreibung></Beschreibung>
-            <Besonderheiten></Besonderheiten>
-        </Anwendung>
-        
-        <Anwendung Name="VirtualMicroscope" ID="A00014">
-            <Beschreibung></Beschreibung>
-            <Besonderheiten></Besonderheiten>
-        </Anwendung>
-        
-        <Anwendung Name="UnrealEngine" ID="A00015">
-            <Beschreibung></Beschreibung>
-            <Besonderheiten></Besonderheiten>
-        </Anwendung>
+            <Anwendung Name="Eclipse" ID="A00006">
+                <Beschreibung></Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Anwendung>
+            
+            <Anwendung Name="Photoshop" ID="A00007">
+                <Beschreibung></Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Anwendung>
+            
+            <Anwendung Name="Illustrator" ID="A00008">
+                <Beschreibung></Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Anwendung>
+            
+            <Anwendung Name="JCreator" ID="A00009">
+                <Beschreibung></Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Anwendung>
+            
+            <Anwendung Name="H2" ID="A00010">
+                <Beschreibung></Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Anwendung>
+            
+            <Anwendung Name="VisualParadigm" ID="A00011">
+                <Beschreibung></Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Anwendung>
+            
+            <Anwendung Name="MicrosoftOffice" ID="A00012">
+                <Beschreibung></Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Anwendung>
+            
+            <Anwendung Name="BoneLab" ID="A00013">
+                <Beschreibung></Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Anwendung>
+            
+            <Anwendung Name="VirtualMicroscope" ID="A00014">
+                <Beschreibung></Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Anwendung>
+            
+            <Anwendung Name="UnrealEngine" ID="A00015">
+                <Beschreibung></Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Anwendung>
+        </Anwendugen>
         
     </Software>
 </Hochschule>
