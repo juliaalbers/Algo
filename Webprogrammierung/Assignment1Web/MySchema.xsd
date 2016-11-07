@@ -36,14 +36,15 @@
                                         <xs:element name="Besonderheiten" type="xs:string"/>
                             <!-- Element fuer Rechner: Installierte_Software -->            
                                         <xs:element name="Installierte_Software">
-                                            <xs:simpleType>
-                                                <xs:list itemType="xs:IDREF">
-                                                    <xs:restriction base="xs:IDREF">
-                                                        <xs:minLength value="1"/>
-                                                    </xs:restriction>
-                                                </xs:list>
-                                                
-                                            </xs:simpleType>
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Software">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="ID" type="xs:IDREF"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
                                         </xs:element>
                                     </xs:sequence>
                                     
@@ -100,7 +101,7 @@
                                 </xs:complexType>
                             </xs:element>
                 <!-- Element Anwendungen fuer Software -->            
-                            <xs:element name="Anwendugen">
+                            <xs:element name="Anwendungen">
                                 <xs:complexType>
                                     <xs:sequence>
                             <!-- Element Anwendung fuer Anwendungen -->            

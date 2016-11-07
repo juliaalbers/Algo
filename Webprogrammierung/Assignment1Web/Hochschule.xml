@@ -40,9 +40,8 @@
             </Besonderheiten>
             
             <Installierte_Software>
-                A00006
-                A00007
-                A00008
+                <Software ID="A00006"/>
+               
             </Installierte_Software>
 
         </Rechner>
