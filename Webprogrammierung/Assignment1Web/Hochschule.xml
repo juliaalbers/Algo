@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="MySchema.xsd" -->
+<?xml-stylesheet type="text/xsl" href="stylesheet.xsl"?>
+
 <Hochschule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="MySchema.xsd">
     
-    <Labor Raum_Nr="E1313">
-        <Rechner Rechner_ID="C1013" Betriebssystem="B00001" Anschaffungsdatum="2013-01-13">
+
+    <Labor Raum_Nr="E1313" Name="Informatik Labor">
+        <Rechner Rechner_ID="C1013" Anschaffungsdatum="2013-01-13" Betriebssystem="B00001">
+
             <Beschreibung>
-                <Hersteller>Dell</Hersteller>-PC
+                <Hersteller>Dell</Hersteller>
+                -PC
             </Beschreibung>
             
             <Erweiterung>
-                <Beschreibung>
+                <Beschreibung> 
                     <Hersteller>Intel</Hersteller> 
-                    <Modell>Core m5-6Y57 Processor</Modell>
+                    <Modell>Core m5-6Y57</Modell>
+                    -Prozessor
                 </Beschreibung>
                  <Besonderheiten></Besonderheiten>
             </Erweiterung>
@@ -21,7 +25,7 @@
             <Besonderheiten></Besonderheiten>
         </Rechner>
         
-        <Rechner Rechner_ID="E2013" Betriebssystem="Windows" Anschaffungsdatum="2016-03-01">
+        <Rechner Rechner_ID="C2013" Anschaffungsdatum="2016-03-01" Betriebssystem="B00001">
             <Beschreibung>
                 <Hersteller>Dell</Hersteller>
                 -PC
@@ -39,7 +43,7 @@
             <Besonderheiten></Besonderheiten>
         </Rechner>
         
-        <Rechner Rechner_ID="C3013" Betriebssystem="Windows" Anschaffungsdatum="2016-03-01">
+        <Rechner Rechner_ID="C3013" Anschaffungsdatum="2016-03-01" Betriebssystem="B00001">
             <Beschreibung>
                 <Hersteller>Microsoft</Hersteller>
                 -PC
@@ -67,8 +71,8 @@
         
     </Labor>
     
-    <Labor Raum_Nr="J3737">
-        <Rechner Rechner_ID="C1037" Betriebssystem="Windows" Anschaffungsdatum="2013-07-03">
+    <Labor Name="Biologie Labor" Raum_Nr="J3737">
+        <Rechner Rechner_ID="C1037" Anschaffungsdatum="2013-07-03" Betriebssystem="B00001">
             <Beschreibung>
                 <Hersteller>Acer</Hersteller>
                 -PC
@@ -87,10 +91,61 @@
             <Besonderheiten></Besonderheiten>   
         </Rechner>
         
-     <!--   <Rechner >
+        <Rechner Rechner_ID="C2037" Anschaffungsdatum="2014-03-07" Betriebssystem="B00001">
+            <Beschreibung>
+                <Hersteller>Asus</Hersteller>
+                -PC
+            </Beschreibung>
             
+            <Erweiterung>
+                <Beschreibung>
+                    2x-
+                    <Hersteller>Samsung</Hersteller>
+                    <Model>8Gb 2133 Mhz DDR4 PC3-2133P</Model>
+                    -Arbeitsspeicher
+                </Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Erweiterung>
+            
+            <Besonderheiten></Besonderheiten>   
         </Rechner>
-     -->
+        
+        <Geraet Geraete_ID="M3037" Anschaffungsdatum="2015-07-03">
+            <Beschreibung>
+                <Hersteller>Compra</Hersteller>
+                <Model>Bin-TOP 02</Model>
+                -Binokulares Mikroskop
+            </Beschreibung>
+        </Geraet>
+    </Labor>
+    
+    <Labor Name="Digitale Medien Produktion Labor" Raum_Nr="N3099">
+        
+        <Rechner Rechner_ID="C1003" Anschaffungsdatum="2016-03-09" Betriebssystem="B00001">
+            <Beschreibung>
+                <Hersteller>Acer</Hersteller>
+                -PC
+            </Beschreibung>
+            <Erweiterung>
+                <Beschreibung>
+                    <Hersteller>Zotac</Hersteller>
+                    <Model>GeForce GTX 1080 AMP 8 GB GDDR5X</Model>
+                    -Grafikkarte
+                </Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Erweiterung>
+            
+            <Besonderheiten></Besonderheiten>
+        </Rechner>
+        
+        <Rechner Rechner_ID="C2003" Anschaffungsdatum="2016-03-03" Betriebssystem="B00001">
+            <Beschreibung></Beschreibung>
+            <Erweiterung>
+                <Beschreibung></Beschreibung>
+                <Besonderheiten></Besonderheiten>
+            </Erweiterung>
+            <Besonderheiten></Besonderheiten>
+        </Rechner>
     </Labor>
     
     <Software>
