@@ -3,6 +3,8 @@
     <xs:element name="Hochschule">
         <xs:complexType>
             <xs:sequence>
+               
+                <xs:sequence>
                 <xs:element name="Labor" minOccurs="1" maxOccurs="unbounded"> 
                     <xs:complexType>
                         <xs:sequence>
@@ -14,23 +16,22 @@
                                         <xs:element name="Beschreibung" minOccurs="1" maxOccurs="1"/>
                                         
                             <!-- Element fuer Rechner: Erweiterung -->
-                                            <xs:element name="Erweiterung">
-                                                <xs:complexType>
-                                                    <xs:all>
-                                            <!-- Element fuer Erweiterungen: Beschreibung -->
-                                                        <xs:element name="Beschreibung" minOccurs="1" />
-                                            <!-- Element fuer Erweiterungen: Besonderheiten -->            
-                                                        <xs:element name="Besonderheiten" type="xs:string"/>
-                                                    </xs:all>    
-                                                </xs:complexType>
-                                            </xs:element>
+                                        <xs:element name="Erweiterung" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:all>
+                                        <!-- Element fuer Erweiterungen: Beschreibung -->
+                                                    <xs:element name="Beschreibung" minOccurs="1" />
+                                        <!-- Element fuer Erweiterungen: Besonderheiten -->            
+                                                    <xs:element name="Besonderheiten" type="xs:string"/>
+                                                </xs:all>    
+                                            </xs:complexType>
+                                        </xs:element>
                             <!-- Element fuer Rechner: Besonderheiten -->                
-                                            <xs:element name="Besonderheiten" type="xs:string"/>
-                                          
+                                        <xs:element name="Besonderheiten" type="xs:string"/>
                                     </xs:sequence>
                             <!-- Attribute fuer Rechner -->        
                                     <xs:attribute name="Rechner_ID" type="xs:ID"/>
-                                    <xs:attribute name="Betriebssystem" type="xs:string"/>
+                                    <xs:attribute name="Betriebssystem" type="xs:IDREF"/>
                                     <xs:attribute name="Anschaffungsdatum" type="xs:date"/>
                                 </xs:complexType>
                             </xs:element>
@@ -52,6 +53,46 @@
                         <xs:attribute name="Raum_Nr" type="xs:ID"/>
                         <xs:attribute name="Name" type="xs:string"/>
                     </xs:complexType>
+                </xs:element>
+                </xs:sequence>
+    <!-- Element Software fuer Hochschule -->            
+                <xs:element name="Software" minOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Betriebssysteme">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Betriebssystem" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element name="Beschreibung" minOccurs="1" type="xs:string"/>
+                                                    <xs:element name="Besonderheiten" minOccurs="0" type="xs:string"></xs:element>
+                                                </xs:all>
+                                                <xs:attribute name="Name" type="xs:string"/>
+                                                <xs:attribute name="ID" type="xs:ID"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Anwendugen">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Anwendung" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element name="Beschreibung" minOccurs="1" type="xs:string"/>
+                                                    <xs:element name="Besonderheiten" minOccurs="0" type="xs:string"></xs:element>
+                                                </xs:all>
+                                                <xs:attribute name="Name" type="xs:string"/>
+                                                <xs:attribute name="ID" type="xs:ID"/>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>   
                 </xs:element>
             </xs:sequence>
         </xs:complexType>

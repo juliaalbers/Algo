@@ -5,7 +5,7 @@
     xsi:noNamespaceSchemaLocation="MySchema.xsd">
     
     <Labor Raum_Nr="E1313">
-        <Rechner Rechner_ID="C1013" Betriebssystem="Windows" Anschaffungsdatum="2013-01-13">
+        <Rechner Rechner_ID="C1013" Betriebssystem="B00001" Anschaffungsdatum="2013-01-13">
             <Beschreibung>
                 <Hersteller>Dell</Hersteller>-PC
             </Beschreibung>
@@ -94,80 +94,80 @@
     </Labor>
     
     <Software>
-        <Windows10 ID="00001">
+        <Betriebssystem Name="Windows10" ID="B00001">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
-        </Windows10>
+        </Betriebssystem>
         
-        <Windows8 ID="00002">
+        <Betriebssystem Name="Windows8" ID="B00002">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
-        </Windows8>
+        </Betriebssystem>
         
-        <Windows7 ID="00003">
+        <Betriebssystem Name="Windows7" ID="B00003">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
-        </Windows7>
+        </Betriebssystem>
         
-        <WindowsVista ID="00004">
+        <Betriebssystem Name="WindowsVista" ID="B00004">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
-        </WindowsVista>
+        </Betriebssystem>
         
-        <Linux ID="00005">
+        <Betriebssystem Name="Linux" ID="B00005">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
-        </Linux>
+        </Betriebssystem>
         
-        <Eclipse ID="00006">
+        <Anwendung Name="Eclipse" ID="A00006">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
-        </Eclipse>
+        </Anwendung>
         
-        <Photoshop ID="00007">
+        <Anwendung Name="Photoshop" ID="A00007">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
-        </Photoshop>
+        </Anwendung>
         
-        <Illustrator ID="00008">
+        <Anwendung Name="Illustrator" ID="A00008">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
-        </Illustrator>
+        </Anwendung>
         
-        <JCreator ID="00009">
+        <Anwendung Name="JCreator" ID="A00009">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
-        </JCreator>
+        </Anwendung>
         
-        <H2 ID="00010">
+        <Anwendung Name="H2" ID="A00010">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
-        </H2>
+        </Anwendung>
         
-        <VisualParadigm ID="00011">
+        <Anwendung Name="VisualParadigm" ID="A00011">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
-        </VisualParadigm>
+        </Anwendung>
         
-        <MicrosoftOffice ID="00012">
+        <Anwendung Name="MicrosoftOffice" ID="A00012">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
-        </MicrosoftOffice>
+        </Anwendung>
         
-        <BoneLab ID="00013">
+        <Anwendung Name="BoneLab" ID="A00013">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
-        </BoneLab>
+        </Anwendung>
         
-        <VirtualMicroscope ID="00014">
+        <Anwendung Name="VirtualMicroscope" ID="A00014">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
-        </VirtualMicroscope>
+        </Anwendung>
         
-        <UnrealEngine ID="00015">
+        <Anwendung Name="UnrealEngine" ID="A00015">
             <Beschreibung></Beschreibung>
             <Besonderheiten></Besonderheiten>
-        </UnrealEngine>
+        </Anwendung>
         
     </Software>
 </Hochschule>
