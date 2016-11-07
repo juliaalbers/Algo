@@ -76,15 +76,19 @@
                 <xs:element name="Software" minOccurs="1">
                     <xs:complexType>
                         <xs:sequence>
+                <!-- Element Betriebssysteme fuer Software -->
                             <xs:element name="Betriebssysteme">
                                 <xs:complexType>
                                     <xs:sequence>
+                            <!-- Element Betriebssystem fuer Betriebssysteme -->            
                                         <xs:element name="Betriebssystem" maxOccurs="unbounded">
                                             <xs:complexType>
                                                 <xs:all>
+                                        <!-- Element Beschreibung, Besonderheiten fuer Betriebssystem -->            
                                                     <xs:element name="Beschreibung" minOccurs="1" type="xs:string"/>
                                                     <xs:element name="Besonderheiten" minOccurs="0" type="xs:string"></xs:element>
                                                 </xs:all>
+                                        <!-- Attribute fuer Betriebssystem -->        
                                                 <xs:attribute name="Name" type="xs:string"/>
                                                 <xs:attribute name="ID" type="xs:ID"/>
                                             </xs:complexType>
@@ -92,15 +96,19 @@
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
+                <!-- Element Anwendungen fuer Software -->            
                             <xs:element name="Anwendugen">
                                 <xs:complexType>
                                     <xs:sequence>
+                            <!-- Element Anwendung fuer Anwendungen -->            
                                         <xs:element name="Anwendung" maxOccurs="unbounded">
                                             <xs:complexType>
                                                 <xs:all>
+                                        <!-- Element Beschreibung, Besonderheiten fuer Anwendunge -->            
                                                     <xs:element name="Beschreibung" minOccurs="1" type="xs:string"/>
                                                     <xs:element name="Besonderheiten" minOccurs="0" type="xs:string"></xs:element>
                                                 </xs:all>
+                                        <!-- Attribute fuer Anwendung -->       
                                                 <xs:attribute name="Name" type="xs:string"/>
                                                 <xs:attribute name="ID" type="xs:ID"/>
                                             </xs:complexType>
@@ -114,7 +122,7 @@
             </xs:sequence>
         </xs:complexType>
         
-        
+    <!-- KeyRefs -->    
         <xs:keyref name="theKeyRef" refer="theKey">
             <xs:selector xpath="Rechner/*"/>
             <xs:field xpath="@Betriebssystem"/>
