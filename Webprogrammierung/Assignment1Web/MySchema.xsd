@@ -50,6 +50,7 @@
                         </xs:sequence>
                 <!-- Attribute fuer Labor -->
                         <xs:attribute name="Raum_Nr" type="xs:ID"/>
+                        <xs:attribute name="Name" type="xs:string"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
