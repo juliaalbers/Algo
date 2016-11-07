@@ -4,37 +4,28 @@
 <Hochschule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="MySchema.xsd">
     
-
     <Labor Raum_Nr="E1313" Name="Informatik Labor">
         <Rechner Rechner_ID="C1013" Anschaffungsdatum="2013-01-13" Betriebssystem="B00001">
 
             <Beschreibung>
                 <Hersteller>Dell</Hersteller>
-                <Model>Precision Tower 3000 Serie </Model>
                 PC mit
                 <Hersteller>Intel </Hersteller>
-                <Model>Core i5-6500 </Model>
-                Prozessor und Integrierte
+                Core i5 Prozessor und Integrierte
                 <Hersteller>Intel </Hersteller>
                 HD Grafik, dazu 4 GB DDR4-Speicher von
-                <Hersteller>Sammsung </Hersteller>
-                und von 
+                <Hersteller>Samsung </Hersteller>
+                und eine 1TB Festplatte von 
                 <Hersteller>Seagate </Hersteller>
-                die 
-                <Model>Desktop HDD ST1000DM003 </Model>
-                1TB Festplatte
             </Beschreibung>
             
             <Erweiterung>
                 <Beschreibung> 
                     Leistungsfähigere CPU durch
                     <Hersteller>Intel</Hersteller> 
-                    <Modell>Core i5-6500</Modell>
-                    -Prozessor
+                    Core i5 Prozessor
                 </Beschreibung>
             </Erweiterung>
-            
-
 
             <Besonderheiten>
                 Gehäuse am 2015-06-03 ausgetauscht,
@@ -43,25 +34,34 @@
             
             <Installierte_Software>
                 A00006
-                A00007
-                A00008
+                A00009
+                A00010
             </Installierte_Software>
 
         </Rechner>
         
         <Rechner Rechner_ID="C2013" Anschaffungsdatum="2016-03-01" Betriebssystem="B00001">
             <Beschreibung>
-                <Hersteller>Dell</Hersteller>
-                -PC
-            </Beschreibung>
+                <Hersteller>Dell </Hersteller>
+                PC mit
+                <Hersteller>Intel </Hersteller>
+                Core i5 Prozessor und Integrierte
+                <Hersteller>Intel </Hersteller>
+                HD Grafik, dazu 8 GB RAM von
+                <Hersteller>Samsung </Hersteller>
+                und eine 1TB Festplatte von 
+                <Hersteller>Seagate </Hersteller>
             
             <Erweiterung>
                 <Beschreibung>
+                    Leistungsfähigere CPU durch
                     <Hersteller>Intel</Hersteller> 
-                    <Model>Core i5-6300U</Model>
-                    -Prozessor
+                    Core i5 Prozessor und schnellere Verarbeitungszeit durch 8GB RAM von
+                    <Hersteller>Samsung</Hersteller>
                 </Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Besonderheiten>
+                    Mainboard am 2016-02-01 ausgewechselt
+                </Besonderheiten>
             </Erweiterung>
             
             <Besonderheiten></Besonderheiten>
@@ -70,16 +70,22 @@
         <Rechner Rechner_ID="C3013" Anschaffungsdatum="2016-03-01" Betriebssystem="B00001">
             <Beschreibung>
                 <Hersteller>Microsoft</Hersteller>
-                -PC
+                PC mit
+                <Hersteller>Intel </Hersteller>
+                Core i3 Prozessor und Integrierte
+                <Hersteller>Intel </Hersteller>
+                HD Grafik, dazu 4 GB RAM von
+                <Hersteller>Samsung </Hersteller>
+                und eine 2TB Festplatte von 
+                <Hersteller>Seagate </Hersteller>
             </Beschreibung>
             
             <Erweiterung>
                 <Beschreibung>
-                    <Hersteller>Intel</Hersteller>
-                    <Model>Core i5-6300U</Model>
-                    -Prozessor
+                    Erweiterte Speicherkapazität durch
+                    <Hersteller>Seagate</Hersteller>
+                    2TB Festplatte
                 </Beschreibung>
-                <Besonderheiten></Besonderheiten>
             </Erweiterung>
             
             <Besonderheiten></Besonderheiten>
