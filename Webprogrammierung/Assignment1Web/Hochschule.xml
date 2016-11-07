@@ -10,19 +10,43 @@
 
             <Beschreibung>
                 <Hersteller>Dell</Hersteller>
-                -PC
+                <Model>Precision Tower 3000 Serie </Model>
+                PC mit
+                <Hersteller>Intel </Hersteller>
+                <Model>Core i5-6500 </Model>
+                Prozessor und Integrierte
+                <Hersteller>Intel </Hersteller>
+                HD Grafik, dazu 4 GB DDR4-Speicher von
+                <Hersteller>Sammsung </Hersteller>
+                und von 
+                <Hersteller>Seagate </Hersteller>
+                die 
+                <Model>Desktop HDD ST1000DM003 </Model>
+                1TB Festplatte
             </Beschreibung>
             
             <Erweiterung>
                 <Beschreibung> 
+                    Leistungsfähigere CPU durch
                     <Hersteller>Intel</Hersteller> 
-                    <Modell>Core m5-6Y57</Modell>
+                    <Modell>Core i5-6500</Modell>
                     -Prozessor
                 </Beschreibung>
-                 <Besonderheiten></Besonderheiten>
             </Erweiterung>
             
-            <Besonderheiten></Besonderheiten>
+
+
+            <Besonderheiten>
+                Gehäuse am 2015-06-03 ausgetauscht,
+                Drei USB 2.0 Schnittstellen defekt
+            </Besonderheiten>
+            
+            <Installierte_Software>
+                A00006
+                A00007
+                A00008
+            </Installierte_Software>
+
         </Rechner>
         
         <Rechner Rechner_ID="C2013" Anschaffungsdatum="2016-03-01" Betriebssystem="B00001">
@@ -119,7 +143,7 @@
         </Geraet>
     </Labor>
     
-    <Labor Name="Digitale Medien Produktion Labor" Raum_Nr="N3099">
+    <Labor Name="Multimedialabor" Raum_Nr="N3099">
         
         <Rechner Rechner_ID="C1003" Anschaffungsdatum="2016-03-09" Betriebssystem="B00001">
             <Beschreibung>
