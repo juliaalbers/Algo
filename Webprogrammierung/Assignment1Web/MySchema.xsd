@@ -123,11 +123,11 @@
         </xs:complexType>
         
     <!-- KeyRefs -->    
-        <xs:keyref name="theKeyRef" refer="theKey">
+        <xs:keyref name="theKeyRef" refer="Betriebssystem">
             <xs:selector xpath="Rechner/*"/>
             <xs:field xpath="@Betriebssystem"/>
         </xs:keyref>
-        <xs:key name="theKey">
+        <xs:key name="Betriebssystem">
             <xs:selector xpath="Betriebssysteme/*"/>
             <xs:field xpath="@ID"/>
         </xs:key>

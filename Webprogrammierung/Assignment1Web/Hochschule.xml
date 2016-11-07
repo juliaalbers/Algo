@@ -23,6 +23,11 @@
             </Erweiterung>
             
             <Besonderheiten></Besonderheiten>
+            <Installierte_Software>
+                A00006
+                A00007
+                A00008
+            </Installierte_Software>
         </Rechner>
         
         <Rechner Rechner_ID="C2013" Anschaffungsdatum="2016-03-01" Betriebssystem="B00001">
