@@ -1,10 +1,12 @@
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <!-- Autoren: Münsterberg, Enno; Albers, Julia; Ioannidis, Niko -->
     
     <xsl:template match="/">
         <html>
             <body>
                 <xsl:element name="h2"><a name="anf">Alle Labore der Hochschule</a></xsl:element>
+                <!-- Tabelle mit allen Laboren -->
                 <xsl:element name="table">
                     <xsl:attribute name="border">
                         1
@@ -20,6 +22,7 @@
                         <xsl:sort select="@Name"/>
                         <xsl:element name="tr">
                             <xsl:element name="td">
+                                <!-- Link zum Labor und holen des Attributes Name -->
                                 <a href="#{@Name}"><xsl:value-of select="@Name"/></a>
                             </xsl:element>
                             <td><xsl:value-of select="@Raum_Nr"/></td>
@@ -40,6 +43,7 @@
                         <xsl:element name="th">Name</xsl:element>
                         <xsl:element name="th">Anzahl</xsl:element>
                     </xsl:element>
+                    <!-- Jede Menge berechnungen zu Anzahlen und Durchschnitt -->
                     <xsl:element name="tr">
                         <xsl:element name="td">Labore</xsl:element>
                         <xsl:element name="td"><xsl:value-of select="count(//Labor)"/></xsl:element>
@@ -64,6 +68,7 @@
                 <!-- Neue Tabelle vorher br -->
                 <xsl:element name="br"/>
                 <xsl:element name="h2">Alle Betriebssysteme</xsl:element>
+                <!-- Tabelle mit allen Betriebssystemen -->
                 <xsl:element name="table">
                     <xsl:attribute name="border">
                         1
@@ -130,8 +135,8 @@
                         <xsl:element name="th">Betriebssystem</xsl:element>
                         <xsl:element name="th">Anschaffung</xsl:element>
                     </xsl:element>
+                    <!-- Bestimmung von dem Labor und Tabelle zu allen Rechnern im Labor -->
                     <xsl:for-each select="//Labor[position()=1]/Rechner">
-                        <!--<xsl:sort select="@Rechner_ID"/>-->
                         <xsl:element name="tr">
                             <xsl:element name="td"><a href="#{@Rechner_ID}"><xsl:value-of select="@Rechner_ID"/></a></xsl:element>
                             <xsl:element name="td"><xsl:value-of select="@Betriebssystem"/></xsl:element>
