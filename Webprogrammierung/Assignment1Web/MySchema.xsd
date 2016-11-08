@@ -21,9 +21,8 @@
                                                     </xs:sequence>
                                                 </xs:complexType>
                                             </xs:element>
-                                            
                                 <!-- Element fuer Rechner: Erweiterung -->
-                                            <xs:element name="Erweiterung" minOccurs="0">
+                                            <xs:element name="Erweiterung" minOccurs="0" maxOccurs="1">
                                                 <xs:complexType>
                                                     <xs:all>
                                             <!-- Element fuer Erweiterungen: Beschreibung -->
@@ -40,17 +39,17 @@
                                                 </xs:complexType>
                                             </xs:element>
                                 <!-- Element fuer Rechner: Besonderheiten -->                
-                                            <xs:element name="Besonderheiten" type="xs:string" minOccurs="0"/>
+                                            <xs:element name="Besonderheiten" type="xs:string" minOccurs="0" maxOccurs="1"/>
                                 <!-- Element fuer Rechner: Installierte_Software -->            
-                                            <xs:element name="Installierte_Software">
+                                            <xs:element name="Installierte_Software" minOccurs="0" maxOccurs="1">
                                                 <xs:complexType>
                                                     <xs:sequence>
                                             <!-- Element fuer Installierte_Software: Software -->            
-                                                        <xs:element name="Software" maxOccurs="unbounded">
+                                                        <xs:element name="Software" minOccurs="1" maxOccurs="unbounded">
                                                             <xs:complexType>
                                                         <!-- Attribute fuer Software -->        
-                                                                <xs:attribute name="ID" type="xs:IDREF"/>
-                                                                <xs:attribute name="Lizenzvorhanden" type="xs:boolean"/>
+                                                                <xs:attribute name="ID" type="xs:IDREF" use="required"/>
+                                                                <xs:attribute name="Lizenzvorhanden" type="xs:boolean" use="required"/>
                                                             </xs:complexType>
                                                         </xs:element>
                                                     </xs:sequence>
@@ -58,9 +57,9 @@
                                             </xs:element>
                                         </xs:sequence>
                                 <!-- Attribute fuer Rechner -->        
-                                        <xs:attribute name="Rechner_ID" type="xs:ID"/>
-                                        <xs:attribute name="Betriebssystem" type="xs:IDREF"/>
-                                        <xs:attribute name="Anschaffungsdatum" type="xs:date"/>
+                                        <xs:attribute name="Rechner_ID" type="xs:ID" use="required"/>
+                                        <xs:attribute name="Betriebssystem" type="xs:IDREF" use="required"/>
+                                        <xs:attribute name="Anschaffungsdatum" type="xs:date" use="required"/>
                                     </xs:complexType>
                                 </xs:element>
                     <!-- Element fuer Labor: Geraet -->
@@ -75,30 +74,30 @@
                                                     </xs:sequence>
                                                 </xs:complexType>
                                             </xs:element>
-                                            <xs:element name="Besonderheiten" type="xs:string" minOccurs="0"/>
+                                            <xs:element name="Besonderheiten" type="xs:string" minOccurs="0" maxOccurs="1"/>
                                         </xs:sequence>
                                 <!-- Attribute fuer Geraet -->
-                                        <xs:attribute name="Geraete_ID" type="xs:ID"/>
-                                        <xs:attribute name="Anschaffungsdatum" type="xs:date"/>
+                                        <xs:attribute name="Geraete_ID" type="xs:ID" use="required"/>
+                                        <xs:attribute name="Anschaffungsdatum" type="xs:date" use="required"/>
                                     </xs:complexType>
                                 </xs:element>
                             </xs:sequence>
                     <!-- Attribute fuer Labor -->
-                            <xs:attribute name="Raum_Nr" type="xs:ID"/>
-                            <xs:attribute name="Name" type="xs:string"/>
+                            <xs:attribute name="Raum_Nr" type="xs:ID" use="required"/>
+                            <xs:attribute name="Name" type="xs:string" use="required"/>
                         </xs:complexType>
                     </xs:element>
                 </xs:sequence>
     <!-- Element Software fuer Hochschule -->            
-                <xs:element name="Software" minOccurs="1">
+                <xs:element name="Software" minOccurs="1" maxOccurs="1">
                     <xs:complexType>
-                        <xs:sequence>
+                        <xs:all>
                 <!-- Element Betriebssysteme fuer Software -->
-                            <xs:element name="Betriebssysteme">
+                            <xs:element name="Betriebssysteme"  minOccurs="1">
                                 <xs:complexType>
                                     <xs:sequence>
                             <!-- Element Betriebssystem fuer Betriebssysteme -->            
-                                        <xs:element name="Betriebssystem" maxOccurs="unbounded">
+                                        <xs:element name="Betriebssystem" minOccurs="0" maxOccurs="unbounded">
                                             <xs:complexType>
                                                 <xs:all>
                                         <!-- Element Beschreibung, Besonderheiten fuer Betriebssystem -->            
@@ -109,22 +108,22 @@
                                                             </xs:sequence>
                                                         </xs:complexType>
                                                     </xs:element>
-                                                    <xs:element name="Besonderheiten" minOccurs="0" type="xs:string"></xs:element>
+                                                    <xs:element name="Besonderheiten" minOccurs="0" type="xs:string"/>
                                                 </xs:all>
                                         <!-- Attribute fuer Betriebssystem -->        
-                                                <xs:attribute name="Name" type="xs:string"/>
-                                                <xs:attribute name="ID" type="xs:ID"/>
+                                                <xs:attribute name="Name" type="xs:string" use="required"/>
+                                                <xs:attribute name="ID" type="xs:ID" use="required"/>
                                             </xs:complexType>
                                         </xs:element>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
                 <!-- Element Anwendungen fuer Software -->            
-                            <xs:element name="Anwendungen">
+                            <xs:element name="Anwendungen" minOccurs="1">
                                 <xs:complexType>
                                     <xs:sequence>
                             <!-- Element Anwendung fuer Anwendungen -->            
-                                        <xs:element name="Anwendung" maxOccurs="unbounded">
+                                        <xs:element name="Anwendung" minOccurs="0" maxOccurs="unbounded">
                                             <xs:complexType>
                                                 <xs:all>
                                         <!-- Element Beschreibung, Besonderheiten fuer Anwendunge -->            
@@ -135,31 +134,20 @@
                                                             </xs:sequence>
                                                         </xs:complexType>
                                                     </xs:element>
-                                                    <xs:element name="Besonderheiten" minOccurs="0" type="xs:string"></xs:element>
+                                                    <xs:element name="Besonderheiten" minOccurs="0" type="xs:string"/>
                                                 </xs:all>
                                         <!-- Attribute fuer Anwendung -->       
-                                                <xs:attribute name="Name" type="xs:string"/>
-                                                <xs:attribute name="ID" type="xs:ID"/>
+                                                <xs:attribute name="Name" type="xs:string" use="required"/>
+                                                <xs:attribute name="ID" type="xs:ID" use="required"/>
                                             </xs:complexType>
                                         </xs:element>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
-                        </xs:sequence>
+                        </xs:all>
                     </xs:complexType>   
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
-        
-    <!-- KeyRefs -->    
-        <xs:keyref name="theKeyRef" refer="Betriebssystem">
-            <xs:selector xpath="Rechner/*"/>
-            <xs:field xpath="@Betriebssystem"/>
-        </xs:keyref>
-        <xs:key name="Betriebssystem">
-            <xs:selector xpath="Betriebssysteme/*"/>
-            <xs:field xpath="@ID"/>
-        </xs:key>
-        
     </xs:element>
 </xs:schema>
