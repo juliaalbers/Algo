@@ -130,7 +130,7 @@
                         <xsl:element name="th">Betriebssystem</xsl:element>
                         <xsl:element name="th">Anschaffung</xsl:element>
                     </xsl:element>
-                    <xsl:for-each select="//Rechner">
+                    <xsl:for-each select="//Labor[position()=1]/Rechner">
                         <!--<xsl:sort select="@Rechner_ID"/>-->
                         <xsl:element name="tr">
                             <xsl:element name="td"><a href="#{@Rechner_ID}"><xsl:value-of select="@Rechner_ID"/></a></xsl:element>
@@ -197,7 +197,7 @@
                         <xsl:element name="th">Betriebssystem</xsl:element>
                         <xsl:element name="th">Anschaffung</xsl:element>
                     </xsl:element>
-                    <xsl:for-each select="//Rechner">
+                    <xsl:for-each select="//Labor[position()=2]/Rechner">
                         <xsl:sort select="@Rechner_ID"/>
                         <xsl:element name="tr">
                             <xsl:element name="td"><a href="#{@Rechner_ID}"><xsl:value-of select="@Rechner_ID"/></a></xsl:element>
@@ -264,7 +264,7 @@
                         <xsl:element name="th">Betriebssystem</xsl:element>
                         <xsl:element name="th">Anschaffung</xsl:element>
                     </xsl:element>
-                    <xsl:for-each select="//Rechner">
+                    <xsl:for-each select="//Labor[position()=3]/Rechner">
                         <xsl:sort select="@Rechner_ID"/>
                         <xsl:element name="tr">
                             <xsl:element name="td"><a href="#{@Rechner_ID}"><xsl:value-of select="@Rechner_ID"/></a></xsl:element>
