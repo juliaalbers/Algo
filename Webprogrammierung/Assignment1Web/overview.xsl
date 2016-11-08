@@ -253,6 +253,9 @@
             <xsl:sort select="@ID"/>
             <xsl:element name="li"><xsl:value-of select="@ID"/></xsl:element>
         </xsl:for-each>
+        <br/>
+        <br/>
+        <hr/>
     </xsl:template>
     
     <!-- Rechner 3 -->
