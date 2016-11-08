@@ -4,7 +4,10 @@
 <Hochschule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="MySchema.xsd">
     
+    <!-- Labor für INF / 3 Rechner 1 Gerät(Drucker) -->
     <Labor Raum_Nr="E1313" Name="Informatik Labor">
+        
+        <!-- Rechner mit Erweiterungen und Besonderheiten -->
         <Rechner Rechner_ID="C1013" Anschaffungsdatum="2013-01-13" Betriebssystem="B00001">
             <Beschreibung>
                 <Hersteller>Dell </Hersteller>
@@ -32,14 +35,15 @@
                 Drei USB 2.0 Schnittstellen defekt
             </Besonderheiten>
             
+            <!-- Installierte Software mit ID verweis aus der Software Liste (unten) und Lizenz Angabe -->
             <Installierte_Software>
                 <Software ID="A00006" Lizenzvorhanden="true"/>
                 <Software ID="A00009" Lizenzvorhanden="true"/>
                 <Software ID="A00010" Lizenzvorhanden="false"/>
             </Installierte_Software>
-
         </Rechner>
         
+        <!-- Rechner mit Erweiterungen und Besonderheiten -->
         <Rechner Rechner_ID="C2013" Anschaffungsdatum="2016-03-01" Betriebssystem="B00002">
             <Beschreibung>
                 <Hersteller>Dell </Hersteller>
@@ -52,6 +56,7 @@
                 und eine 1TB Festplatte von 
                 <Hersteller>Seagate </Hersteller>
             </Beschreibung>
+            
             <Erweiterung>
                 <Beschreibung>
                     Leistungsfähigere CPU durch
@@ -65,11 +70,13 @@
                 Mainboard am 2016-02-01 ausgewechselt
             </Besonderheiten>
             
+            <!-- Installierte Software mit ID verweis aus der Software Liste (unten) und Lizenz Angabe -->
             <Installierte_Software>
                 <Software ID="A00009" Lizenzvorhanden="false"/>
             </Installierte_Software>
         </Rechner>
         
+        <!-- Rechner mit Erweiterungen aber OHNE Besonderheiten -->
         <Rechner Rechner_ID="C3013" Anschaffungsdatum="2016-03-01" Betriebssystem="B00001">
             <Beschreibung>
                 <Hersteller>Microsoft </Hersteller>
@@ -91,23 +98,26 @@
                 </Beschreibung>
             </Erweiterung>
             
+            <!-- Installierte Software mit ID verweis aus der Software Liste (unten) und Lizenz Angabe -->
             <Installierte_Software>
                 <Software ID="A00009" Lizenzvorhanden="false"/>
                 <Software ID="A00010" Lizenzvorhanden="true"/>
-            </Installierte_Software>
-            
+            </Installierte_Software>   
         </Rechner>
         
+        <!-- Gerät Drucker -->
         <Geraet Geraete_ID="G4013" Anschaffungsdatum="2013-03-01">
             <Beschreibung>
                 <Hersteller>HP </Hersteller>
                 -Drucker
             </Beschreibung>
-        </Geraet>
-        
+        </Geraet>   
     </Labor>
     
+    <!-- Biologie Labor / 2 Rechner 1 Geräte -->
     <Labor Name="Biologie Labor" Raum_Nr="J3737">
+        
+        <!-- Rechner mit Erweiterungen aber OHNE Besonderheiten -->
         <Rechner Rechner_ID="C1037" Anschaffungsdatum="2013-07-03" Betriebssystem="B00001">
             <Beschreibung>
                 <Hersteller>Acer </Hersteller>
@@ -128,6 +138,7 @@
                 </Beschreibung>
             </Erweiterung>
             
+            <!-- Installierte Software mit ID verweis aus der Software Liste (unten) und Lizenz Angabe -->
             <Installierte_Software>
                 <Software ID="A00007" Lizenzvorhanden="true"/>
                 <Software ID="A00012" Lizenzvorhanden="false"/>
@@ -136,6 +147,7 @@
             </Installierte_Software>
         </Rechner>
         
+        <!-- Rechner OHNE Erweiterungen und OHNE Besonderheiten -->
         <Rechner Rechner_ID="C2037" Anschaffungsdatum="2014-03-07" Betriebssystem="B00001">
             <Beschreibung>
                 <Hersteller>Asus </Hersteller>
@@ -149,6 +161,7 @@
                 <Hersteller>Seagate </Hersteller>
             </Beschreibung>
             
+            <!-- Installierte Software mit ID verweis aus der Software Liste (unten) und Lizenz Angabe -->
             <Installierte_Software>
                 <Software ID="A00007" Lizenzvorhanden="true"/>
                 <Software ID="A00008" Lizenzvorhanden="true"/>
@@ -156,6 +169,7 @@
             </Installierte_Software>
         </Rechner>
         
+        <!-- Gerät Mirkroskop -->
         <Geraet Geraete_ID="M3037" Anschaffungsdatum="2015-07-03">
             <Beschreibung>
                 <Hersteller>Compra </Hersteller>
@@ -164,8 +178,10 @@
         </Geraet>
     </Labor>
     
+    <!-- Multimedialabor / 1 Rechner KEINE Geräte -->
     <Labor Name="Multimedialabor" Raum_Nr="N3099">
         
+        <!-- Rechner mit Erweiterungen und mit Besonderheiten -->
         <Rechner Rechner_ID="C1003" Anschaffungsdatum="2016-03-09" Betriebssystem="B00001">
             <Beschreibung>
                 <Hersteller>Acer </Hersteller>
@@ -176,6 +192,7 @@
                 dazu eine 1TB Festplatte von 
                 <Hersteller>Samsung </Hersteller>
             </Beschreibung>
+            
             <Erweiterung>
                 <Beschreibung>
                     Seht Hohe auflösung durch die
@@ -191,6 +208,7 @@
                 CPU Lüfter am 2016-04-03 ausgewechselt
             </Besonderheiten>
             
+            <!-- Installierte Software mit ID verweis aus der Software Liste (unten) und Lizenz Angabe -->
             <Installierte_Software>
                 <Software ID="A00007" Lizenzvorhanden="true"/>
                 <Software ID="A00008" Lizenzvorhanden="true"/>
@@ -204,27 +222,30 @@
         <Betriebssysteme>
 
             <Betriebssystem Name="Windows10" ID="B00001">
-                <Beschreibung></Beschreibung>
+                <Beschreibung>
+                    Betriebssystem von 
+                    <Hersteller>Microsoft</Hersteller>
+                </Beschreibung>
                 <Besonderheiten></Besonderheiten>
             </Betriebssystem>
             
             <Betriebssystem Name="Windows8" ID="B00002">
-                <Beschreibung></Beschreibung>
+                <Beschreibung>Betriebssystem von Microsoft</Beschreibung>
                 <Besonderheiten></Besonderheiten>
             </Betriebssystem>
             
             <Betriebssystem Name="Windows7" ID="B00003">
-                <Beschreibung></Beschreibung>
+                <Beschreibung>Betriebssystem von Microsoft</Beschreibung>
                 <Besonderheiten></Besonderheiten>
             </Betriebssystem>
             
             <Betriebssystem Name="WindowsVista" ID="B00004">
-                <Beschreibung></Beschreibung>
+                <Beschreibung>Betriebssystem von Microsoft</Beschreibung>
                 <Besonderheiten></Besonderheiten>
             </Betriebssystem>
             
             <Betriebssystem Name="Linux" ID="B00005">
-                <Beschreibung></Beschreibung>
+                <Beschreibung>Betriebssystem</Beschreibung>
                 <Besonderheiten></Besonderheiten>
             </Betriebssystem>
             
