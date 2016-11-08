@@ -103,14 +103,16 @@
                         </xsl:attribute>
                         <xsl:element name="th">Anwendungen</xsl:element>
                         <xsl:element name="th">ID</xsl:element>
+                        <xsl:element name="th">Beschreibung</xsl:element>
+                        <xsl:element name="th">Besonderheiten</xsl:element>
                     </xsl:element>
                     <xsl:for-each select="//Anwendung">
                         <xsl:sort select="@Name"/>
                         <xsl:element name="tr">
-                            <xsl:element name="td">
-                                <xsl:value-of select="@Name"/>
-                            </xsl:element>
+                            <xsl:element name="td"><xsl:value-of select="@Name"/></xsl:element>
                             <xsl:element name="td"><xsl:value-of select="@ID"/></xsl:element>
+                            <xsl:element name="td"><xsl:value-of select="Beschreibung"/></xsl:element>
+                            <xsl:element name="td"><xsl:value-of select="Besonderheiten"/></xsl:element>
                         </xsl:element>
                     </xsl:for-each>
                 </xsl:element>
