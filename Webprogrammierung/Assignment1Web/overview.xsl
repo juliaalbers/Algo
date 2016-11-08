@@ -118,340 +118,162 @@
                 <br/>
                 <hr/>
                 
-                <!-- Labor 1 -->
-                <xsl:element name="h2"><a name="Biologie Labor">Alle Daten zum Labor 1</a></xsl:element>
-                <xsl:element name="br"/>
-                <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
-                <xsl:element name="h3">Die Rechner</xsl:element>
-                <xsl:element name="table">
-                    <xsl:attribute name="border">
-                        1
-                    </xsl:attribute>
-                    <xsl:element name="tr">
-                        <xsl:attribute name="bgcolor">
-                            FFFF00
-                        </xsl:attribute>
-                        <xsl:element name="th">Rechner</xsl:element>
-                        <xsl:element name="th">Betriebssystem</xsl:element>
-                        <xsl:element name="th">Anschaffung</xsl:element>
-                    </xsl:element>
-                    <!-- Bestimmung von dem Labor und Tabelle zu allen Rechnern im Labor -->
-                    <xsl:for-each select="//Labor[position()=1]/Rechner">
-                        <xsl:element name="tr">
-                            <xsl:element name="td"><a href="#{@Rechner_ID}"><xsl:value-of select="@Rechner_ID"/></a></xsl:element>
-                            <xsl:element name="td"><xsl:value-of select="@Betriebssystem"/></xsl:element>
-                            <xsl:element name="td"><xsl:value-of select="@Anschaffungsdatum"/></xsl:element>
-                        </xsl:element>
-                    </xsl:for-each>
-                </xsl:element>
-                <!-- Zeilenumbruch -->
-                <xsl:element name="br"/>
-                <xsl:element name="h3">Hersteller</xsl:element>
-                <xsl:for-each  select="//Labor[position()=1]/*/*/Hersteller">
-                    <xsl:sort select="text()"/>
-                    <xsl:if test="not(preceding::Hersteller/text() = text())">
-                        <xsl:element  name="li"><xsl:value-of select="text()"/></xsl:element>
-                    </xsl:if>
-                </xsl:for-each>
-                <!-- Zeilenumbruch -->
-                <xsl:element name="br"/>
-                <xsl:element name="h3">Sonstige Geräte</xsl:element>
-                <xsl:element name="table">
-                    <xsl:attribute name="border">
-                        1
-                    </xsl:attribute>
-                    <xsl:element name="tr">
-                        <xsl:attribute name="bgcolor">
-                            FFFF00
-                        </xsl:attribute>
-                        <xsl:element name="th">Gerät</xsl:element>
-                        <xsl:element name="th">Anschaffungsdatum</xsl:element>
-                    </xsl:element>
-                    <xsl:for-each select="//Labor[position()=1]/Geraet">
-                        <xsl:sort select="@Geraete_ID"/>
-                        <xsl:element name="tr">
-                            <xsl:element name="td"><xsl:value-of select="@Geraete_ID"/></xsl:element>
-                            <xsl:element name="td"><xsl:value-of select="@Anschaffungsdatum"/></xsl:element>
-                        </xsl:element>
-                    </xsl:for-each>
-                </xsl:element>
-                <!-- Zeilenumbruch -->
-                <xsl:element name="br"/>
-                <xsl:element name="h3">Installierte Software</xsl:element>
-                <xsl:for-each select="//Labor[position()=1]/*/Installierte_Software/Software">
-                    <xsl:sort select="@ID"/>
-                    <xsl:element name="li"><xsl:value-of select="@ID"/></xsl:element>
-                </xsl:for-each>
-                <br/>
-                <br/>
-                <hr/>
+                <!-- Links für die Labore -->
+                <a name="Biologie Labor">
+                    <!-- Aufruf zum Template mit parametern -->
+                    <xsl:call-template name="lab">
+                        <xsl:with-param name="name" select="//Labor[position()=1]"/>
+                    </xsl:call-template>
+                </a>
                 
-                <!-- Labor 2 -->
-                <xsl:element name="h2"><a name="Informatik Labor">Alle Daten zum Labor 2</a></xsl:element>
-                <xsl:element name="br"/>
-                <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
-                <xsl:element name="h3">Die Rechner</xsl:element>
-                <xsl:element name="table">
-                    <xsl:attribute name="border">
-                        1
-                    </xsl:attribute>
-                    <xsl:element name="tr">
-                        <xsl:attribute name="bgcolor">
-                            FFFF00
-                        </xsl:attribute>
-                        <xsl:element name="th">Rechner</xsl:element>
-                        <xsl:element name="th">Betriebssystem</xsl:element>
-                        <xsl:element name="th">Anschaffung</xsl:element>
-                    </xsl:element>
-                    <xsl:for-each select="//Labor[position()=2]/Rechner">
-                        <xsl:sort select="@Rechner_ID"/>
-                        <xsl:element name="tr">
-                            <xsl:element name="td"><a href="#{@Rechner_ID}"><xsl:value-of select="@Rechner_ID"/></a></xsl:element>
-                            <xsl:element name="td"><xsl:value-of select="@Betriebssystem"/></xsl:element>
-                            <xsl:element name="td"><xsl:value-of select="@Anschaffungsdatum"/></xsl:element>
-                        </xsl:element>
-                    </xsl:for-each>
-                </xsl:element>
-                <!-- Zeilenumbruch -->
-                <xsl:element name="br"/>
-                <xsl:element name="h3">Hersteller</xsl:element>
-                <xsl:for-each select="//Labor[position()=2]/*/*/Hersteller">
-                    <xsl:sort select="text()"/>
-                    <xsl:if test="not(preceding::Hersteller/text() = text())">
-                        <xsl:element  name="li"><xsl:value-of select="text()"/></xsl:element>
-                    </xsl:if>
-                </xsl:for-each>
-                <!-- Zeilenumbruch -->
-                <xsl:element name="br"/>
-                <xsl:element name="h3">Sonstige Geräte</xsl:element>
-                <xsl:element name="table">
-                    <xsl:attribute name="border">
-                        1
-                    </xsl:attribute>
-                    <xsl:element name="tr">
-                        <xsl:attribute name="bgcolor">
-                            FFFF00
-                        </xsl:attribute>
-                        <xsl:element name="th">Gerät</xsl:element>
-                        <xsl:element name="th">Anschaffungsdatum</xsl:element>
-                    </xsl:element>
-                    <xsl:for-each select="//Labor[position()=2]/Geraet">
-                        <xsl:sort select="@Geraete_ID"/>
-                        <xsl:element name="tr">
-                            <xsl:element name="td"><xsl:value-of select="@Geraete_ID"/></xsl:element>
-                            <xsl:element name="td"><xsl:value-of select="@Anschaffungsdatum"/></xsl:element>
-                        </xsl:element>
-                    </xsl:for-each>
-                </xsl:element>
-                <!-- Zeilenumbruch -->
-                <xsl:element name="br"/>
-                <xsl:element name="h3">Installierte Software</xsl:element>
-                <xsl:for-each select="//Labor[position()=2]/*/Installierte_Software/Software">
-                    <xsl:sort select="@ID"/>
-                    <xsl:element name="li"><xsl:value-of select="@ID"/></xsl:element>
-                </xsl:for-each>
-                <br/>
-                <br/>
-                <hr/>
+                <a name="Informatik Labor">
+                    <xsl:call-template name="lab">
+                        <xsl:with-param name="name" select="//Labor[position()=2]"/>
+                    </xsl:call-template>
+                </a>
                 
-                <!-- Labor 3 -->
-                <xsl:element name="h2"><a name="Multimedialabor">Alle Daten zum Labor 3</a></xsl:element>
-                <xsl:element name="br"/>
-                <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
-                <xsl:element name="h3">Die Rechner</xsl:element>
-                <xsl:element name="table">
-                    <xsl:attribute name="border">
-                        1
-                    </xsl:attribute>
-                    <xsl:element name="tr">
-                        <xsl:attribute name="bgcolor">
-                            FFFF00
-                        </xsl:attribute>
-                        <xsl:element name="th">Rechner</xsl:element>
-                        <xsl:element name="th">Betriebssystem</xsl:element>
-                        <xsl:element name="th">Anschaffung</xsl:element>
-                    </xsl:element>
-                    <xsl:for-each select="//Labor[position()=3]/Rechner">
-                        <xsl:sort select="@Rechner_ID"/>
-                        <xsl:element name="tr">
-                            <xsl:element name="td"><a href="#{@Rechner_ID}"><xsl:value-of select="@Rechner_ID"/></a></xsl:element>
-                            <xsl:element name="td"><xsl:value-of select="@Betriebssystem"/></xsl:element>
-                            <xsl:element name="td"><xsl:value-of select="@Anschaffungsdatum"/></xsl:element>
-                        </xsl:element>
-                    </xsl:for-each>
-                </xsl:element>
-                <!-- Zeilenumbruch -->
-                <xsl:element name="br"/>
-                <xsl:element name="h3">Hersteller</xsl:element>
-                <xsl:for-each select="//Labor[position()=3]/*/*/Hersteller">
-                    <xsl:sort select="text()"/>
-                    <xsl:if test="not(preceding::Hersteller/text() = text())">
-                        <xsl:element  name="li"><xsl:value-of select="text()"/></xsl:element>
-                    </xsl:if>
-                </xsl:for-each>
-                <!-- Zeilenumbruch -->
-                <xsl:element name="br"/>
-                <xsl:element name="h3">Sonstige Geräte</xsl:element>
-                <xsl:element name="table">
-                    <xsl:attribute name="border">
-                        1
-                    </xsl:attribute>
-                    <xsl:element name="tr">
-                        <xsl:attribute name="bgcolor">
-                            FFFF00
-                        </xsl:attribute>
-                        <xsl:element name="th">Gerät</xsl:element>
-                        <xsl:element name="th">Anschaffungsdatum</xsl:element>
-                    </xsl:element>
-                    <xsl:for-each select="//Labor[position()=3]/Geraet">
-                        <xsl:sort select="@Geraete_ID"/>
-                        <xsl:element name="tr">
-                            <xsl:element name="td"><xsl:value-of select="@Geraete_ID"/></xsl:element>
-                            <xsl:element name="td"><xsl:value-of select="@Anschaffungsdatum"/></xsl:element>
-                        </xsl:element>
-                    </xsl:for-each>
-                </xsl:element>
-                <!-- Zeilenumbruch -->
-                <xsl:element name="br"/>
-                <xsl:element name="h3">Installierte Software</xsl:element>
-                <xsl:for-each select="//Labor[position()=3]/*/Installierte_Software/Software">
-                    <xsl:sort select="@ID"/>
-                    <xsl:element name="li"><xsl:value-of select="@ID"/></xsl:element>
-                </xsl:for-each>
-                <br/>
-                <br/>
-                <hr/>
+                <a name="Multimedialabor">
+                    <xsl:call-template name="lab">
+                        <xsl:with-param name="name" select="//Labor[position()=3]"/>
+                    </xsl:call-template>
+                </a>
                 
-                <!-- Rechner 6 -->
-                <xsl:element name="h2"><a name="C1003">Alles zu Rechner C1003</a></xsl:element>
-                <xsl:element name="br"/>
-                <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
-                <xsl:element name="p"><a href="#Multimedialabor">Labor 3</a></xsl:element>
-                <xsl:element name="h4">Beschreibung</xsl:element>
-                <xsl:value-of select="//Labor[position()=3]/Rechner[position()=1]/Beschreibung"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Erweiterung</xsl:element>
-                <xsl:value-of select="//Labor[position()=3]/Rechner[position()=1]/Erweiterung/Beschreibung"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Besonderheiten</xsl:element>
-                <xsl:value-of select="//Labor[position()=3]/Rechner[position()=1]/Besonderheiten"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Software</xsl:element>
-                <xsl:for-each select="//Labor[position()=3]/Rechner[position()=1]/Installierte_Software/Software">
-                    <xsl:element name="li"><xsl:value-of select="@ID"/></xsl:element>
-                </xsl:for-each>
-                <br/>
-                <br/>
-                <hr/>
+                <!-- Links für die Rechner -->
+                <a name="C3013">
+                    <!-- Aufruf zum Template mit parametern -->
+                    <xsl:call-template name="rech">
+                        <xsl:with-param name="name" select="//Labor[position()=1]/Rechner[position()=3]"/>
+                        <xsl:with-param name="labor" select="'Biologie Labor'"/>
+                    </xsl:call-template>
+                </a>
                 
-                <!-- Rechner 1 -->
-                <xsl:element name="h2"><a name="C1013">Alles zu Rechner C1013</a></xsl:element>
-                <xsl:element name="br"/>
-                <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
-                <xsl:element name="p"><a href="#Biologie Labor">Labor 1</a></xsl:element>
-                <xsl:element name="h4">Beschreibung</xsl:element>
-                <xsl:value-of select="//Labor[position()=1]/Rechner[position()=1]/Beschreibung"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Erweiterung</xsl:element>
-                <xsl:value-of select="//Labor[position()=1]/Rechner[position()=1]/Erweiterung/Beschreibung"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Besonderheiten</xsl:element>
-                <xsl:value-of select="//Labor[position()=1]/Rechner[position()=1]/Besonderheiten"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Software</xsl:element>
-                <xsl:for-each select="//Labor[position()=1]/Rechner[position()=1]/Installierte_Software/Software">
-                    <xsl:element name="li"><xsl:value-of select="@ID"/></xsl:element>
-                </xsl:for-each>
-                <br/>
-                <br/>
-                <hr/>
+                <a name="C2037">
+                    <xsl:call-template name="rech">
+                        <xsl:with-param name="name" select="//Labor[position()=2]/Rechner[position()=2]"/>
+                        <xsl:with-param name="labor" select="'Informatik Labor'"/>
+                    </xsl:call-template>
+                </a>
                 
-                <!-- Rechner 4 -->
-                <xsl:element name="h2"><a name="C1037">Alles zu Rechner C1037</a></xsl:element>
-                <xsl:element name="br"/>
-                <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
-                <xsl:element name="p"><a href="#Informatik Labor">Labor 2</a></xsl:element>
-                <xsl:element name="h4">Beschreibung</xsl:element>
-                <xsl:value-of select="//Labor[position()=2]/Rechner[position()=1]/Beschreibung"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Erweiterung</xsl:element>
-                <xsl:value-of select="//Labor[position()=2]/Rechner[position()=1]/Erweiterung/Beschreibung"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Besonderheiten</xsl:element>
-                <xsl:value-of select="//Labor[position()=2]/Rechner[position()=1]/Besonderheiten"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Software</xsl:element>
-                <xsl:for-each select="//Labor[position()=2]/Rechner[position()=1]/Installierte_Software/Software">
-                    <xsl:element name="li"><xsl:value-of select="@ID"/></xsl:element>
-                </xsl:for-each>
-                <br/>
-                <br/>
-                <hr/>
+                <a name="C2013">
+                    <xsl:call-template name="rech">
+                        <xsl:with-param name="name" select="//Labor[position()=1]/Rechner[position()=2]"/>
+                        <xsl:with-param name="labor" select="'Biologie Labor'"/>
+                    </xsl:call-template>
+                </a>
                 
-                <!-- Rechner 2 -->
-                <xsl:element name="h2"><a name="C2013">Alles zu Rechner C2013</a></xsl:element>
-                <xsl:element name="br"/>
-                <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
-                <xsl:element name="p"><a href="#Biologie Labor">Labor 1</a></xsl:element>
-                <xsl:element name="h4">Beschreibung</xsl:element>
-                <xsl:value-of select="//Labor[position()=1]/Rechner[position()=2]/Beschreibung"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Erweiterung</xsl:element>
-                <xsl:value-of select="//Labor[position()=1]/Rechner[position()=2]/Erweiterung/Beschreibung"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Besonderheiten</xsl:element>
-                <xsl:value-of select="//Labor[position()=1]/Rechner[position()=2]/Besonderheiten"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Software</xsl:element>
-                <xsl:for-each select="//Labor[position()=1]/Rechner[position()=2]/Installierte_Software/Software">
-                    <xsl:element name="li"><xsl:value-of select="@ID"/></xsl:element>
-                </xsl:for-each>
-                <br/>
-                <br/>
-                <hr/>
+                <a name="C1037">
+                    <xsl:call-template name="rech">
+                        <xsl:with-param name="name" select="//Labor[position()=2]/Rechner[position()=1]"/>
+                        <xsl:with-param name="labor" select="'Informatik Labor'"/>
+                    </xsl:call-template>
+                </a>
                 
-                <!-- Rechner 5 -->
-                <xsl:element name="h2"><a name="C2037">Alles zu Rechner C2037</a></xsl:element>
-                <xsl:element name="br"/>
-                <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
-                <xsl:element name="p"><a href="#Informatik Labor">Labor 2</a></xsl:element>
-                <xsl:element name="h4">Beschreibung</xsl:element>
-                <xsl:value-of select="//Labor[position()=2]/Rechner[position()=2]/Beschreibung"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Erweiterung</xsl:element>
-                <xsl:value-of select="//Labor[position()=2]/Rechner[position()=2]/Erweiterung/Beschreibung"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Besonderheiten</xsl:element>
-                <xsl:value-of select="//Labor[position()=2]/Rechner[position()=2]/Besonderheiten/text()"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Software</xsl:element>
-                <xsl:for-each select="//Labor[position()=2]/Rechner[position()=2]/Installierte_Software/Software">
-                    <xsl:element name="li"><xsl:value-of select="@ID"/></xsl:element>
-                </xsl:for-each>
-                <br/>
-                <br/>
-                <hr/>
+                <a name="C1013">
+                    <xsl:call-template name="rech">
+                        <xsl:with-param name="name" select="//Labor[position()=1]/Rechner[position()=1]"/>
+                        <xsl:with-param name="labor" select="'Biologie Labor'"/>
+                    </xsl:call-template>
+                </a>
                 
-                <!-- Rechner 3 -->
-                <xsl:element name="h2"><a name="C3013">Alles zu Rechner C3013</a></xsl:element>
-                <xsl:element name="br"/>
-                <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
-                <xsl:element name="p"><a href="#Biologie Labor">Labor 1</a></xsl:element>
-                <xsl:element name="h4">Beschreibung</xsl:element>
-                <xsl:value-of select="//Labor[position()=1]/Rechner[position()=3]/Beschreibung"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Erweiterung</xsl:element>
-                <xsl:value-of select="//Labor[position()=1]/Rechner[position()=3]/Erweiterung/Beschreibung"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Besonderheiten</xsl:element>
-                <xsl:value-of select="//Labor[position()=1]/Rechner[position()=3]/Besonderheiten"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Software</xsl:element>
-                <xsl:for-each select="//Labor[position()=1]/Rechner[position()=3]/Installierte_Software/Software">
-                    <xsl:element name="li"><xsl:value-of select="@ID"/></xsl:element>
-                </xsl:for-each>
+                <a name="C1003">
+                    <xsl:call-template name="rech">
+                        <xsl:with-param name="name" select="//Labor[position()=3]/Rechner[position()=1]"/>
+                        <xsl:with-param name="labor" select="'Multimedialabor'"/>
+                    </xsl:call-template>
+                </a>
+                
             </body>
         </html>
+    </xsl:template>
+    
+    <xsl:template match="Labor" name="lab">
+        <xsl:param name="name" select="@name"/>
+        <xsl:element name="h2">Alle Daten zum Labor</xsl:element>
+        <xsl:element name="br"/>
+        <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
+        <xsl:element name="h3">Die Rechner</xsl:element>
+        <xsl:element name="table">
+            <xsl:attribute name="border">
+                1
+            </xsl:attribute>
+            <xsl:element name="tr">
+                <xsl:attribute name="bgcolor">
+                    FFFF00
+                </xsl:attribute>
+                <xsl:element name="th">Rechner</xsl:element>
+                <xsl:element name="th">Betriebssystem</xsl:element>
+                <xsl:element name="th">Anschaffung</xsl:element>
+            </xsl:element>
+            <!-- Bestimmung von dem Labor und Tabelle zu allen Rechnern im Labor -->
+            <xsl:for-each select="$name/Rechner"><!-- benutzen des Parameters -->
+                <xsl:element name="tr">
+                    <xsl:element name="td"><a href="#{@Rechner_ID}"><xsl:value-of select="@Rechner_ID"/></a></xsl:element>
+                    <xsl:element name="td"><xsl:value-of select="@Betriebssystem"/></xsl:element>
+                    <xsl:element name="td"><xsl:value-of select="@Anschaffungsdatum"/></xsl:element>
+                </xsl:element>
+            </xsl:for-each>
+        </xsl:element>
+        <!-- Zeilenumbruch -->
+        <xsl:element name="br"/>
+        <xsl:element name="h3">Hersteller</xsl:element>
+        <xsl:for-each  select="$name/*/*/Hersteller"><!-- benutzen des Parameters -->
+            <xsl:sort select="text()"/>
+            <xsl:if test="not(preceding::Hersteller/text() = text())">
+                <xsl:element  name="li"><xsl:value-of select="text()"/></xsl:element>
+            </xsl:if>
+        </xsl:for-each>
+        <!-- Zeilenumbruch -->
+        <xsl:element name="br"/>
+        <xsl:element name="h3">Sonstige Geräte</xsl:element>
+        <xsl:element name="table">
+            <xsl:attribute name="border">
+                1
+            </xsl:attribute>
+            <xsl:element name="tr">
+                <xsl:attribute name="bgcolor">
+                    FFFF00
+                </xsl:attribute>
+                <xsl:element name="th">Gerät</xsl:element>
+                <xsl:element name="th">Anschaffungsdatum</xsl:element>
+            </xsl:element>
+            <xsl:for-each select="$name/Geraet"><!-- benutzen des Parameters -->
+                <xsl:sort select="@Geraete_ID"/>
+                <xsl:element name="tr">
+                    <xsl:element name="td"><xsl:value-of select="@Geraete_ID"/></xsl:element>
+                    <xsl:element name="td"><xsl:value-of select="@Anschaffungsdatum"/></xsl:element>
+                </xsl:element>
+            </xsl:for-each>
+        </xsl:element>
+        <!-- Zeilenumbruch -->
+        <xsl:element name="br"/>
+        <xsl:element name="h3">Installierte Software</xsl:element>
+        <xsl:for-each select="$name/*/Installierte_Software/Software"><!-- benutzen des Parameters -->
+            <xsl:sort select="@ID"/>
+            <xsl:element name="li"><xsl:value-of select="@ID"/></xsl:element>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <!-- Rechner 3 -->
+    <xsl:template match="Rechner" name="rech">
+        <xsl:param name="name" select="@name"/>
+        <xsl:param name="labor" select="@labor"/>
+        <xsl:element name="h2"><a name="C3013">Alles zu Rechner C3013</a></xsl:element>
+        <xsl:element name="br"/>
+        <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
+        <xsl:element name="p"><a href="#{$labor}">Zurück zum Labor</a></xsl:element><!-- benutzen des Parameters -->
+        <xsl:element name="h4">Beschreibung</xsl:element>
+        <xsl:value-of select="$name/Beschreibung"/><!-- benutzen des Parameters -->
+        <xsl:element name="br"/>
+        <xsl:element name="h4">Erweiterung</xsl:element>
+        <xsl:value-of select="$name/Erweiterung/Beschreibung"/><!-- benutzen des Parameters -->
+        <xsl:element name="br"/>
+        <xsl:element name="h4">Besonderheiten</xsl:element>
+        <xsl:value-of select="$name/Besonderheiten"/><!-- benutzen des Parameters -->
+        <xsl:element name="br"/>
+        <xsl:element name="h4">Software</xsl:element>
+        <xsl:for-each select="$name/Installierte_Software/Software"><!-- benutzen des Parameters -->
+            <xsl:element name="li"><xsl:value-of select="@ID"/></xsl:element>
+        </xsl:for-each>
     </xsl:template>
     
 </xsl:stylesheet> 
