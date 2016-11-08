@@ -4,11 +4,13 @@
 <Hochschule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="MySchema.xsd">
     
+    <!-- Labor für INF / 3 Rechner 1 Gerät(Drucker) -->
     <Labor Raum_Nr="E1313" Name="Informatik Labor">
+        
+        <!-- Rechner mit Erweiterungen und Besonderheiten -->
         <Rechner Rechner_ID="C1013" Anschaffungsdatum="2013-01-13" Betriebssystem="B00001">
             <Beschreibung>
                 <Hersteller>Dell </Hersteller>
-                Precision Tower 3000 Serie
                 PC mit
                 <Hersteller>Intel </Hersteller>
                 Core i5 Prozessor und Integrierte
@@ -16,30 +18,32 @@
                 HD Grafik, dazu 4 GB DDR4-Speicher von
                 <Hersteller>Samsung </Hersteller>
                 und eine 1TB Festplatte von 
-                <Hersteller>Seagate </Hersteller>
+                <Hersteller>Seagate</Hersteller>
+                .
             </Beschreibung>
             
             <Erweiterung>
                 <Beschreibung> 
                     Leistungsfähigere CPU durch
                     <Hersteller>Intel </Hersteller> 
-                    Core i5 Prozessor
+                    Core i5 Prozessor.
                 </Beschreibung>
             </Erweiterung>
 
             <Besonderheiten>
                 Gehäuse am 2015-06-03 ausgetauscht,
-                Drei USB 2.0 Schnittstellen defekt
+                Drei USB 2.0 Schnittstellen defekt.
             </Besonderheiten>
             
+            <!-- Installierte Software mit ID verweis aus der Software Liste (unten) und Lizenz Angabe -->
             <Installierte_Software>
                 <Software ID="A00006" Lizenzvorhanden="true"/>
                 <Software ID="A00009" Lizenzvorhanden="true"/>
                 <Software ID="A00010" Lizenzvorhanden="false"/>
             </Installierte_Software>
-
         </Rechner>
         
+        <!-- Rechner mit Erweiterungen und Besonderheiten -->
         <Rechner Rechner_ID="C2013" Anschaffungsdatum="2016-03-01" Betriebssystem="B00002">
             <Beschreibung>
                 <Hersteller>Dell </Hersteller>
@@ -50,26 +54,31 @@
                 HD Grafik, dazu 8 GB RAM von
                 <Hersteller>Samsung </Hersteller>
                 und eine 1TB Festplatte von 
-                <Hersteller>Seagate </Hersteller>
+                <Hersteller>Seagate</Hersteller>
+                .
             </Beschreibung>
+            
             <Erweiterung>
                 <Beschreibung>
                     Leistungsfähigere CPU durch
                     <Hersteller>Intel </Hersteller> 
                     Core i5 Prozessor und schnellere Verarbeitungszeit durch 8GB RAM von
-                    <Hersteller>Samsung </Hersteller>
+                    <Hersteller>Samsung</Hersteller>
+                    .
                 </Beschreibung>
             </Erweiterung>
             
             <Besonderheiten>
-                Mainboard am 2016-02-01 ausgewechselt
+                Mainboard am 2016-02-01 ausgewechselt.
             </Besonderheiten>
             
+            <!-- Installierte Software mit ID verweis aus der Software Liste (unten) und Lizenz Angabe -->
             <Installierte_Software>
                 <Software ID="A00009" Lizenzvorhanden="false"/>
             </Installierte_Software>
         </Rechner>
         
+        <!-- Rechner mit Erweiterungen aber OHNE Besonderheiten -->
         <Rechner Rechner_ID="C3013" Anschaffungsdatum="2016-03-01" Betriebssystem="B00001">
             <Beschreibung>
                 <Hersteller>Microsoft </Hersteller>
@@ -80,34 +89,38 @@
                 HD Grafik, dazu 4 GB RAM von
                 <Hersteller>Samsung </Hersteller>
                 und eine 2TB Festplatte von 
-                <Hersteller>Seagate </Hersteller>
+                <Hersteller>Seagate</Hersteller>
+                .
             </Beschreibung>
             
             <Erweiterung>
                 <Beschreibung>
                     Erweiterte Speicherkapazität durch
                     <Hersteller>Seagate </Hersteller>
-                    2TB Festplatte
+                    2TB Festplatte.
                 </Beschreibung>
             </Erweiterung>
             
+            <!-- Installierte Software mit ID verweis aus der Software Liste (unten) und Lizenz Angabe -->
             <Installierte_Software>
                 <Software ID="A00009" Lizenzvorhanden="false"/>
                 <Software ID="A00010" Lizenzvorhanden="true"/>
-            </Installierte_Software>
-            
+            </Installierte_Software>   
         </Rechner>
         
+        <!-- Gerät Drucker -->
         <Geraet Geraete_ID="G4013" Anschaffungsdatum="2013-03-01">
             <Beschreibung>
                 <Hersteller>HP </Hersteller>
-                -Drucker
+                -Drucker.
             </Beschreibung>
-        </Geraet>
-        
+        </Geraet>   
     </Labor>
     
+    <!-- Biologie Labor / 2 Rechner 1 Geräte -->
     <Labor Name="Biologie Labor" Raum_Nr="J3737">
+        
+        <!-- Rechner mit Erweiterungen aber OHNE Besonderheiten -->
         <Rechner Rechner_ID="C1037" Anschaffungsdatum="2013-07-03" Betriebssystem="B00001">
             <Beschreibung>
                 <Hersteller>Acer </Hersteller>
@@ -118,16 +131,19 @@
                 HD Grafik, dazu 16 GB RAM von
                 <Hersteller>Kingston </Hersteller>
                 und eine 1TB Festplatte von 
-                <Hersteller>Seagate </Hersteller>
+                <Hersteller>Seagate</Hersteller>
+                .
             </Beschreibung>
             
             <Erweiterung>
                 <Beschreibung>
                     Hohe belastbarkeit für anspruchsvolle Programme durch 16GB Arbeitsspeicher von
-                    <Hersteller>Kingston </Hersteller>
+                    <Hersteller>Kingston</Hersteller>
+                    .
                 </Beschreibung>
             </Erweiterung>
             
+            <!-- Installierte Software mit ID verweis aus der Software Liste (unten) und Lizenz Angabe -->
             <Installierte_Software>
                 <Software ID="A00007" Lizenzvorhanden="true"/>
                 <Software ID="A00012" Lizenzvorhanden="false"/>
@@ -136,6 +152,7 @@
             </Installierte_Software>
         </Rechner>
         
+        <!-- Rechner OHNE Erweiterungen und OHNE Besonderheiten -->
         <Rechner Rechner_ID="C2037" Anschaffungsdatum="2014-03-07" Betriebssystem="B00001">
             <Beschreibung>
                 <Hersteller>Asus </Hersteller>
@@ -146,9 +163,11 @@
                 HD Grafik, dazu 4 GB RAM von
                 <Hersteller>Samsung </Hersteller>
                 und eine 1TB Festplatte von 
-                <Hersteller>Seagate </Hersteller>
+                <Hersteller>Seagate</Hersteller>
+                .
             </Beschreibung>
             
+            <!-- Installierte Software mit ID verweis aus der Software Liste (unten) und Lizenz Angabe -->
             <Installierte_Software>
                 <Software ID="A00007" Lizenzvorhanden="true"/>
                 <Software ID="A00008" Lizenzvorhanden="true"/>
@@ -156,16 +175,19 @@
             </Installierte_Software>
         </Rechner>
         
+        <!-- Gerät Mirkroskop -->
         <Geraet Geraete_ID="M3037" Anschaffungsdatum="2015-07-03">
             <Beschreibung>
                 <Hersteller>Compra </Hersteller>
-                -Binokulares Mikroskop
+                -Binokulares Mikroskop.
             </Beschreibung>
         </Geraet>
     </Labor>
     
+    <!-- Multimedialabor / 1 Rechner KEINE Geräte -->
     <Labor Name="Multimedialabor" Raum_Nr="N3099">
         
+        <!-- Rechner mit Erweiterungen und mit Besonderheiten -->
         <Rechner Rechner_ID="C1003" Anschaffungsdatum="2016-03-09" Betriebssystem="B00001">
             <Beschreibung>
                 <Hersteller>Acer </Hersteller>
@@ -174,23 +196,26 @@
                 Core i5 Prozessor und eine GTX 1080 Grafikkarte von
                 <Hersteller>Zotac </Hersteller>
                 dazu eine 1TB Festplatte von 
-                <Hersteller>Samsung </Hersteller>
+                <Hersteller>Samsung</Hersteller>
+                .
             </Beschreibung>
+            
             <Erweiterung>
                 <Beschreibung>
                     Seht Hohe auflösung durch die
                     <Hersteller>Zotac </Hersteller>
                     Grafikkarte und Leistungsfähigere CPU durch den
                     <Hersteller>Intel </Hersteller>
-                    Core i5 Prozessor
+                    Core i5 Prozessor.
                 </Beschreibung>
             </Erweiterung>
             
             <Besonderheiten>
                 Geäuse erheblich zerkratzt,
-                CPU Lüfter am 2016-04-03 ausgewechselt
+                CPU Lüfter am 2016-04-03 ausgewechselt.
             </Besonderheiten>
             
+            <!-- Installierte Software mit ID verweis aus der Software Liste (unten) und Lizenz Angabe -->
             <Installierte_Software>
                 <Software ID="A00007" Lizenzvorhanden="true"/>
                 <Software ID="A00008" Lizenzvorhanden="true"/>
@@ -200,88 +225,142 @@
         </Rechner>
     </Labor>
     
+    <!-- Liste mit aller Software (aus dieser Lite wird IDREF angewendet) -->
     <Software>
+        <!-- Abschnitt mit den Betriebssystemen -->
         <Betriebssysteme>
 
             <Betriebssystem Name="Windows10" ID="B00001">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Betriebssystem von 
+                    <Hersteller>Microsoft</Hersteller>
+                    .
+                </Beschreibung>
+                <Besonderheiten>Updates sind Verpflichtend.</Besonderheiten>
             </Betriebssystem>
             
             <Betriebssystem Name="Windows8" ID="B00002">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Betriebssystem von 
+                    <Hersteller>Microsoft</Hersteller>
+                    .
+                </Beschreibung>
             </Betriebssystem>
             
             <Betriebssystem Name="Windows7" ID="B00003">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Betriebssystem von 
+                    <Hersteller>Microsoft</Hersteller>
+                    .
+                </Beschreibung>
+                <Besonderheiten>Stabile Windows Version.</Besonderheiten>
             </Betriebssystem>
             
             <Betriebssystem Name="WindowsVista" ID="B00004">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Betriebssystem von 
+                    <Hersteller>Microsoft</Hersteller>
+                    .
+                </Beschreibung>
             </Betriebssystem>
             
             <Betriebssystem Name="Linux" ID="B00005">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>Betriebssystem.</Beschreibung>
+                <Besonderheiten>Open source.</Besonderheiten>
             </Betriebssystem>
-            
         </Betriebssysteme>
-        <Anwendungen>
-            <Anwendung>
-                <Beschreibung></Beschreibung>
-            </Anwendung>
         
+        <!-- Abschnitt mir Anwendungen bzw. Programmen -->
+        <Anwendungen>
             <Anwendung Name="Eclipse" ID="A00006">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Entwicklungsplattform für C++,C,Java und weitere Sprachen.
+                </Beschreibung>
+                <Besonderheiten>
+                    Erweiterbare Arbeitsfläche durch Plugins wie z.B. Oxygen,
+                    beliebte und sehr bekannte Software.
+                </Besonderheiten>
             </Anwendung>
             
             <Anwendung Name="Photoshop" ID="A00007">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Bildbearbeitungs Programm von 
+                    <Hersteller>Adobe</Hersteller>
+                    .
+                </Beschreibung>
+                <Besonderheiten>
+                    Sehr verbreitete Software.
+                </Besonderheiten>
             </Anwendung>
             
             <Anwendung Name="Illustrator" ID="A00008">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Vektorbasiertes Grafik- und Zeichenprogramm von 
+                    <Hersteller>Adobe</Hersteller>
+                    .
+                </Beschreibung>
+                <Besonderheiten>
+                    Fast nur in professionellen Agenturen eingesetzt.
+                </Besonderheiten>
             </Anwendung>
             
             <Anwendung Name="JCreator" ID="A00009">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Entwicklungsplattform für Java von 
+                    <Hersteller>Xinox Software</Hersteller>
+                    .
+                </Beschreibung>
+                <Besonderheiten>
+                    Leichte Bedienung.
+                </Besonderheiten>
             </Anwendung>
             
             <Anwendung Name="H2" ID="A00010">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Entwicklungsplattform für Datenbaken.
+                </Beschreibung>
+                <Besonderheiten>
+                    Sehr Triviales Programm.
+                </Besonderheiten>
             </Anwendung>
             
             <Anwendung Name="VisualParadigm" ID="A00011">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    UML-Werkzeug von 
+                    <Hersteller>Visual Paradigm International</Hersteller>
+                    .
+                </Beschreibung>
             </Anwendung>
             
             <Anwendung Name="MicrosoftOffice" ID="A00012">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Textverarbeitungs Programm von 
+                    <Hersteller>Microsoft</Hersteller>
+                    .
+                </Beschreibung>
+                <Besonderheiten>
+                    Extrem vielseitig und Professionell.
+                </Besonderheiten>
             </Anwendung>
             
             <Anwendung Name="BoneLab" ID="A00013">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Lernsoftware, die sich mit dem menschlichen Skelett beschäftigt.
+                </Beschreibung>
             </Anwendung>
             
             <Anwendung Name="VirtualMicroscope" ID="A00014">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Simuliert das Microskopieren.
+                </Beschreibung>
             </Anwendung>
             
             <Anwendung Name="UnrealEngine" ID="A00015">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Software für die Entwicklung von Konsolen- und Computerspielen von 
+                    <Hersteller>Epic Games</Hersteller>
+                    .
+                </Beschreibung>
             </Anwendung>
         </Anwendungen>
         

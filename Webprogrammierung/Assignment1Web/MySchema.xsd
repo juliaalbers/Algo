@@ -102,7 +102,13 @@
                                             <xs:complexType>
                                                 <xs:all>
                                         <!-- Element Beschreibung, Besonderheiten fuer Betriebssystem -->            
-                                                    <xs:element name="Beschreibung" minOccurs="1" type="xs:string"/>
+                                                    <xs:element name="Beschreibung" minOccurs="1">
+                                                        <xs:complexType mixed="true">
+                                                            <xs:sequence>
+                                                                <xs:element name="Hersteller" minOccurs="0" maxOccurs="unbounded"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
                                                     <xs:element name="Besonderheiten" minOccurs="0" type="xs:string"></xs:element>
                                                 </xs:all>
                                         <!-- Attribute fuer Betriebssystem -->        
@@ -125,7 +131,7 @@
                                                     <xs:element name="Beschreibung" minOccurs="1">
                                                         <xs:complexType mixed="true">
                                                             <xs:sequence>
-                                                                <xs:element name="Hersteller" minOccurs="1" maxOccurs="unbounded"/>
+                                                                <xs:element name="Hersteller" minOccurs="0" maxOccurs="unbounded"/>
                                                             </xs:sequence>
                                                         </xs:complexType>
                                                     </xs:element>
