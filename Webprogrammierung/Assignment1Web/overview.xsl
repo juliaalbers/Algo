@@ -6,6 +6,18 @@
         <html>
             <body>
                 <xsl:element name="h2"><a name="anf">Alle Labore der Hochschule</a></xsl:element>
+                <xsl:element name="li"><a href="#labs">Labore</a></xsl:element>
+                <xsl:element name="li"><a href="#zf">Zahlen und Fakten</a></xsl:element>
+                <xsl:element name="li"><a href="#be">Betriebssysteme</a></xsl:element>
+                <xsl:element name="li"><a href="#sw">Software</a></xsl:element>
+                <xsl:element name="li"><a href="#h">Hersteller</a></xsl:element>
+                <xsl:element name="li"><a href="#sg">Sonstige Geräte</a></xsl:element>
+                <br/>
+                <br/>
+                <hr/>
+                
+                <xsl:element name="h2"><a name="labs">Alle Labore der Hochschule</a></xsl:element>
+                <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
                 <!-- Tabelle mit allen Laboren -->
                 <xsl:element name="table">
                     <xsl:attribute name="border">
@@ -29,9 +41,14 @@
                         </xsl:element>
                     </xsl:for-each>
                 </xsl:element>
+                <br/>
+                <br/>
+                <hr/>
+                
                 <!-- Neue Tabelle vorher br -->
                 <xsl:element name="br"/>
-                <xsl:element name="h2">Zahlen und Fakten</xsl:element>
+                <xsl:element name="h2"><a name="zf">Zahlen und Fakten</a></xsl:element>
+                <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
                 <xsl:element name="table">
                     <xsl:attribute name="border">
                         1
@@ -65,9 +82,14 @@
                         <xsl:element name="td"><xsl:value-of select="format-number(count(//Labor) div count(//Rechner), '0.00')"/></xsl:element>
                     </xsl:element>
                 </xsl:element>
+                <br/>
+                <br/>
+                <hr/>
+                
                 <!-- Neue Tabelle vorher br -->
                 <xsl:element name="br"/>
-                <xsl:element name="h2">Alle Betriebssysteme</xsl:element>
+                <xsl:element name="h2"><a name="be">Alle Betriebssysteme</a></xsl:element>
+                <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
                 <!-- Tabelle mit allen Betriebssystemen -->
                 <xsl:element name="table">
                     <xsl:attribute name="border">
@@ -90,9 +112,14 @@
                         </xsl:element>
                     </xsl:for-each>
                 </xsl:element>
+                <br/>
+                <br/>
+                <hr/>
+                
                 <!-- Neue Tabelle vorher br -->
                 <xsl:element name="br"/>
-                <xsl:element name="h2">Alle Anwendungen</xsl:element>
+                <xsl:element name="h2"><a name="sw">Alle Anwendungen</a></xsl:element>
+                <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
                 <xsl:element name="table">
                     <xsl:attribute name="border">
                         1
@@ -113,6 +140,51 @@
                             <xsl:element name="td"><xsl:value-of select="@ID"/></xsl:element>
                             <xsl:element name="td"><xsl:value-of select="Beschreibung"/></xsl:element>
                             <xsl:element name="td"><xsl:value-of select="Besonderheiten"/></xsl:element>
+                        </xsl:element>
+                    </xsl:for-each>
+                </xsl:element>
+                <br/>
+                <br/>
+                <hr/>
+                
+                <!-- Neue Tabelle vorher br -->
+                <xsl:element name="br"/>
+                <xsl:element name="h2"><a name="h">Alle Hersteller</a></xsl:element>
+                <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
+                <xsl:for-each  select="//Hersteller"><!-- benutzen des Parameters -->
+                    <xsl:sort select="text()"/>
+                    <xsl:if test="not(preceding::Hersteller/text() = text())">
+                        <xsl:if test="not(descendant::Hersteller/text() = text())">
+                            <xsl:element  name="li"><xsl:value-of select="text()"/></xsl:element>
+                        </xsl:if>
+                    </xsl:if>
+                </xsl:for-each>
+                <br/>
+                <br/>
+                <hr/>
+                
+                <!-- Neue Tabelle vorher br -->
+                <xsl:element name="br"/>
+                <xsl:element name="h2"><a name="sg">Sonstige Geräte</a></xsl:element>
+                <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
+                <xsl:element name="table">
+                    <xsl:attribute name="border">
+                        1
+                    </xsl:attribute>
+                    <xsl:element name="tr">
+                        <xsl:attribute name="bgcolor">
+                            4d4dff
+                        </xsl:attribute>
+                        <xsl:element name="th">Geraet</xsl:element>
+                        <xsl:element name="th">Anschaffungsdatum</xsl:element>
+                        <xsl:element name="th">Beschreibung</xsl:element>
+                    </xsl:element>
+                    <xsl:for-each select="//Geraet">
+                        <xsl:sort select="@Geraete_ID"/>
+                        <xsl:element name="tr">
+                            <xsl:element name="td"><xsl:value-of select="@Geraete_ID"/></xsl:element>
+                            <xsl:element name="td"><xsl:value-of select="@Anschaffungsdatum"/></xsl:element>
+                            <xsl:element name="td"><xsl:value-of select="Beschreibung"/></xsl:element>
                         </xsl:element>
                     </xsl:for-each>
                 </xsl:element>
