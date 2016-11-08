@@ -131,7 +131,7 @@
                         <xsl:element name="th">Anschaffung</xsl:element>
                     </xsl:element>
                     <xsl:for-each select="//Rechner">
-                        <xsl:sort select="@Rechner_ID"/>
+                        <!--<xsl:sort select="@Rechner_ID"/>-->
                         <xsl:element name="tr">
                             <xsl:element name="td"><a href="#{@Rechner_ID}"><xsl:value-of select="@Rechner_ID"/></a></xsl:element>
                             <xsl:element name="td"><xsl:value-of select="@Betriebssystem"/></xsl:element>
@@ -142,9 +142,11 @@
                 <!-- Zeilenumbruch -->
                 <xsl:element name="br"/>
                 <xsl:element name="h3">Hersteller</xsl:element>
-                <xsl:for-each select="//Labor[position()=1]/*/*/Hersteller">
+                <xsl:for-each  select="//Labor[position()=1]/*/*/Hersteller">
                     <xsl:sort select="text()"/>
-                    <xsl:element name="li"><xsl:value-of select="text()"/></xsl:element>
+                    <xsl:if test="not(preceding::Hersteller/text() = text())">
+                        <xsl:element  name="li"><xsl:value-of select="text()"/></xsl:element>
+                    </xsl:if>
                 </xsl:for-each>
                 <!-- Zeilenumbruch -->
                 <xsl:element name="br"/>
@@ -207,9 +209,11 @@
                 <!-- Zeilenumbruch -->
                 <xsl:element name="br"/>
                 <xsl:element name="h3">Hersteller</xsl:element>
-                <xsl:for-each select="//Labor[position()=1]/*/*/Hersteller">
+                <xsl:for-each select="//Labor[position()=2]/*/*/Hersteller">
                     <xsl:sort select="text()"/>
-                    <xsl:element name="li"><xsl:value-of select="text()"/></xsl:element>
+                    <xsl:if test="not(preceding::Hersteller/text() = text())">
+                        <xsl:element  name="li"><xsl:value-of select="text()"/></xsl:element>
+                    </xsl:if>
                 </xsl:for-each>
                 <!-- Zeilenumbruch -->
                 <xsl:element name="br"/>
@@ -225,7 +229,7 @@
                         <xsl:element name="th">Gerät</xsl:element>
                         <xsl:element name="th">Anschaffungsdatum</xsl:element>
                     </xsl:element>
-                    <xsl:for-each select="//Labor[position()=1]/Geraet">
+                    <xsl:for-each select="//Labor[position()=2]/Geraet">
                         <xsl:sort select="@Geraete_ID"/>
                         <xsl:element name="tr">
                             <xsl:element name="td"><xsl:value-of select="@Geraete_ID"/></xsl:element>
@@ -236,7 +240,7 @@
                 <!-- Zeilenumbruch -->
                 <xsl:element name="br"/>
                 <xsl:element name="h3">Installierte Software</xsl:element>
-                <xsl:for-each select="//Labor[position()=1]/*/Installierte_Software/Software">
+                <xsl:for-each select="//Labor[position()=2]/*/Installierte_Software/Software">
                     <xsl:element name="li"><xsl:value-of select="@ID"/></xsl:element>
                 </xsl:for-each>
                 <br/>
@@ -272,9 +276,11 @@
                 <!-- Zeilenumbruch -->
                 <xsl:element name="br"/>
                 <xsl:element name="h3">Hersteller</xsl:element>
-                <xsl:for-each select="//Labor[position()=1]/*/*/Hersteller">
+                <xsl:for-each select="//Labor[position()=3]/*/*/Hersteller">
                     <xsl:sort select="text()"/>
-                    <xsl:element name="li"><xsl:value-of select="text()"/></xsl:element>
+                    <xsl:if test="not(preceding::Hersteller/text() = text())">
+                        <xsl:element  name="li"><xsl:value-of select="text()"/></xsl:element>
+                    </xsl:if>
                 </xsl:for-each>
                 <!-- Zeilenumbruch -->
                 <xsl:element name="br"/>
@@ -290,7 +296,7 @@
                         <xsl:element name="th">Gerät</xsl:element>
                         <xsl:element name="th">Anschaffungsdatum</xsl:element>
                     </xsl:element>
-                    <xsl:for-each select="//Labor[position()=1]/Geraet">
+                    <xsl:for-each select="//Labor[position()=3]/Geraet">
                         <xsl:sort select="@Geraete_ID"/>
                         <xsl:element name="tr">
                             <xsl:element name="td"><xsl:value-of select="@Geraete_ID"/></xsl:element>
@@ -301,64 +307,43 @@
                 <!-- Zeilenumbruch -->
                 <xsl:element name="br"/>
                 <xsl:element name="h3">Installierte Software</xsl:element>
-                <xsl:for-each select="//Labor[position()=1]/*/Installierte_Software/Software">
+                <xsl:for-each select="//Labor[position()=3]/*/Installierte_Software/Software">
                     <xsl:element name="li"><xsl:value-of select="@ID"/></xsl:element>
                 </xsl:for-each>
                 <br/>
                 <br/>
                 <hr/>
                 
-                <!-- Rechner 1 -->
+                <!-- Rechner 6 -->
                 <xsl:element name="h2"><a name="C1003">Alles zu Rechner C1003</a></xsl:element>
                 <xsl:element name="br"/>
                 <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
                 <xsl:element name="h4">Beschreibung</xsl:element>
-                <xsl:value-of select="//Beschreibung"/>
+                <xsl:value-of select="//Rechner[position()=6]/Beschreibung"/>
                 <xsl:element name="br"/>
                 <xsl:element name="h4">Erweiterung</xsl:element>
-                <xsl:value-of select="//Erweiterung/Beschreibung"/>
+                <xsl:value-of select="//Rechner[position()=6]/Erweiterung/Beschreibung"/>
                 <xsl:element name="br"/>
                 <xsl:element name="h4">Besonderheiten</xsl:element>
-                <xsl:value-of select="//Rechner[position()=1]/Besonderheiten/text()"/>
+                <xsl:value-of select="//Rechner[position()=6]/Besonderheiten/text()"/>
                 <xsl:element name="br"/>
                 <xsl:element name="h4">Software</xsl:element>
-                <xsl:for-each select="//Rechner[position()=1]/Installierte_Software">
+                <xsl:for-each select="//Rechner[position()=6]/Installierte_Software">
                     <xsl:element name="li"><xsl:value-of select="Software/attribute::ID"/></xsl:element>
                 </xsl:for-each>
                 <br/>
                 <br/>
                 <hr/>
                 
-                <!-- Rechner 2 -->
+                <!-- Rechner 1 -->
                 <xsl:element name="h2"><a name="C1013">Alles zu Rechner C1013</a></xsl:element>
                 <xsl:element name="br"/>
                 <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
                 <xsl:element name="h4">Beschreibung</xsl:element>
-                <xsl:value-of select="//Beschreibung"/>
+                <xsl:value-of select="//Rechner[position()=1]/Beschreibung"/>
                 <xsl:element name="br"/>
                 <xsl:element name="h4">Erweiterung</xsl:element>
-                <xsl:value-of select="//Erweiterung/Beschreibung"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Besonderheiten</xsl:element>
-                <xsl:value-of select="//Rechner[position()=1]/Besonderheiten/text()"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Software</xsl:element>
-                <xsl:for-each select="//Rechner[position()=1]/Installierte_Software">
-                    <xsl:element name="li"><xsl:value-of select="Software/attribute::ID"/></xsl:element>
-                </xsl:for-each>
-                <br/>
-                <br/>
-                <hr/>
-                
-                <!-- Rechner 3 -->
-                <xsl:element name="h2"><a name="C1037">Alles zu Rechner C1037</a></xsl:element>
-                <xsl:element name="br"/>
-                <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
-                <xsl:element name="h4">Beschreibung</xsl:element>
-                <xsl:value-of select="//Beschreibung"/>
-                <xsl:element name="br"/>
-                <xsl:element name="h4">Erweiterung</xsl:element>
-                <xsl:value-of select="//Erweiterung/Beschreibung"/>
+                <xsl:value-of select="//Rechner[position()=1]/Erweiterung/Beschreibung"/>
                 <xsl:element name="br"/>
                 <xsl:element name="h4">Besonderheiten</xsl:element>
                 <xsl:value-of select="//Rechner[position()=1]/Besonderheiten/text()"/>
@@ -372,20 +357,41 @@
                 <hr/>
                 
                 <!-- Rechner 4 -->
+                <xsl:element name="h2"><a name="C1037">Alles zu Rechner C1037</a></xsl:element>
+                <xsl:element name="br"/>
+                <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
+                <xsl:element name="h4">Beschreibung</xsl:element>
+                <xsl:value-of select="//Rechner[position()=4]/Beschreibung"/>
+                <xsl:element name="br"/>
+                <xsl:element name="h4">Erweiterung</xsl:element>
+                <xsl:value-of select="//Rechner[position()=4]/Erweiterung/Beschreibung"/>
+                <xsl:element name="br"/>
+                <xsl:element name="h4">Besonderheiten</xsl:element>
+                <xsl:value-of select="//Rechner[position()=4]/Besonderheiten/text()"/>
+                <xsl:element name="br"/>
+                <xsl:element name="h4">Software</xsl:element>
+                <xsl:for-each select="//Rechner[position()=4]/Installierte_Software">
+                    <xsl:element name="li"><xsl:value-of select="Software/attribute::ID"/></xsl:element>
+                </xsl:for-each>
+                <br/>
+                <br/>
+                <hr/>
+                
+                <!-- Rechner 2 -->
                 <xsl:element name="h2"><a name="C2013">Alles zu Rechner C2013</a></xsl:element>
                 <xsl:element name="br"/>
                 <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
                 <xsl:element name="h4">Beschreibung</xsl:element>
-                <xsl:value-of select="//Beschreibung"/>
+                <xsl:value-of select="//Rechner[position()=2]/Beschreibung"/>
                 <xsl:element name="br"/>
                 <xsl:element name="h4">Erweiterung</xsl:element>
-                <xsl:value-of select="//Erweiterung/Beschreibung"/>
+                <xsl:value-of select="//Rechner[position()=2]/Erweiterung/Beschreibung"/>
                 <xsl:element name="br"/>
                 <xsl:element name="h4">Besonderheiten</xsl:element>
-                <xsl:value-of select="//Rechner[position()=1]/Besonderheiten/text()"/>
+                <xsl:value-of select="//Rechner[position()=2]/Besonderheiten/text()"/>
                 <xsl:element name="br"/>
                 <xsl:element name="h4">Software</xsl:element>
-                <xsl:for-each select="//Rechner[position()=1]/Installierte_Software">
+                <xsl:for-each select="//Rechner[position()=2]/Installierte_Software">
                     <xsl:element name="li"><xsl:value-of select="Software/attribute::ID"/></xsl:element>
                 </xsl:for-each>
                 <br/>
@@ -397,37 +403,37 @@
                 <xsl:element name="br"/>
                 <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
                 <xsl:element name="h4">Beschreibung</xsl:element>
-                <xsl:value-of select="//Beschreibung"/>
+                <xsl:value-of select="//Rechner[position()=5]/Beschreibung"/>
                 <xsl:element name="br"/>
                 <xsl:element name="h4">Erweiterung</xsl:element>
-                <xsl:value-of select="//Erweiterung/Beschreibung"/>
+                <xsl:value-of select="//Rechner[position()=5]/Erweiterung/Beschreibung"/>
                 <xsl:element name="br"/>
                 <xsl:element name="h4">Besonderheiten</xsl:element>
-                <xsl:value-of select="//Rechner[position()=1]/Besonderheiten/text()"/>
+                <xsl:value-of select="//Rechner[position()=5]/Besonderheiten/text()"/>
                 <xsl:element name="br"/>
                 <xsl:element name="h4">Software</xsl:element>
-                <xsl:for-each select="//Rechner[position()=1]/Installierte_Software">
+                <xsl:for-each select="//Rechner[position()=5]/Installierte_Software">
                     <xsl:element name="li"><xsl:value-of select="Software/attribute::ID"/></xsl:element>
                 </xsl:for-each>
                 <br/>
                 <br/>
                 <hr/>
                 
-                <!-- Rechner 6 -->
+                <!-- Rechner 3 -->
                 <xsl:element name="h2"><a name="C3013">Alles zu Rechner C3013</a></xsl:element>
                 <xsl:element name="br"/>
                 <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
                 <xsl:element name="h4">Beschreibung</xsl:element>
-                <xsl:value-of select="//Rechner[position()=7]/Beschreibung"/>
+                <xsl:value-of select="//Rechner[position()=3]/Beschreibung"/>
                 <xsl:element name="br"/>
                 <xsl:element name="h4">Erweiterung</xsl:element>
-                <xsl:value-of select="//Erweiterung/Beschreibung"/>
+                <xsl:value-of select="//Rechner[position()=3]/Erweiterung/Beschreibung"/>
                 <xsl:element name="br"/>
                 <xsl:element name="h4">Besonderheiten</xsl:element>
-                <xsl:value-of select="//Rechner[position()=1]/Besonderheiten/text()"/>
+                <xsl:value-of select="//Rechner[position()=3]/Besonderheiten/text()"/>
                 <xsl:element name="br"/>
                 <xsl:element name="h4">Software</xsl:element>
-                <xsl:for-each select="//Rechner[position()=1]/Installierte_Software">
+                <xsl:for-each select="//Rechner[position()=3]/Installierte_Software">
                     <xsl:element name="li"><xsl:value-of select="Software/attribute::ID"/></xsl:element>
                 </xsl:for-each>
             </body>
