@@ -279,6 +279,9 @@
         <xsl:for-each select="$name/Installierte_Software/Software"><!-- benutzen des Parameters -->
             <xsl:element name="li"><xsl:value-of select="@ID"/></xsl:element>
         </xsl:for-each>
+        <br/>
+        <br/>
+        <hr/>
     </xsl:template>
     
 </xsl:stylesheet> 
