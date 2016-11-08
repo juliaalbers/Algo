@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="rechner.xsl"?>
+<?xml-stylesheet type="text/xsl" href="labor.xsl"?>
 
 <Hochschule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="MySchema.xsd">
@@ -11,7 +11,6 @@
         <Rechner Rechner_ID="C1013" Anschaffungsdatum="2013-01-13" Betriebssystem="B00001">
             <Beschreibung>
                 <Hersteller>Dell </Hersteller>
-                Precision Tower 3000 Serie
                 PC mit
                 <Hersteller>Intel </Hersteller>
                 Core i5 Prozessor und Integrierte
@@ -19,20 +18,21 @@
                 HD Grafik, dazu 4 GB DDR4-Speicher von
                 <Hersteller>Samsung </Hersteller>
                 und eine 1TB Festplatte von 
-                <Hersteller>Seagate </Hersteller>
+                <Hersteller>Seagate</Hersteller>
+                .
             </Beschreibung>
             
             <Erweiterung>
                 <Beschreibung> 
                     Leistungsfähigere CPU durch
                     <Hersteller>Intel </Hersteller> 
-                    Core i5 Prozessor
+                    Core i5 Prozessor.
                 </Beschreibung>
             </Erweiterung>
 
             <Besonderheiten>
                 Gehäuse am 2015-06-03 ausgetauscht,
-                Drei USB 2.0 Schnittstellen defekt
+                Drei USB 2.0 Schnittstellen defekt.
             </Besonderheiten>
             
             <!-- Installierte Software mit ID verweis aus der Software Liste (unten) und Lizenz Angabe -->
@@ -54,7 +54,8 @@
                 HD Grafik, dazu 8 GB RAM von
                 <Hersteller>Samsung </Hersteller>
                 und eine 1TB Festplatte von 
-                <Hersteller>Seagate </Hersteller>
+                <Hersteller>Seagate</Hersteller>
+                .
             </Beschreibung>
             
             <Erweiterung>
@@ -62,12 +63,13 @@
                     Leistungsfähigere CPU durch
                     <Hersteller>Intel </Hersteller> 
                     Core i5 Prozessor und schnellere Verarbeitungszeit durch 8GB RAM von
-                    <Hersteller>Samsung </Hersteller>
+                    <Hersteller>Samsung</Hersteller>
+                    .
                 </Beschreibung>
             </Erweiterung>
             
             <Besonderheiten>
-                Mainboard am 2016-02-01 ausgewechselt
+                Mainboard am 2016-02-01 ausgewechselt.
             </Besonderheiten>
             
             <!-- Installierte Software mit ID verweis aus der Software Liste (unten) und Lizenz Angabe -->
@@ -87,14 +89,15 @@
                 HD Grafik, dazu 4 GB RAM von
                 <Hersteller>Samsung </Hersteller>
                 und eine 2TB Festplatte von 
-                <Hersteller>Seagate </Hersteller>
+                <Hersteller>Seagate</Hersteller>
+                .
             </Beschreibung>
             
             <Erweiterung>
                 <Beschreibung>
                     Erweiterte Speicherkapazität durch
                     <Hersteller>Seagate </Hersteller>
-                    2TB Festplatte
+                    2TB Festplatte.
                 </Beschreibung>
             </Erweiterung>
             
@@ -109,7 +112,7 @@
         <Geraet Geraete_ID="G4013" Anschaffungsdatum="2013-03-01">
             <Beschreibung>
                 <Hersteller>HP </Hersteller>
-                -Drucker
+                -Drucker.
             </Beschreibung>
         </Geraet>   
     </Labor>
@@ -128,13 +131,15 @@
                 HD Grafik, dazu 16 GB RAM von
                 <Hersteller>Kingston </Hersteller>
                 und eine 1TB Festplatte von 
-                <Hersteller>Seagate </Hersteller>
+                <Hersteller>Seagate</Hersteller>
+                .
             </Beschreibung>
             
             <Erweiterung>
                 <Beschreibung>
                     Hohe belastbarkeit für anspruchsvolle Programme durch 16GB Arbeitsspeicher von
-                    <Hersteller>Kingston </Hersteller>
+                    <Hersteller>Kingston</Hersteller>
+                    .
                 </Beschreibung>
             </Erweiterung>
             
@@ -158,7 +163,8 @@
                 HD Grafik, dazu 4 GB RAM von
                 <Hersteller>Samsung </Hersteller>
                 und eine 1TB Festplatte von 
-                <Hersteller>Seagate </Hersteller>
+                <Hersteller>Seagate</Hersteller>
+                .
             </Beschreibung>
             
             <!-- Installierte Software mit ID verweis aus der Software Liste (unten) und Lizenz Angabe -->
@@ -173,7 +179,7 @@
         <Geraet Geraete_ID="M3037" Anschaffungsdatum="2015-07-03">
             <Beschreibung>
                 <Hersteller>Compra </Hersteller>
-                -Binokulares Mikroskop
+                -Binokulares Mikroskop.
             </Beschreibung>
         </Geraet>
     </Labor>
@@ -190,7 +196,8 @@
                 Core i5 Prozessor und eine GTX 1080 Grafikkarte von
                 <Hersteller>Zotac </Hersteller>
                 dazu eine 1TB Festplatte von 
-                <Hersteller>Samsung </Hersteller>
+                <Hersteller>Samsung</Hersteller>
+                .
             </Beschreibung>
             
             <Erweiterung>
@@ -199,13 +206,13 @@
                     <Hersteller>Zotac </Hersteller>
                     Grafikkarte und Leistungsfähigere CPU durch den
                     <Hersteller>Intel </Hersteller>
-                    Core i5 Prozessor
+                    Core i5 Prozessor.
                 </Beschreibung>
             </Erweiterung>
             
             <Besonderheiten>
                 Geäuse erheblich zerkratzt,
-                CPU Lüfter am 2016-04-03 ausgewechselt
+                CPU Lüfter am 2016-04-03 ausgewechselt.
             </Besonderheiten>
             
             <!-- Installierte Software mit ID verweis aus der Software Liste (unten) und Lizenz Angabe -->
@@ -226,37 +233,40 @@
             <Betriebssystem Name="Windows10" ID="B00001">
                 <Beschreibung>
                     Betriebssystem von 
-                    <Hersteller>Microsoft </Hersteller>
+                    <Hersteller>Microsoft</Hersteller>
+                    .
                 </Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Besonderheiten>Updates sind Verpflichtend.</Besonderheiten>
             </Betriebssystem>
             
             <Betriebssystem Name="Windows8" ID="B00002">
                 <Beschreibung>
                     Betriebssystem von 
-                    <Hersteller>Microsoft </Hersteller>
+                    <Hersteller>Microsoft</Hersteller>
+                    .
                 </Beschreibung>
-                <Besonderheiten></Besonderheiten>
             </Betriebssystem>
             
             <Betriebssystem Name="Windows7" ID="B00003">
                 <Beschreibung>
                     Betriebssystem von 
-                    <Hersteller>Microsoft </Hersteller>
+                    <Hersteller>Microsoft</Hersteller>
+                    .
                 </Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Besonderheiten>Stabile Windows Version.</Besonderheiten>
             </Betriebssystem>
             
             <Betriebssystem Name="WindowsVista" ID="B00004">
                 <Beschreibung>
                     Betriebssystem von 
-                    <Hersteller>Microsoft </Hersteller>
+                    <Hersteller>Microsoft</Hersteller>
+                    .
                 </Beschreibung>
             </Betriebssystem>
             
             <Betriebssystem Name="Linux" ID="B00005">
-                <Beschreibung>Betriebssystem </Beschreibung>
-                <Besonderheiten>Open source</Besonderheiten>
+                <Beschreibung>Betriebssystem.</Beschreibung>
+                <Besonderheiten>Open source.</Besonderheiten>
             </Betriebssystem>
         </Betriebssysteme>
         
@@ -264,86 +274,92 @@
         <Anwendungen>
             <Anwendung Name="Eclipse" ID="A00006">
                 <Beschreibung>
-                    Entwicklungsplattform für C++,C,Java und weitere Sprachen
+                    Entwicklungsplattform für C++,C,Java und weitere Sprachen.
                 </Beschreibung>
                 <Besonderheiten>
                     Erweiterbare Arbeitsfläche durch Plugins wie z.B. Oxygen,
-                    beliebte und sehr bekannte Software
+                    beliebte und sehr bekannte Software.
                 </Besonderheiten>
             </Anwendung>
             
             <Anwendung Name="Photoshop" ID="A00007">
                 <Beschreibung>
                     Bildbearbeitungs Programm von 
-                    <Hersteller>Adobe </Hersteller>
+                    <Hersteller>Adobe</Hersteller>
+                    .
                 </Beschreibung>
                 <Besonderheiten>
-                    Sehr verbreitete Software
+                    Sehr verbreitete Software.
                 </Besonderheiten>
             </Anwendung>
             
             <Anwendung Name="Illustrator" ID="A00008">
                 <Beschreibung>
                     Vektorbasiertes Grafik- und Zeichenprogramm von 
-                    <Hersteller>Adobe </Hersteller>
+                    <Hersteller>Adobe</Hersteller>
+                    .
                 </Beschreibung>
                 <Besonderheiten>
-                    Fast nur in professionellen Agenturen eingesetzt
+                    Fast nur in professionellen Agenturen eingesetzt.
                 </Besonderheiten>
             </Anwendung>
             
             <Anwendung Name="JCreator" ID="A00009">
                 <Beschreibung>
                     Entwicklungsplattform für Java von 
-                    <Hersteller>Xinox Software </Hersteller>
+                    <Hersteller>Xinox Software</Hersteller>
+                    .
                 </Beschreibung>
                 <Besonderheiten>
-                    Leichte Bedienung
+                    Leichte Bedienung.
                 </Besonderheiten>
             </Anwendung>
             
             <Anwendung Name="H2" ID="A00010">
                 <Beschreibung>
-                    Entwicklungsplattform für Datenbaken
+                    Entwicklungsplattform für Datenbaken.
                 </Beschreibung>
                 <Besonderheiten>
-                    Sehr Triviales Programm
+                    Sehr Triviales Programm.
                 </Besonderheiten>
             </Anwendung>
             
             <Anwendung Name="VisualParadigm" ID="A00011">
                 <Beschreibung>
                     UML-Werkzeug von 
-                    <Hersteller>Visual Paradigm International </Hersteller>
+                    <Hersteller>Visual Paradigm International</Hersteller>
+                    .
                 </Beschreibung>
             </Anwendung>
             
             <Anwendung Name="MicrosoftOffice" ID="A00012">
                 <Beschreibung>
                     Textverarbeitungs Programm von 
-                    <Hersteller>Microsoft </Hersteller>
+                    <Hersteller>Microsoft</Hersteller>
+                    .
                 </Beschreibung>
                 <Besonderheiten>
-                    Extrem vielseitig und Professionell
+                    Extrem vielseitig und Professionell.
                 </Besonderheiten>
             </Anwendung>
             
             <Anwendung Name="BoneLab" ID="A00013">
                 <Beschreibung>
-                    Lernsoftware, die sich mit dem menschlichen Skelett beschäftigt
+                    Lernsoftware, die sich mit dem menschlichen Skelett beschäftigt.
                 </Beschreibung>
             </Anwendung>
             
             <Anwendung Name="VirtualMicroscope" ID="A00014">
                 <Beschreibung>
-                    Simuliert das Microskopieren
+                    Simuliert das Microskopieren.
                 </Beschreibung>
             </Anwendung>
             
             <Anwendung Name="UnrealEngine" ID="A00015">
                 <Beschreibung>
                     Software für die Entwicklung von Konsolen- und Computerspielen von 
-                    <Hersteller>Epic Games </Hersteller>
+                    <Hersteller>Epic Games</Hersteller>
+                    .
                 </Beschreibung>
             </Anwendung>
         </Anwendungen>
