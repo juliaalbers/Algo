@@ -260,8 +260,8 @@
     
     <!-- Rechner 3 -->
     <xsl:template match="Rechner" name="rech">
-        <xsl:param name="name" select="@name"/>
-        <xsl:param name="labor" select="@labor"/>
+        <xsl:param name="name" select="@name"/><!-- Parameter -->
+        <xsl:param name="labor" select="@labor"/><!-- Parameter -->
         <xsl:element name="h2"><a name="C3013">Alles zu Rechner C3013</a></xsl:element>
         <xsl:element name="br"/>
         <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
@@ -276,9 +276,25 @@
         <xsl:value-of select="$name/Besonderheiten"/><!-- benutzen des Parameters -->
         <xsl:element name="br"/>
         <xsl:element name="h4">Software</xsl:element>
-        <xsl:for-each select="$name/Installierte_Software/Software"><!-- benutzen des Parameters -->
-            <xsl:element name="li"><xsl:value-of select="@ID"/></xsl:element>
-        </xsl:for-each>
+        <xsl:element name="table">
+            <xsl:attribute name="border">
+                1
+            </xsl:attribute>
+            <xsl:element name="tr">
+                <xsl:attribute name="bgcolor">
+                    FF0000
+                </xsl:attribute>
+                <xsl:element name="th">ID</xsl:element>
+                <xsl:element name="th">Lizenz</xsl:element>
+            </xsl:element>
+            <xsl:for-each select="$name/Installierte_Software/Software"><!-- benutzen des Parameters -->
+                <xsl:sort select="@ID"/>
+                <xsl:element name="tr">
+                    <xsl:element name="td"><xsl:value-of select="@ID"/></xsl:element>
+                    <xsl:element name="td"><xsl:value-of select="@Lizenzvorhanden"/></xsl:element>
+                </xsl:element>
+            </xsl:for-each>
+        </xsl:element>
         <br/>
         <br/>
         <hr/>
