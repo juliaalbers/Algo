@@ -218,7 +218,9 @@
         </Rechner>
     </Labor>
     
+    <!-- Liste mit aller Software (aus dieser Lite wird IDREF angewendet) -->
     <Software>
+        <!-- Abschnitt mit den Betriebssystemen -->
         <Betriebssysteme>
 
             <Betriebssystem Name="Windows10" ID="B00001">
@@ -230,79 +232,119 @@
             </Betriebssystem>
             
             <Betriebssystem Name="Windows8" ID="B00002">
-                <Beschreibung>Betriebssystem von Microsoft</Beschreibung>
+                <Beschreibung>
+                    Betriebssystem von 
+                    <Hersteller>Microsoft </Hersteller>
+                </Beschreibung>
                 <Besonderheiten></Besonderheiten>
             </Betriebssystem>
             
             <Betriebssystem Name="Windows7" ID="B00003">
-                <Beschreibung>Betriebssystem von Microsoft</Beschreibung>
+                <Beschreibung>
+                    Betriebssystem von 
+                    <Hersteller>Microsoft </Hersteller>
+                </Beschreibung>
                 <Besonderheiten></Besonderheiten>
             </Betriebssystem>
             
             <Betriebssystem Name="WindowsVista" ID="B00004">
-                <Beschreibung>Betriebssystem von Microsoft</Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Betriebssystem von 
+                    <Hersteller>Microsoft </Hersteller>
+                </Beschreibung>
             </Betriebssystem>
             
             <Betriebssystem Name="Linux" ID="B00005">
-                <Beschreibung>Betriebssystem</Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>Betriebssystem </Beschreibung>
+                <Besonderheiten>Open source</Besonderheiten>
             </Betriebssystem>
-            
         </Betriebssysteme>
-        <Anwendungen>
-            <Anwendung>
-                <Beschreibung></Beschreibung>
-            </Anwendung>
         
+        <!-- Abschnitt mir Anwendungen bzw. Programmen -->
+        <Anwendungen>
             <Anwendung Name="Eclipse" ID="A00006">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Entwicklungsplattform für C++,C,Java und weitere Sprachen
+                </Beschreibung>
+                <Besonderheiten>
+                    Erweiterbare Arbeitsfläche durch Plugins wie z.B. Oxygen,
+                    beliebte und sehr bekannte Software
+                </Besonderheiten>
             </Anwendung>
             
             <Anwendung Name="Photoshop" ID="A00007">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Bildbearbeitungs Programm von 
+                    <Hersteller>Adobe </Hersteller>
+                </Beschreibung>
+                <Besonderheiten>
+                    Sehr verbreitete Software
+                </Besonderheiten>
             </Anwendung>
             
             <Anwendung Name="Illustrator" ID="A00008">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Vektorbasiertes Grafik- und Zeichenprogramm von 
+                    <Hersteller>Adobe </Hersteller>
+                </Beschreibung>
+                <Besonderheiten>
+                    Fast nur in professionellen Agenturen eingesetzt
+                </Besonderheiten>
             </Anwendung>
             
             <Anwendung Name="JCreator" ID="A00009">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Entwicklungsplattform für Java von 
+                    <Hersteller>Xinox Software </Hersteller>
+                </Beschreibung>
+                <Besonderheiten>
+                    Leichte Bedienung
+                </Besonderheiten>
             </Anwendung>
             
             <Anwendung Name="H2" ID="A00010">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Entwicklungsplattform für Datenbaken
+                </Beschreibung>
+                <Besonderheiten>
+                    Sehr Triviales Programm
+                </Besonderheiten>
             </Anwendung>
             
             <Anwendung Name="VisualParadigm" ID="A00011">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    UML-Werkzeug von 
+                    <Hersteller>Visual Paradigm International </Hersteller>
+                </Beschreibung>
             </Anwendung>
             
             <Anwendung Name="MicrosoftOffice" ID="A00012">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Textverarbeitungs Programm von 
+                    <Hersteller>Microsoft </Hersteller>
+                </Beschreibung>
+                <Besonderheiten>
+                    Extrem vielseitig und Professionell
+                </Besonderheiten>
             </Anwendung>
             
             <Anwendung Name="BoneLab" ID="A00013">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Lernsoftware, die sich mit dem menschlichen Skelett beschäftigt
+                </Beschreibung>
             </Anwendung>
             
             <Anwendung Name="VirtualMicroscope" ID="A00014">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Simuliert das Microskopieren
+                </Beschreibung>
             </Anwendung>
             
             <Anwendung Name="UnrealEngine" ID="A00015">
-                <Beschreibung></Beschreibung>
-                <Besonderheiten></Besonderheiten>
+                <Beschreibung>
+                    Software für die Entwicklung von Konsolen- und Computerspielen von 
+                    <Hersteller>Epic Games </Hersteller>
+                </Beschreibung>
             </Anwendung>
         </Anwendungen>
         
