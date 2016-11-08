@@ -14,12 +14,10 @@
                 <xsl:element name="br"/>
                 <xsl:element name="h4">Besonderheiten</xsl:element>
                 <xsl:value-of select="//Rechner[position()=1]/Besonderheiten/text()"/>
-          
                 <xsl:element name="br"/>
-                
-                <xsl:element name="h4">Besonderheiten</xsl:element>
-                <xsl:for-each select="//Rechner[position()=1]/Installierte_Software/Software">
-                    <xsl:element name="li"><xsl:value-of select="@ID"/></xsl:element>
+                <xsl:element name="h4">Software</xsl:element>
+                <xsl:for-each select="//Rechner[position()=1]/Installierte_Software">
+                    <xsl:element name="li"><xsl:value-of select="Software/attribute::ID"/></xsl:element>
                 </xsl:for-each>
             </body>
         </html>
