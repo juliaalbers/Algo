@@ -331,11 +331,11 @@
         <hr/>
     </xsl:template>
     
-    <!-- Rechner 3 -->
+    <!-- Rechner -->
     <xsl:template match="Rechner" name="rech">
         <xsl:param name="name" select="@name"/><!-- Parameter -->
         <xsl:param name="labor" select="@labor"/><!-- Parameter -->
-        <xsl:element name="h2"><a name="C3013">Alles zu Rechner C3013</a></xsl:element>
+        <xsl:element name="h2">Alles zum Rechner</xsl:element>
         <xsl:element name="br"/>
         <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
         <xsl:element name="p"><a href="#{$labor}">Zurück zum Labor</a></xsl:element><!-- benutzen des Parameters -->
