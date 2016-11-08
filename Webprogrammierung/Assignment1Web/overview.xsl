@@ -5,7 +5,8 @@
     <xsl:template match="/">
         <html>
             <body>
-                <xsl:element name="h2"><a name="anf">Alle Labore der Hochschule</a></xsl:element>
+                <!-- Inhaltsverzeichnis -->
+                <xsl:element name="h2"><a name="anf">Inhaltsverzeichnis</a></xsl:element>
                 <xsl:element name="li"><a href="#labs">Labore</a></xsl:element>
                 <xsl:element name="li"><a href="#zf">Zahlen und Fakten</a></xsl:element>
                 <xsl:element name="li"><a href="#be">Betriebssysteme</a></xsl:element>
@@ -151,9 +152,9 @@
                 <xsl:element name="br"/>
                 <xsl:element name="h2"><a name="h">Alle Hersteller</a></xsl:element>
                 <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
-                <xsl:for-each  select="//Hersteller"><!-- benutzen des Parameters -->
+                <xsl:for-each  select="//Hersteller">
                     <xsl:sort select="text()"/>
-                    <xsl:if test="not(preceding::Hersteller/text() = text())">
+                    <xsl:if test="not(preceding::Hersteller/text() = text())"><!-- Es sollen nicht alle doppelt angezeig werden -->
                         <xsl:if test="not(descendant::Hersteller/text() = text())">
                             <xsl:element  name="li"><xsl:value-of select="text()"/></xsl:element>
                         </xsl:if>
