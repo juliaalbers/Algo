@@ -321,6 +321,7 @@
                 <xsl:element name="h2"><a name="C1003">Alles zu Rechner C1003</a></xsl:element>
                 <xsl:element name="br"/>
                 <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
+                <xsl:element name="p"><a href="#Multimedialabor">Labor 3</a></xsl:element>
                 <xsl:element name="h4">Beschreibung</xsl:element>
                 <xsl:value-of select="//Labor[position()=3]/Rechner[position()=1]/Beschreibung"/>
                 <xsl:element name="br"/>
@@ -342,6 +343,7 @@
                 <xsl:element name="h2"><a name="C1013">Alles zu Rechner C1013</a></xsl:element>
                 <xsl:element name="br"/>
                 <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
+                <xsl:element name="p"><a href="#Biologie Labor">Labor 1</a></xsl:element>
                 <xsl:element name="h4">Beschreibung</xsl:element>
                 <xsl:value-of select="//Labor[position()=1]/Rechner[position()=1]/Beschreibung"/>
                 <xsl:element name="br"/>
@@ -363,6 +365,7 @@
                 <xsl:element name="h2"><a name="C1037">Alles zu Rechner C1037</a></xsl:element>
                 <xsl:element name="br"/>
                 <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
+                <xsl:element name="p"><a href="#Informatik Labor">Labor 2</a></xsl:element>
                 <xsl:element name="h4">Beschreibung</xsl:element>
                 <xsl:value-of select="//Labor[position()=2]/Rechner[position()=1]/Beschreibung"/>
                 <xsl:element name="br"/>
@@ -384,6 +387,7 @@
                 <xsl:element name="h2"><a name="C2013">Alles zu Rechner C2013</a></xsl:element>
                 <xsl:element name="br"/>
                 <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
+                <xsl:element name="p"><a href="#Biologie Labor">Labor 1</a></xsl:element>
                 <xsl:element name="h4">Beschreibung</xsl:element>
                 <xsl:value-of select="//Labor[position()=1]/Rechner[position()=2]/Beschreibung"/>
                 <xsl:element name="br"/>
@@ -405,6 +409,7 @@
                 <xsl:element name="h2"><a name="C2037">Alles zu Rechner C2037</a></xsl:element>
                 <xsl:element name="br"/>
                 <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
+                <xsl:element name="p"><a href="#Informatik Labor">Labor 2</a></xsl:element>
                 <xsl:element name="h4">Beschreibung</xsl:element>
                 <xsl:value-of select="//Labor[position()=2]/Rechner[position()=2]/Beschreibung"/>
                 <xsl:element name="br"/>
@@ -426,6 +431,7 @@
                 <xsl:element name="h2"><a name="C3013">Alles zu Rechner C3013</a></xsl:element>
                 <xsl:element name="br"/>
                 <xsl:element name="p"><a href="#anf">Seitenanfang</a></xsl:element>
+                <xsl:element name="p"><a href="#Biologie Labor">Labor 1</a></xsl:element>
                 <xsl:element name="h4">Beschreibung</xsl:element>
                 <xsl:value-of select="//Labor[position()=1]/Rechner[position()=3]/Beschreibung"/>
                 <xsl:element name="br"/>
