@@ -224,7 +224,7 @@
             <Betriebssystem Name="Windows10" ID="B00001">
                 <Beschreibung>
                     Betriebssystem von 
-                    <Hersteller>Microsoft</Hersteller>
+                    <Hersteller>Microsoft </Hersteller>
                 </Beschreibung>
                 <Besonderheiten></Besonderheiten>
             </Betriebssystem>
