@@ -1,218 +1,245 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="/resources/xsl/rdf_xsl.jsp" type="text/xsl"?>
 <rss version="2.0">
-<!--
-* XML-format for teasering tagesschau.de-headlines. Version: 2.0
-* Release-Date:2002/02/04, last updated 2006/06/28
-*
-* Die Nutzung dieser Inhalte ist ausschliesslich nicht-kommerziellen Internet-
-* Angeboten erlaubt, die Nutzung kann jederzeit von tagesschau.de untersagt
-* werden. tagesschau.de übernimmt keinen Support, zudem wird keine Verfügbarkeit
-* dieser XML-Datei gewährleistet. Die Inhalte dürfen nicht archiviert werden.
-//-->
-<channel>
-<title>tagesschau.de - Die Nachrichten der ARD</title>
-<link>http://www.tagesschau.de</link>
-<description>tagesschau.de</description>
-<language>de</language>
-<copyright>tagesschau.de, Norddeutscher Rundfunk</copyright>
-<docs>http://blogs.law.harvard.edu/tech/rss</docs>
-<ttl>30</ttl>
-<item>
-<title>Merkel verteidigt Flüchtlingspolitik und verspricht Regulierung</title>
-<link>http://www.tagesschau.de/inland/merkel-rede-105.html</link>
-<description>Die Erwartungen an ihre Rede waren hoch - aber Merkel scheint sie erfüllt zu haben: Die Delegierten quittierten die Rede ihrer Vorsitzenden mit minutenlangem tosendem Applaus. Merkel hatte unter anderem ihre Flüchtlingspolitik verteidigt, zugleich aber einen härteren Kurs angekündigt.</description>
-<guid>http://www.tagesschau.de/inland/merkel-rede-105.html</guid>
-<category>Inland</category>
-</item>
-<item>
-<title>Merkel-Rede: "Die richtigen emotionalen Botschaften"</title>
-<link>http://www.tagesschau.de/inland/hassel-cdu-101.html</link>
-<description>Merkel hat die richtigen emotionalen Botschaften gesendet, sagt Tina Hassel zur Rede in Essen. Mit Themen, auf die die Partei lange gewartet hat. Immer wieder relativierte sie jedoch die konservativen Positionen.</description>
-<guid>http://www.tagesschau.de/inland/hassel-cdu-101.html</guid>
-<category>Inland</category>
-</item>
-<item>
-<title>Livestream: CDU ringt um künftige Ausrichtung</title>
-<link>http://www.phoenix.de/livestream/</link>
-<description>Nach der Rede der Parteivorsitzenden Merkel bereitet sich die CDU auf die Wahl ihres Bundesvorstands vor. Auch Merkel braucht die Zustimmung der 1001 Delegierten. Ob sie allerdings an ihr bestes Ergebnis von 97,9 Prozent heranreichen kann, ist fraglich.</description>
-<guid>http://www.phoenix.de/livestream/</guid>
-<category>Inland</category>
-</item>
-<item>
-<title>Atomausstieg: Urteil mit unvorhersehbaren Folgen</title>
-<link>http://www.tagesschau.de/inland/atomausstieg-121.html</link>
-<description>Das Verfassungsgericht hat den Atomausstieg für zulässig erklärt. Doch gleichzeitig befanden die Richter, dass den Energiekonzernen eine Entschädigung zusteht. Das könnte sogar dazu führen, dass einzelne Meiler länger laufen, erklärt Klaus Hempel. </description>
-<guid>http://www.tagesschau.de/inland/atomausstieg-121.html</guid>
-<category>Inland</category>
-</item>
-<item>
-<title>PISA: Deutsche Schüler besser als der Durchschnitt</title>
-<link>http://www.tagesschau.de/inland/pisa-101.html</link>
-<description>10.000 deutsche Schüler wurden für die neue PISA-Studie getestet. Ihre Ergebnisse liegen über dem OECD-Durchschnitt - Spitze sind sie jedoch nicht. Während die Leistungen beim Lesen positiv stimmen, sieht es bei den Naturwissenschaften schlechter aus.</description>
-<guid>http://www.tagesschau.de/inland/pisa-101.html</guid>
-<category>Inland</category>
-</item>
-<item>
-<title>NATO und EU: Zusammenarbeit groß geschrieben</title>
-<link>http://www.tagesschau.de/ausland/natoeutreffen-101.html</link>
-<description>Die NATO und die EU wollen stärker zusammenarbeiten. Hierzu will das transatlantische Bündnis heute einen Aktionsplan beschließen, der mehr als 40 Punkte umfasst. Es geht um den Kampf gegen Cyberkriminalität oder gemeinsame Marineeinsätze. Von Kai Küstner.</description>
-<guid>http://www.tagesschau.de/ausland/natoeutreffen-101.html</guid>
-<category>Ausland</category>
-</item>
-<item>
-<title>Cazeneuve wird neuer Frankreichs Regierungschef</title>
-<link>http://www.tagesschau.de/ausland/cazeneuve-137.html</link>
-<description>Frankreichs Premierminister Valls hatte gestern Abend seinen Rücktritt angekündigt. Nun steht fest, wer sein Nachfolger wird: der bisherige Innenminister Cazeneuve. Er stand in den vergangenen Jahren wegen der Terrorserie besonders im Rampenlicht.</description>
-<guid>http://www.tagesschau.de/ausland/cazeneuve-137.html</guid>
-<category>Ausland</category>
-</item>
-<item>
-<title>Verkehr in Paris wegen starken Smogs eingeschränkt</title>
-<link>http://www.tagesschau.de/ausland/paris-luftverschmutzung-101.html</link>
-<description>Paris leidet unter Smog - um dem abzuhelfen, hat die Stadt drastische Maßnahmen ergriffen. Jedes zweite Auto muss stehenbleiben - dafür ist allerdings der öffentliche Nahverkehr kostenlos, auch Fahrgemeinschaften dürfen auf die Straße.</description>
-<guid>http://www.tagesschau.de/ausland/paris-luftverschmutzung-101.html</guid>
-<category>Ausland</category>
-</item>
-<item>
-<title>Brasiliens Senatspräsident Calheiros abgesetzt</title>
-<link>http://www.tagesschau.de/ausland/brasilien-311.html</link>
-<description>Er würde Staatschef werden, falls der Präsident zurücktritt. Doch nun muss Brasiliens Senatspräsident Calheiros sein Amt ruhen lassen. Der Oberste Gerichtshof suspendierte ihn vorläufig wegen des Verdachts der Veruntreuung.</description>
-<guid>http://www.tagesschau.de/ausland/brasilien-311.html</guid>
-<category>Ausland</category>
-</item>
-<item>
-<title>EU erhöht Druck: Brexit-Details sollen bis 2018 stehen</title>
-<link>http://www.tagesschau.de/ausland/brexit-verhandlungen-103.html</link>
-<description>Der Brexit-Unterhändler der EU, Barnier, will die Verhandlungen über das Ausscheiden Großbritanniens innerhalb von 18 Monaten abschließen. Zugleich macht er klar, dass die Briten die Privilegien einer EU-Mitgliedschaft verlieren werden. Von Ralph Sina.</description>
-<guid>http://www.tagesschau.de/ausland/brexit-verhandlungen-103.html</guid>
-<category>Ausland</category>
-</item>
-<item>
-<title>Amnesty wirft Türkei Vertreibung Hunderttausender vor</title>
-<link>http://www.tagesschau.de/ausland/amnesty-tuerkei-109.html</link>
-<description>Schätzungen zufolge sind etwa 500.000 Menschen im Südosten der Türkei vor den dortigen Kämpfen geflohen. Amnesty International macht dafür das "brutale Vorgehen" der  türkischen Behörden verantwortlich und wirft ihnen Vertreibung vor.</description>
-<guid>http://www.tagesschau.de/ausland/amnesty-tuerkei-109.html</guid>
-<category>Ausland</category>
-</item>
-<item>
-<title>Prozess gegen US-Polizisten nach Todesschüssen geplatzt</title>
-<link>http://www.tagesschau.de/ausland/charleston-prozess-101.html</link>
-<description>Als Walter Scott die tödlichen Schüsse aus der Polizeiwaffe in den Rücken trafen, filmte ein Handy die Szene. Dieser Fall von Polizeigewalt gegen Schwarze sorgte weltweit für Aufsehen. Nun endete der Prozess gegen den damaligen Polizisten: ohne Urteil. Von Martin Ganslmeier.</description>
-<guid>http://www.tagesschau.de/ausland/charleston-prozess-101.html</guid>
-<category>Ausland</category>
-</item>
-<item>
-<title>Indische Politikerin Jayalalithaa gestorben</title>
-<link>http://www.tagesschau.de/ausland/jayalalitha-105.html</link>
-<description>Sie war Filmstar, Muse und eine perfekte Populistin - Jayaram Jayalalithaa. Im Alter von 68 Jahren ist die Regierungschefin des indischen Bundesstaats Tamil Nadu gestorben. Weil viele sie wie eine Halbgöttin verehren, befürchten Behörden, aus Trauer könnten Unruhen werden. Von J. Webermann.</description>
-<guid>http://www.tagesschau.de/ausland/jayalalitha-105.html</guid>
-<category>Ausland</category>
-</item>
-<item>
-<title>Diese Woche keine Streiks bei der Lufthansa</title>
-<link>http://www.tagesschau.de/wirtschaft/piloten-lufthansa-101.html</link>
-<description>Die Lufthansa-Piloten wollen ihre Streiks vorerst aussetzen. "Mindestens diese Woche" werde man brauchen, um das neue Angebot des Konzerns zu prüfen. So lange soll auch der Flugverkehr normal weiterlaufen. Wenn es einen neuen Stand gebe, werde man wieder Stellung nehmen.</description>
-<guid>http://www.tagesschau.de/wirtschaft/piloten-lufthansa-101.html</guid>
-<category>Wirtschaft</category>
-</item>
-<item>
-<title>Videoblog "Tudo Bem": 100 Jahre Samba</title>
-<link>http://www.tagesschau.de/videoblog/tudobem/tudobem-samba-101.html</link>
-<description>Für unseren heutigen Videoblog muss Michael Stocks gut bei Stimme sein. Denn in "Tudo Bem" geht es um Samba. Brasilien feiert den 100. Geburtstag des Tanzes, den einst Sklaven ins Land brachten - und wenn Brasilianer feiern, dann ausgelassen und laut.</description>
-<guid>http://www.tagesschau.de/videoblog/tudobem/tudobem-samba-101.html</guid>
-<category>Ausland</category>
-</item>
-<item>
-<title>Neues aus dem ARD-Hauptstadtstudio</title>
-<link>http://blog.ard-hauptstadtstudio.de</link>
-<description>Was ist los auf dem politischen Parkett in Berlin? Was wird diskutiert in den Parteien, im Bundestag, im Bundesrat oder auch im Kanzleramt - und wie ist dies alles zu bewerten? Die Korrespondenten im ARD-Hauptstadtstudio informieren darüber in diesem Blog.</description>
-<guid>http://blog.ard-hauptstadtstudio.de</guid>
-<category>Inland</category>
-</item>
-<item>
-<title>Zeitgeschichte: Die Tagesschau vor 20 Jahren</title>
-<link>http://www.tagesschau.de/inland/tsvorzwanzigjahren100.html</link>
-<description>Wie sah die Welt vor 20 Jahren aus? Welche Themen bestimmten die politische Debatte? Wer war damals wichtig? Die Tagesschau bietet einen wertvollen Einblick in die jüngere Zeitgeschichte. Tagesschau.de dokumentiert sie Tag für Tag mit den 20-Uhr-Ausgaben.</description>
-<guid>http://www.tagesschau.de/inland/tsvorzwanzigjahren100.html</guid>
-<category>Inland</category>
-</item>
-<item>
-<title>Dax: Geht das jetzt schon wieder los?</title>
-<link>http://boerse.ard.de/marktberichte/dax-geht-das-jetzt-schon-wieder-los100.html#xtor=export</link>
-<description>Wer gehofft hatte, dass die Aktienmärkte nach dem Referendum in Italien sich aus ihrer Seitwärtslage befreien würden, muss sich wohl weiter gedulden.</description>
-<guid>http://boerse.ard.de/marktberichte/dax-geht-das-jetzt-schon-wieder-los100.html#xtor=export</guid>
-<category>Sport</category>
-</item>
-<item>
-<title>Kommentar zum Referendum: Es wird düster für Italien</title>
-<link>http://www.tagesschau.de/kommentar/renzi-referendum-101.html</link>
-<description>Renzi ist mit dem Verfassungsreferendum in Italien gescheitert. Dies ist ein Sieg für die Populisten und Anti-Politiker, meint J.-C. Kitzler. Dabei sind Reformen bitter nötig. Aber um die Zukunft des Landes wird es nun erstmal nicht gehen.</description>
-<guid>http://www.tagesschau.de/kommentar/renzi-referendum-101.html</guid>
-<category>Kommentar</category>
-</item>
-<item>
-<title>SPD macht Steuern zum Wahlkampfthema</title>
-<link>http://www.tagesschau.de/inland/spd-steuerkonzept-101.html</link>
-<description>Weniger Belastung für mittlere und kleine Einkommen, dafür ein konsequentes Vorgehen gegen Steuerflucht und höhere Belastungen für Reiche: Das ist nach Informationen des ARD-Hauptstadtstudios der Kern des Steuerkonzepts, mit dem die SPD in den Bundestagswahlkampf ziehen will.</description>
-<guid>http://www.tagesschau.de/inland/spd-steuerkonzept-101.html</guid>
-<category>Inland</category>
-</item>
-<item>
-<title>Tod einer Studentin - Ein Schatten über Freiburg</title>
-<link>http://www.tagesschau.de/inland/freiburg-vergewaltigung-politiker-103.html</link>
-<description>Die linksliberal geprägte Uni-Stadt Freiburg stand nach dem Tod der Studentin Maria L. unter Schock. Die Festnahme eines Verdächtigen bewirkte zunächst Erleichterung, dann aber auch Beklemmung und Trotz angesichts der Debatte, da es sich um einen afghanischen Flüchtling handelt. Von Daniel Hechler.</description>
-<guid>http://www.tagesschau.de/inland/freiburg-vergewaltigung-politiker-103.html</guid>
-<category>Inland</category>
-</item>
-<item>
-<title>#kurzerklärt: Abschiebung - gar nicht so einfach</title>
-<link>http://www.tagesschau.de/multimedia/kurzerklaert/kurz-erkaert-abschiebungen-101.html</link>
-<description>Flüchtlinge, die kein Recht auf Asyl haben, müssen Deutschland wieder verlassen. Eigentlich ganz einfach, doch in der Praxis ziemlich kompliziert. Aus welchen Gründen Abschiebungen oft scheitern, erklärt Charlotte Gnändiger.</description>
-<guid>http://www.tagesschau.de/multimedia/kurzerklaert/kurz-erkaert-abschiebungen-101.html</guid>
-<category>Videos &amp; Audios</category>
-</item>
-<item>
-<title>Russland und China blockieren UN-Resolution zu Aleppo</title>
-<link>http://www.tagesschau.de/ausland/aleppo-resolution-101.html</link>
-<description>Erneut hat sich der UN-Sicherheitsrat nicht auf eine Syrien-Resolution einigen können. Diesmal scheiterte ein Entwurf, der eine Waffenruhe für Aleppo forderte, am Widerstand Russlands und Chinas. Scharfe Töne folgten. Von Kai Clement.</description>
-<guid>http://www.tagesschau.de/ausland/aleppo-resolution-101.html</guid>
-<category>Ausland</category>
-</item>
-<item>
-<title>Italiens Präsident fordert Renzi auf, länger im Amt zu bleiben</title>
-<link>http://www.tagesschau.de/ausland/renzi-italien-103.html</link>
-<description>Nach dem gescheiterten Referendum in Italien hatte Regierungschef Renzi seinen Rücktritt angekündigt. Doch der verzögert sich jetzt. Staatspräsident Mattarella bat ihn zu bleiben, bis der Haushalt für 2017 im Parlament verabschiedet ist.</description>
-<guid>http://www.tagesschau.de/ausland/renzi-italien-103.html</guid>
-<category>Ausland</category>
-</item>
-<item>
-<title>NATO vertieft Zusammenarbeit mit EU</title>
-<link>http://www.tagesschau.de/ausland/nato-eu-105.html</link>
-<description>Seit klar ist, dass Donald Trump ins Weiße Haus einziehen wird, ist viel von europäischen Anstrengungen bei der Verteidigung die Rede. Unklar ist allerdings, wie das aussehen kann. NATO und EU zumindest vereinbarten schon einmal eine bessere Kooperation. Von K. Küstner.</description>
-<guid>http://www.tagesschau.de/ausland/nato-eu-105.html</guid>
-<category>Ausland</category>
-</item>
-<item>
-<title>Griechenland liefert türkische Militärs nicht aus</title>
-<link>http://www.tagesschau.de/ausland/griechenland-tuerkei-putschversuch-101.html</link>
-<description>Die griechische Justiz hat die Auslieferung von drei türkischen Armeeangehörigen abgelehnt. Zur Begründung hieß es, die Sicherheit der drei Türken wäre in ihrer Heimat bedroht. Sie waren nach dem gescheiterten Putschversuch in der Türkei nach Griechenland geflohen.</description>
-<guid>http://www.tagesschau.de/ausland/griechenland-tuerkei-putschversuch-101.html</guid>
-<category>Ausland</category>
-</item>
-<item>
-<title>Britischer Supreme Court verhandelt Brexit</title>
-<link>http://www.tagesschau.de/ausland/brexit-gericht-101.html</link>
-<description>"Volksverräter"-Vorwürfe und Morddrohungen: Bereits vor dem Brexit-Prozess vor dem Obersten Gericht Großbritanniens kochten die Emotionen hoch. Die Richter versuchten, zu beruhigen. Der Überblick ging dennoch manchmal verloren. Von J.-P. Marquardt.</description>
-<guid>http://www.tagesschau.de/ausland/brexit-gericht-101.html</guid>
-<category>Ausland</category>
-</item>
-<item>
-<title>Eurogruppe beschließt Schuldenerleichterungen für Athen</title>
-<link>http://www.tagesschau.de/wirtschaft/griechenland-eu-111.html</link>
-<description>Die Finanzminister der Euro-Staaten haben Griechenland einige Erleichterungen gewährt. Dabei geht es um "technische Maßnahmen" wie zum Beispiel die Streckung des Schuldendienstes. Neue Kredite gaben die Finanzminister nicht frei.</description>
-<guid>http://www.tagesschau.de/wirtschaft/griechenland-eu-111.html</guid>
-<category>Wirtschaft</category>
-</item>
-</channel>
+	<!--
+	* XML-format for teasering tagesschau.de-headlines. Version: 2.0
+	* Release-Date:2002/02/04, last updated 2006/06/28
+	*
+	* Die Nutzung dieser Inhalte ist ausschliesslich nicht-kommerziellen Internet-
+	* Angeboten erlaubt, die Nutzung kann jederzeit von tagesschau.de untersagt
+	* werden. tagesschau.de übernimmt keinen Support, zudem wird keine Verfügbarkeit
+	* dieser XML-Datei gewährleistet. Die Inhalte dürfen nicht archiviert werden.
+	//-->
+	<channel>
+		<title>tagesschau.de - Die Nachrichten der ARD</title>
+		<link>http://www.tagesschau.de</link>
+		<description>tagesschau.de</description>
+		<language>de</language>
+		<copyright>tagesschau.de, Norddeutscher Rundfunk</copyright>
+		<docs>http://blogs.law.harvard.edu/tech/rss</docs>
+		<ttl>30</ttl>
+		<item>
+			<title>Merkel verteidigt Flüchtlingspolitik und verspricht Regulierung</title>
+			<link>http://www.tagesschau.de/inland/merkel-rede-105.html</link>
+			<description>Die Erwartungen an ihre Rede waren hoch - aber Merkel scheint sie erfüllt zu haben: Die Delegierten quittierten die Rede ihrer Vorsitzenden mit minutenlangem tosendem Applaus. Merkel hatte unter anderem ihre Flüchtlingspolitik verteidigt, zugleich aber einen härteren Kurs angekündigt.</description>
+			<guid>http://www.tagesschau.de/inland/merkel-rede-105.html</guid>
+			<category>Inland</category>
+		</item>
+		
+		<item>
+			<title>Merkel-Rede: "Die richtigen emotionalen Botschaften"</title>
+			<link>http://www.tagesschau.de/inland/hassel-cdu-101.html</link>
+			<description>Merkel hat die richtigen emotionalen Botschaften gesendet, sagt Tina Hassel zur Rede in Essen. Mit Themen, auf die die Partei lange gewartet hat. Immer wieder relativierte sie jedoch die konservativen Positionen.</description>
+			<guid>http://www.tagesschau.de/inland/hassel-cdu-101.html</guid>
+			<category>Inland</category>
+		</item>
+		
+		<item>
+			<title>Livestream: CDU ringt um künftige Ausrichtung</title>
+			<link>http://www.phoenix.de/livestream/</link>
+			<description>Nach der Rede der Parteivorsitzenden Merkel bereitet sich die CDU auf die Wahl ihres Bundesvorstands vor. Auch Merkel braucht die Zustimmung der 1001 Delegierten. Ob sie allerdings an ihr bestes Ergebnis von 97,9 Prozent heranreichen kann, ist fraglich.</description>
+			<guid>http://www.phoenix.de/livestream/</guid>
+			<category>Inland</category>
+		</item>
+	
+		<item>
+		<title>Atomausstieg: Urteil mit unvorhersehbaren Folgen</title>
+		<link>http://www.tagesschau.de/inland/atomausstieg-121.html</link>
+		<description>Das Verfassungsgericht hat den Atomausstieg für zulässig erklärt. Doch gleichzeitig befanden die Richter, dass den Energiekonzernen eine Entschädigung zusteht. Das könnte sogar dazu führen, dass einzelne Meiler länger laufen, erklärt Klaus Hempel. </description>
+		<guid>http://www.tagesschau.de/inland/atomausstieg-121.html</guid>
+		<category>Inland</category>
+		</item>
+		
+		<item>
+		<title>PISA: Deutsche Schüler besser als der Durchschnitt</title>
+		<link>http://www.tagesschau.de/inland/pisa-101.html</link>
+		<description>10.000 deutsche Schüler wurden für die neue PISA-Studie getestet. Ihre Ergebnisse liegen über dem OECD-Durchschnitt - Spitze sind sie jedoch nicht. Während die Leistungen beim Lesen positiv stimmen, sieht es bei den Naturwissenschaften schlechter aus.</description>
+		<guid>http://www.tagesschau.de/inland/pisa-101.html</guid>
+		<category>Inland</category>
+		</item>
+		
+		<item>
+		<title>NATO und EU: Zusammenarbeit groß geschrieben</title>
+		<link>http://www.tagesschau.de/ausland/natoeutreffen-101.html</link>
+		<description>Die NATO und die EU wollen stärker zusammenarbeiten. Hierzu will das transatlantische Bündnis heute einen Aktionsplan beschließen, der mehr als 40 Punkte umfasst. Es geht um den Kampf gegen Cyberkriminalität oder gemeinsame Marineeinsätze. Von Kai Küstner.</description>
+		<guid>http://www.tagesschau.de/ausland/natoeutreffen-101.html</guid>
+		<category>Ausland</category>
+		</item>
+		
+		<item>
+		<title>Cazeneuve wird neuer Frankreichs Regierungschef</title>
+		<link>http://www.tagesschau.de/ausland/cazeneuve-137.html</link>
+		<description>Frankreichs Premierminister Valls hatte gestern Abend seinen Rücktritt angekündigt. Nun steht fest, wer sein Nachfolger wird: der bisherige Innenminister Cazeneuve. Er stand in den vergangenen Jahren wegen der Terrorserie besonders im Rampenlicht.</description>
+		<guid>http://www.tagesschau.de/ausland/cazeneuve-137.html</guid>
+		<category>Ausland</category>
+		</item>
+		
+		<item>
+		<title>Verkehr in Paris wegen starken Smogs eingeschränkt</title>
+		<link>http://www.tagesschau.de/ausland/paris-luftverschmutzung-101.html</link>
+		<description>Paris leidet unter Smog - um dem abzuhelfen, hat die Stadt drastische Maßnahmen ergriffen. Jedes zweite Auto muss stehenbleiben - dafür ist allerdings der öffentliche Nahverkehr kostenlos, auch Fahrgemeinschaften dürfen auf die Straße.</description>
+		<guid>http://www.tagesschau.de/ausland/paris-luftverschmutzung-101.html</guid>
+		<category>Ausland</category>
+		</item>
+		
+		<item>
+		<title>Brasiliens Senatspräsident Calheiros abgesetzt</title>
+		<link>http://www.tagesschau.de/ausland/brasilien-311.html</link>
+		<description>Er würde Staatschef werden, falls der Präsident zurücktritt. Doch nun muss Brasiliens Senatspräsident Calheiros sein Amt ruhen lassen. Der Oberste Gerichtshof suspendierte ihn vorläufig wegen des Verdachts der Veruntreuung.</description>
+		<guid>http://www.tagesschau.de/ausland/brasilien-311.html</guid>
+		<category>Ausland</category>
+		</item>
+		
+		<item>
+		<title>EU erhöht Druck: Brexit-Details sollen bis 2018 stehen</title>
+		<link>http://www.tagesschau.de/ausland/brexit-verhandlungen-103.html</link>
+		<description>Der Brexit-Unterhändler der EU, Barnier, will die Verhandlungen über das Ausscheiden Großbritanniens innerhalb von 18 Monaten abschließen. Zugleich macht er klar, dass die Briten die Privilegien einer EU-Mitgliedschaft verlieren werden. Von Ralph Sina.</description>
+		<guid>http://www.tagesschau.de/ausland/brexit-verhandlungen-103.html</guid>
+		<category>Ausland</category>
+		</item>
+		
+		<item>
+		<title>Amnesty wirft Türkei Vertreibung Hunderttausender vor</title>
+		<link>http://www.tagesschau.de/ausland/amnesty-tuerkei-109.html</link>
+		<description>Schätzungen zufolge sind etwa 500.000 Menschen im Südosten der Türkei vor den dortigen Kämpfen geflohen. Amnesty International macht dafür das "brutale Vorgehen" der  türkischen Behörden verantwortlich und wirft ihnen Vertreibung vor.</description>
+		<guid>http://www.tagesschau.de/ausland/amnesty-tuerkei-109.html</guid>
+		<category>Ausland</category>
+		</item>
+		
+		<item>
+		<title>Prozess gegen US-Polizisten nach Todesschüssen geplatzt</title>
+		<link>http://www.tagesschau.de/ausland/charleston-prozess-101.html</link>
+		<description>Als Walter Scott die tödlichen Schüsse aus der Polizeiwaffe in den Rücken trafen, filmte ein Handy die Szene. Dieser Fall von Polizeigewalt gegen Schwarze sorgte weltweit für Aufsehen. Nun endete der Prozess gegen den damaligen Polizisten: ohne Urteil. Von Martin Ganslmeier.</description>
+		<guid>http://www.tagesschau.de/ausland/charleston-prozess-101.html</guid>
+		<category>Ausland</category>
+		</item>
+		
+		<item>
+		<title>Indische Politikerin Jayalalithaa gestorben</title>
+		<link>http://www.tagesschau.de/ausland/jayalalitha-105.html</link>
+		<description>Sie war Filmstar, Muse und eine perfekte Populistin - Jayaram Jayalalithaa. Im Alter von 68 Jahren ist die Regierungschefin des indischen Bundesstaats Tamil Nadu gestorben. Weil viele sie wie eine Halbgöttin verehren, befürchten Behörden, aus Trauer könnten Unruhen werden. Von J. Webermann.</description>
+		<guid>http://www.tagesschau.de/ausland/jayalalitha-105.html</guid>
+		<category>Ausland</category>
+		</item>
+		
+		<item>
+		<title>Diese Woche keine Streiks bei der Lufthansa</title>
+		<link>http://www.tagesschau.de/wirtschaft/piloten-lufthansa-101.html</link>
+		<description>Die Lufthansa-Piloten wollen ihre Streiks vorerst aussetzen. "Mindestens diese Woche" werde man brauchen, um das neue Angebot des Konzerns zu prüfen. So lange soll auch der Flugverkehr normal weiterlaufen. Wenn es einen neuen Stand gebe, werde man wieder Stellung nehmen.</description>
+		<guid>http://www.tagesschau.de/wirtschaft/piloten-lufthansa-101.html</guid>
+		<category>Wirtschaft</category>
+		</item>
+		
+		<item>
+		<title>Videoblog "Tudo Bem": 100 Jahre Samba</title>
+		<link>http://www.tagesschau.de/videoblog/tudobem/tudobem-samba-101.html</link>
+		<description>Für unseren heutigen Videoblog muss Michael Stocks gut bei Stimme sein. Denn in "Tudo Bem" geht es um Samba. Brasilien feiert den 100. Geburtstag des Tanzes, den einst Sklaven ins Land brachten - und wenn Brasilianer feiern, dann ausgelassen und laut.</description>
+		<guid>http://www.tagesschau.de/videoblog/tudobem/tudobem-samba-101.html</guid>
+		<category>Ausland</category>
+		</item>
+		
+		<item>
+		<title>Neues aus dem ARD-Hauptstadtstudio</title>
+		<link>http://blog.ard-hauptstadtstudio.de</link>
+		<description>Was ist los auf dem politischen Parkett in Berlin? Was wird diskutiert in den Parteien, im Bundestag, im Bundesrat oder auch im Kanzleramt - und wie ist dies alles zu bewerten? Die Korrespondenten im ARD-Hauptstadtstudio informieren darüber in diesem Blog.</description>
+		<guid>http://blog.ard-hauptstadtstudio.de</guid>
+		<category>Inland</category>
+		</item>
+		
+		<item>
+		<title>Zeitgeschichte: Die Tagesschau vor 20 Jahren</title>
+		<link>http://www.tagesschau.de/inland/tsvorzwanzigjahren100.html</link>
+		<description>Wie sah die Welt vor 20 Jahren aus? Welche Themen bestimmten die politische Debatte? Wer war damals wichtig? Die Tagesschau bietet einen wertvollen Einblick in die jüngere Zeitgeschichte. Tagesschau.de dokumentiert sie Tag für Tag mit den 20-Uhr-Ausgaben.</description>
+		<guid>http://www.tagesschau.de/inland/tsvorzwanzigjahren100.html</guid>
+		<category>Inland</category>
+		</item>
+		
+		<item>
+		<title>Dax: Geht das jetzt schon wieder los?</title>
+		<link>http://boerse.ard.de/marktberichte/dax-geht-das-jetzt-schon-wieder-los100.html#xtor=export</link>
+		<description>Wer gehofft hatte, dass die Aktienmärkte nach dem Referendum in Italien sich aus ihrer Seitwärtslage befreien würden, muss sich wohl weiter gedulden.</description>
+		<guid>http://boerse.ard.de/marktberichte/dax-geht-das-jetzt-schon-wieder-los100.html#xtor=export</guid>
+		<category>Sport</category>
+		</item>
+		
+		<item>
+		<title>Kommentar zum Referendum: Es wird düster für Italien</title>
+		<link>http://www.tagesschau.de/kommentar/renzi-referendum-101.html</link>
+		<description>Renzi ist mit dem Verfassungsreferendum in Italien gescheitert. Dies ist ein Sieg für die Populisten und Anti-Politiker, meint J.-C. Kitzler. Dabei sind Reformen bitter nötig. Aber um die Zukunft des Landes wird es nun erstmal nicht gehen.</description>
+		<guid>http://www.tagesschau.de/kommentar/renzi-referendum-101.html</guid>
+		<category>Kommentar</category>
+		</item>
+		
+		<item>
+		<title>SPD macht Steuern zum Wahlkampfthema</title>
+		<link>http://www.tagesschau.de/inland/spd-steuerkonzept-101.html</link>
+		<description>Weniger Belastung für mittlere und kleine Einkommen, dafür ein konsequentes Vorgehen gegen Steuerflucht und höhere Belastungen für Reiche: Das ist nach Informationen des ARD-Hauptstadtstudios der Kern des Steuerkonzepts, mit dem die SPD in den Bundestagswahlkampf ziehen will.</description>
+		<guid>http://www.tagesschau.de/inland/spd-steuerkonzept-101.html</guid>
+		<category>Inland</category>
+		</item>
+		
+		<item>
+		<title>Tod einer Studentin - Ein Schatten über Freiburg</title>
+		<link>http://www.tagesschau.de/inland/freiburg-vergewaltigung-politiker-103.html</link>
+		<description>Die linksliberal geprägte Uni-Stadt Freiburg stand nach dem Tod der Studentin Maria L. unter Schock. Die Festnahme eines Verdächtigen bewirkte zunächst Erleichterung, dann aber auch Beklemmung und Trotz angesichts der Debatte, da es sich um einen afghanischen Flüchtling handelt. Von Daniel Hechler.</description>
+		<guid>http://www.tagesschau.de/inland/freiburg-vergewaltigung-politiker-103.html</guid>
+		<category>Inland</category>
+		</item>
+		
+		<item>
+		<title>#kurzerklärt: Abschiebung - gar nicht so einfach</title>
+		<link>http://www.tagesschau.de/multimedia/kurzerklaert/kurz-erkaert-abschiebungen-101.html</link>
+		<description>Flüchtlinge, die kein Recht auf Asyl haben, müssen Deutschland wieder verlassen. Eigentlich ganz einfach, doch in der Praxis ziemlich kompliziert. Aus welchen Gründen Abschiebungen oft scheitern, erklärt Charlotte Gnändiger.</description>
+		<guid>http://www.tagesschau.de/multimedia/kurzerklaert/kurz-erkaert-abschiebungen-101.html</guid>
+		<category>Videos &amp; Audios</category>
+		</item>
+		
+		<item>
+		<title>Russland und China blockieren UN-Resolution zu Aleppo</title>
+		<link>http://www.tagesschau.de/ausland/aleppo-resolution-101.html</link>
+		<description>Erneut hat sich der UN-Sicherheitsrat nicht auf eine Syrien-Resolution einigen können. Diesmal scheiterte ein Entwurf, der eine Waffenruhe für Aleppo forderte, am Widerstand Russlands und Chinas. Scharfe Töne folgten. Von Kai Clement.</description>
+		<guid>http://www.tagesschau.de/ausland/aleppo-resolution-101.html</guid>
+		<category>Ausland</category>
+		</item>
+		
+		<item>
+		<title>Italiens Präsident fordert Renzi auf, länger im Amt zu bleiben</title>
+		<link>http://www.tagesschau.de/ausland/renzi-italien-103.html</link>
+		<description>Nach dem gescheiterten Referendum in Italien hatte Regierungschef Renzi seinen Rücktritt angekündigt. Doch der verzögert sich jetzt. Staatspräsident Mattarella bat ihn zu bleiben, bis der Haushalt für 2017 im Parlament verabschiedet ist.</description>
+		<guid>http://www.tagesschau.de/ausland/renzi-italien-103.html</guid>
+		<category>Ausland</category>
+		</item>
+		
+		<item>
+		<title>NATO vertieft Zusammenarbeit mit EU</title>
+		<link>http://www.tagesschau.de/ausland/nato-eu-105.html</link>
+		<description>Seit klar ist, dass Donald Trump ins Weiße Haus einziehen wird, ist viel von europäischen Anstrengungen bei der Verteidigung die Rede. Unklar ist allerdings, wie das aussehen kann. NATO und EU zumindest vereinbarten schon einmal eine bessere Kooperation. Von K. Küstner.</description>
+		<guid>http://www.tagesschau.de/ausland/nato-eu-105.html</guid>
+		<category>Ausland</category>
+		</item>
+		
+		<item>
+		<title>Griechenland liefert türkische Militärs nicht aus</title>
+		<link>http://www.tagesschau.de/ausland/griechenland-tuerkei-putschversuch-101.html</link>
+		<description>Die griechische Justiz hat die Auslieferung von drei türkischen Armeeangehörigen abgelehnt. Zur Begründung hieß es, die Sicherheit der drei Türken wäre in ihrer Heimat bedroht. Sie waren nach dem gescheiterten Putschversuch in der Türkei nach Griechenland geflohen.</description>
+		<guid>http://www.tagesschau.de/ausland/griechenland-tuerkei-putschversuch-101.html</guid>
+		<category>Ausland</category>
+		</item>
+		
+		<item>
+		<title>Britischer Supreme Court verhandelt Brexit</title>
+		<link>http://www.tagesschau.de/ausland/brexit-gericht-101.html</link>
+		<description>"Volksverräter"-Vorwürfe und Morddrohungen: Bereits vor dem Brexit-Prozess vor dem Obersten Gericht Großbritanniens kochten die Emotionen hoch. Die Richter versuchten, zu beruhigen. Der Überblick ging dennoch manchmal verloren. Von J.-P. Marquardt.</description>
+		<guid>http://www.tagesschau.de/ausland/brexit-gericht-101.html</guid>
+		<category>Ausland</category>
+		</item>
+		
+		<item>
+		<title>Eurogruppe beschließt Schuldenerleichterungen für Athen</title>
+		<link>http://www.tagesschau.de/wirtschaft/griechenland-eu-111.html</link>
+		<description>Die Finanzminister der Euro-Staaten haben Griechenland einige Erleichterungen gewährt. Dabei geht es um "technische Maßnahmen" wie zum Beispiel die Streckung des Schuldendienstes. Neue Kredite gaben die Finanzminister nicht frei.</description>
+		<guid>http://www.tagesschau.de/wirtschaft/griechenland-eu-111.html</guid>
+		<category>Wirtschaft</category>
+		</item>
+	</channel>
 </rss>
