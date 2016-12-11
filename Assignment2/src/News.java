@@ -1,16 +1,17 @@
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
 public class News {
 	String m_title;
 	String m_description;
 	
-	News(){
-		
-	}
-	
+	@XmlElement
 	public void setTitle(String title) {
 		m_title = title;
 	}
 	
+	@XmlElement
 	public void setDescription(String descpt) {
 		m_description = descpt;
 	}
@@ -24,3 +25,5 @@ public class News {
 	}
 	
 }
+
+
